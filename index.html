@@ -67,34 +67,21 @@ nav a:hover{background:#222;color:var(--gold)}
 .hero-bg::before{width:34vw;height:34vw;min-width:260px;min-height:260px;left:-6vw;top:14%;background:radial-gradient(circle,rgba(255,208,120,.18) 0%,rgba(255,208,120,.06) 34%,transparent 72%);animation:orbFloatA 14s ease-in-out infinite}
 .hero-bg::after{width:28vw;height:28vw;min-width:220px;min-height:220px;right:-4vw;bottom:4%;background:radial-gradient(circle,rgba(255,180,90,.12) 0%,rgba(255,180,90,.04) 38%,transparent 74%);animation:orbFloatB 16s ease-in-out infinite}
 .hero-sheen{position:absolute;inset:-8% auto -8% -14%;width:30%;background:linear-gradient(90deg,transparent 0%,rgba(255,226,171,.03) 44%,rgba(255,232,185,.1) 52%,rgba(255,226,171,.03) 60%,transparent 100%);transform:skewX(-16deg);filter:blur(10px);animation:heroSweep 11s linear infinite;pointer-events:none;z-index:0}
-.hero-shell{position:relative;z-index:1;max-width:1180px;width:100%;margin:0 auto;padding:48px 20px 74px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr);gap:24px;align-items:end}
-.hero-content{position:relative;text-align:left;padding:40px 42px 42px;animation:heroContentIn 1.1s ease-out both;transform:translateY(calc(var(--hero-shift) * .35));background:linear-gradient(180deg,rgba(7,7,7,.72),rgba(7,7,7,.52));border:1px solid rgba(216,175,110,.16);border-radius:30px;backdrop-filter:blur(10px);box-shadow:0 24px 80px rgba(0,0,0,.28)}
-.hero-side{display:grid;gap:16px;align-self:stretch}
-.hero-panel{background:linear-gradient(180deg,rgba(14,14,14,.76),rgba(14,14,14,.58));border:1px solid rgba(216,175,110,.15);border-radius:28px;padding:24px 22px;box-shadow:0 24px 60px rgba(0,0,0,.24);backdrop-filter:blur(12px)}
-.hero-panel h3{font-size:.86rem;letter-spacing:2px;color:var(--gold);margin-bottom:14px}
-.hero-panel ul{list-style:none;display:grid;gap:12px}
-.hero-panel li{display:grid;gap:4px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.08)}
-.hero-panel li:last-child{padding-bottom:0;border-bottom:none}
-.hero-panel strong{font-size:1.02rem;color:var(--text)}
-.hero-panel span{font-size:.85rem;color:var(--text2);line-height:1.6}
-.hero-chip-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.hero-chip{padding:16px 14px;border-radius:18px;border:1px solid rgba(255,255,255,.08);background:linear-gradient(135deg,rgba(255,255,255,.05),rgba(255,255,255,.02));min-height:120px}
-.hero-chip strong{display:block;font-size:1.15rem;color:var(--gold);line-height:1.2}
-.hero-chip span{display:block;font-size:.82rem;color:var(--text2);margin-top:8px;line-height:1.55}
+.hero-content{position:relative;z-index:1;text-align:center;padding:60px 20px;animation:heroContentIn 1.1s ease-out both;transform:translateY(calc(var(--hero-shift) * .35))}
 .hero-sub{font-size:.9rem;letter-spacing:3px;color:var(--gold);margin-bottom:14px}
-.hero-title-main{font-size:clamp(2rem,5vw,3.6rem);font-weight:800;color:var(--gold);line-height:1.2;max-width:13ch}
-.hero-title-sub{font-size:clamp(1.1rem,2.5vw,1.9rem);font-weight:600;color:var(--text2);margin-top:8px;max-width:20ch}
+.hero-title-main{font-size:clamp(2rem,5vw,3.6rem);font-weight:800;color:var(--gold);line-height:1.2;max-width:13ch;margin:0 auto}
+.hero-title-sub{font-size:clamp(1.1rem,2.5vw,1.9rem);font-weight:600;color:var(--text2);margin-top:8px;max-width:20ch;margin-left:auto;margin-right:auto}
 .hero-en{font-size:clamp(.8rem,1.8vw,1rem);color:#666;letter-spacing:2px;margin-top:12px}
-.hero-badges{display:flex;gap:10px;justify-content:flex-start;flex-wrap:wrap;margin-top:28px}
-.hero-actions{display:flex;gap:14px;justify-content:flex-start;flex-wrap:wrap;margin-top:28px;align-items:stretch}
+.hero-badges{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+.hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:28px;align-items:stretch}
 .badge{padding:7px 18px;border:1px solid rgba(216,175,110,.9);border-radius:30px;font-size:.85rem;color:var(--gold);background:rgba(0,0,0,.24);backdrop-filter:blur(8px);text-align:center;line-height:1.35}
-.countdown-wrap{margin-top:0}
+.countdown-wrap{margin-top:32px}
 .cd-label{font-size:.82rem;color:var(--text2);margin-bottom:10px;letter-spacing:2px}
 .cd-boxes{display:flex;gap:10px;justify-content:center}
 .cb{background:rgba(0,0,0,.34);border:1px solid rgba(216,175,110,.85);border-radius:8px;padding:10px 16px;text-align:center;min-width:64px;backdrop-filter:blur(10px);box-shadow:0 10px 28px rgba(0,0,0,.18)}
 .cb-num{font-size:1.7rem;font-weight:800;color:var(--gold);line-height:1}
 .cb-unit{font-size:.68rem;color:var(--text2);margin-top:4px}
-.hero-facts{position:relative;z-index:1;max-width:1180px;margin:-44px auto 0;padding:0 20px;transform:translateY(calc(var(--hero-shift) * .18))}
+.hero-facts{position:relative;z-index:1;max-width:1080px;margin:-64px auto 0;padding:0 20px;transform:translateY(calc(var(--hero-shift) * .18))}
 .fact-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
 .fact-card{background:rgba(10,10,10,.76);backdrop-filter:blur(14px);border:1px solid rgba(216,175,110,.3);border-radius:14px;padding:18px 20px;box-shadow:0 18px 42px rgba(0,0,0,.32);animation:factFloat 6.5s ease-in-out infinite;min-height:148px}
 .fact-card:nth-child(2){animation-delay:.8s}
@@ -152,9 +139,22 @@ hr.div{border:none;border-top:1px solid #1a1a1a;margin:0}
 .abox h3{color:var(--gold);font-size:1rem;margin-bottom:8px}
 .abox ul{padding-left:18px;color:var(--text2)}
 .abox ul li{margin-bottom:5px;font-size:.92rem}
-.cards{display:grid;grid-template-columns:1.15fr .85fr .85fr;gap:20px;align-items:stretch}
-.cards .card:first-child{grid-row:span 2;min-height:100%}
-.cards .card{display:flex;flex-direction:column;justify-content:flex-start}
+.quiz-shell{max-width:900px;margin:0 auto 34px;background:linear-gradient(180deg,rgba(18,18,18,.82),rgba(18,18,18,.62));border:1px solid rgba(216,175,110,.16);border-radius:24px;padding:28px 26px;box-shadow:0 18px 42px rgba(0,0,0,.22)}
+.quiz-head{text-align:center;max-width:620px;margin:0 auto 24px}
+.quiz-head h3{font-size:1.25rem;color:var(--gold);margin-bottom:8px}
+.quiz-head p{font-size:.92rem;color:var(--text2)}
+.quiz-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.quiz-group label{display:block;font-size:.82rem;letter-spacing:1.4px;color:var(--text2);margin-bottom:10px;text-transform:uppercase}
+.quiz-options{display:flex;flex-wrap:wrap;gap:10px}
+.quiz-btn{padding:11px 16px;border-radius:999px;border:1px solid #343434;background:#161616;color:var(--text2);font:inherit;font-size:.9rem;font-weight:700;cursor:pointer;transition:.2s}
+.quiz-btn:hover{border-color:rgba(216,175,110,.5);color:var(--text)}
+.quiz-btn.active{background:rgba(216,175,110,.14);border-color:rgba(216,175,110,.6);color:var(--gold);box-shadow:0 10px 24px rgba(216,175,110,.12)}
+.quiz-result{margin-top:22px;padding:18px 20px;border-radius:18px;border:1px solid rgba(216,175,110,.18);background:rgba(255,255,255,.03);display:none}
+.quiz-result.show{display:block;animation:fadePanel .24s ease-out}
+.quiz-result strong{display:block;font-size:1.08rem;color:var(--text)}
+.quiz-result p{font-size:.9rem;color:var(--text2);margin-top:6px}
+.quiz-result .btn{margin-top:14px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
 .card{background:var(--dark3);border:1px solid #2a2a2a;border-radius:10px;padding:24px;transition:.2s}
 .card:hover{border-color:var(--gold);transform:translateY(-2px)}
 .card-icon{font-size:1.8rem;margin-bottom:10px}
@@ -166,8 +166,7 @@ hr.div{border:none;border-top:1px solid #1a1a1a;margin:0}
 .highlight-eyebrow{font-size:.74rem;letter-spacing:1.5px;color:var(--gold);text-transform:uppercase}
 .highlight-card h3{font-size:1.08rem;color:var(--text);margin:10px 0 8px;line-height:1.45}
 .highlight-card p{font-size:.9rem;color:var(--text2);line-height:1.8}
-.news-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:18px}
-.news-grid .news-card:first-child{grid-row:span 2;min-height:100%}
+.news-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
 .news-card{background:linear-gradient(145deg,rgba(255,255,255,.04),rgba(216,175,110,.06));border:1px solid rgba(216,175,110,.18);border-radius:14px;padding:22px;position:relative;overflow:hidden}
 .news-card::after{content:'';position:absolute;inset:auto 0 0 0;height:3px;background:linear-gradient(90deg,transparent,rgba(216,175,110,.8),transparent);opacity:.5}
 .news-meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
@@ -175,6 +174,30 @@ hr.div{border:none;border-top:1px solid #1a1a1a;margin:0}
 .news-date{font-size:.8rem;color:var(--text2)}
 .news-card h3{font-size:1.02rem;color:var(--text);margin-bottom:8px;line-height:1.5}
 .news-card p{font-size:.9rem;color:var(--text2);line-height:1.8}
+.timeline{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-bottom:24px}
+.timeline-step{position:relative;padding:22px 22px 20px;background:linear-gradient(180deg,rgba(15,15,15,.82),rgba(15,15,15,.6));border:1px solid rgba(216,175,110,.18);border-radius:22px;box-shadow:0 16px 36px rgba(0,0,0,.18);cursor:pointer;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+.timeline-step::after{content:'';position:absolute;top:28px;right:-18px;width:18px;height:2px;background:rgba(216,175,110,.35)}
+.timeline-step:last-child::after{display:none}
+.timeline-step:hover{transform:translateY(-4px);border-color:rgba(216,175,110,.34)}
+.timeline-step.active{border-color:rgba(216,175,110,.52);box-shadow:0 22px 44px rgba(0,0,0,.24)}
+.timeline-kicker{font-size:.72rem;letter-spacing:1.5px;color:var(--text2);text-transform:uppercase}
+.timeline-step h3{font-size:1.08rem;color:var(--gold);margin:10px 0 6px}
+.timeline-date{font-size:1.1rem;font-weight:800;color:var(--text);line-height:1.3}
+.timeline-meta{font-size:.84rem;color:var(--text2);margin-top:8px;line-height:1.7}
+.timeline-step.active .timeline-meta{color:var(--text)}
+.tbl-wrap.is-focused{border-color:rgba(216,175,110,.3);box-shadow:0 18px 34px rgba(0,0,0,.18)}
+tr.row-active td{background:rgba(216,175,110,.08)}
+tr.row-active td:first-child strong,tr.row-active td strong{color:var(--gold)!important}
+.rules-faq{display:grid;gap:14px;max-width:920px;margin:0 auto}
+.rule-accordion{background:var(--dark3);border:1px solid #262626;border-radius:18px;overflow:hidden;box-shadow:0 14px 34px rgba(0,0,0,.16)}
+.rule-accordion summary{list-style:none;cursor:pointer;padding:18px 22px;color:var(--text);font-size:1rem;font-weight:800;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.rule-accordion summary::-webkit-details-marker{display:none}
+.rule-accordion summary::after{content:'+';font-size:1.2rem;color:var(--gold);flex-shrink:0}
+.rule-accordion[open] summary::after{content:'−'}
+.rule-accordion[open]{border-color:rgba(216,175,110,.3)}
+.rule-body{padding:0 22px 18px}
+.rule-body ul{padding-left:18px}
+.rule-body li{color:var(--text2);font-size:.9rem;line-height:1.8;margin-bottom:8px}
 .rules-shell{display:grid;grid-template-columns:260px minmax(0,1fr);gap:20px;align-items:start}
 .rules-tabs{display:grid;gap:10px;position:sticky;top:88px}
 .rule-tab{width:100%;padding:14px 16px;border-radius:12px;border:1px solid #2b2b2b;background:rgba(255,255,255,.03);color:var(--text2);text-align:left;font:inherit;font-weight:700;cursor:pointer;transition:.2s}
@@ -197,12 +220,12 @@ hr.div{border:none;border-top:1px solid #1a1a1a;margin:0}
 .notice-item summary::after{content:'+';font-size:1.2rem;color:var(--gold);flex-shrink:0}
 .notice-item[open] summary::after{content:'−'}
 .notice-body{padding:0 18px 16px;color:var(--text2);font-size:.9rem;line-height:1.8}
-.register-grid{display:grid;grid-template-columns:repeat(2,minmax(260px,320px));justify-content:center;gap:18px 20px;margin:26px auto 0;align-items:start;max-width:760px}
+.register-grid{display:grid;grid-template-columns:repeat(3,minmax(220px,260px));justify-content:center;gap:18px 20px;margin:26px auto 0;align-items:start;max-width:860px}
 .register-card{background:var(--dark2);border:1px solid rgba(216,175,110,.16);border-radius:14px;padding:20px 18px;text-align:left;min-width:0;min-height:100%}
 .register-card h3{font-size:1rem;color:var(--gold);margin-bottom:8px}
 .register-card p{font-size:.85rem;color:var(--text2);line-height:1.72;margin-bottom:14px}
 .register-card .btn{width:100%}
-.register-card.paper{grid-column:1/-1;width:min(320px,100%);max-width:320px;justify-self:center;text-align:center}
+.register-card.paper{grid-column:1/-1;width:min(260px,100%);max-width:260px;justify-self:center;text-align:center}
 @keyframes fadePanel{
   from{opacity:0;transform:translateY(8px)}
   to{opacity:1;transform:translateY(0)}
@@ -239,13 +262,16 @@ tr:hover td{background:rgba(255,255,255,.02)}
 .ta{background:rgba(216,175,110,.2);color:var(--gold);border:1px solid rgba(216,175,110,.4)}
 
 .score-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}
-.score-item{background:var(--dark3);border-radius:10px;padding:22px 14px;text-align:center;border:1px solid #222}
-.score-pct{font-size:2rem;font-weight:800;color:var(--gold);margin-bottom:5px}
+.score-item{background:var(--dark3);border-radius:10px;padding:22px 14px 18px;text-align:center;border:1px solid #222;--score-current:0}
+.score-ring{width:110px;height:110px;border-radius:50%;margin:0 auto 14px;display:grid;place-items:center;background:conic-gradient(var(--gold) calc(var(--score-current) * 1%),rgba(255,255,255,.08) 0);transition:background 1.1s ease}
+.score-ring::before{content:'';width:78px;height:78px;border-radius:50%;background:var(--dark2);box-shadow:inset 0 0 0 1px rgba(255,255,255,.04)}
+.score-pct{position:relative;margin-top:-86px;margin-bottom:52px;font-size:1.55rem;font-weight:800;color:var(--gold);line-height:1}
 .score-name{font-size:.92rem;color:var(--text);font-weight:600}
 .score-en{font-size:.78rem;color:var(--text2);margin-top:4px}
 
 .prize-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:22px}
-.prize-card{background:var(--dark2);border-radius:12px;overflow:hidden;border:1px solid #222}
+.prize-card{background:var(--dark2);border-radius:12px;overflow:hidden;border:1px solid #222;transition:transform .24s ease,box-shadow .24s ease,border-color .24s ease}
+.prize-card:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(0,0,0,.24);border-color:rgba(216,175,110,.32)}
 .ph-charm{background:linear-gradient(135deg,rgba(180,120,220,.3),rgba(100,60,150,.3));border-bottom:2px solid #c890f0;padding:16px 22px;text-align:center}
 .ph-vitality{background:linear-gradient(135deg,rgba(36,138,204,.3),rgba(20,80,140,.3));border-bottom:2px solid #70bfef;padding:16px 22px;text-align:center}
 .ph-migrant{background:linear-gradient(135deg,rgba(80,200,120,.3),rgba(40,120,70,.3));border-bottom:2px solid #70e09a;padding:16px 22px;text-align:center}
@@ -253,13 +279,18 @@ tr:hover td{background:rgba(255,255,255,.02)}
 .ph-vitality h3{color:#70bfef;font-size:1.05rem;font-weight:800}
 .ph-migrant h3{color:#70e09a;font-size:1.05rem;font-weight:800}
 .prize-body{padding:14px 18px}
-.pr{display:flex;justify-content:space-between;align-items:center;padding:7px 10px;border-radius:5px;margin-bottom:3px}
+.pr{display:flex;justify-content:space-between;align-items:center;padding:7px 10px;border-radius:5px;margin-bottom:3px;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
 .pr:nth-child(odd){background:rgba(255,255,255,.03)}
 .pr .pl{font-weight:600;color:var(--text);font-size:.88rem}
 .pr .am{font-weight:700;color:var(--gold2);font-size:.9rem}
 .pr.r1 .pl{color:#FFD700}.pr.r1 .am{color:#FFD700;font-size:1rem}
 .pr.r2 .pl{color:#C0C0C0}.pr.r2 .am{color:#C0C0C0}
 .pr.r3 .pl{color:#CD7F32}.pr.r3 .am{color:#CD7F32}
+.pr.top3{padding:12px 14px;border:1px solid rgba(255,255,255,.06);margin-bottom:8px}
+.prize-card:hover .pr.top3{transform:translateY(-2px);box-shadow:0 14px 24px rgba(0,0,0,.18)}
+.prize-card:hover .pr.r1{background:linear-gradient(135deg,rgba(255,215,0,.16),rgba(255,215,0,.06))}
+.prize-card:hover .pr.r2{background:linear-gradient(135deg,rgba(192,192,192,.14),rgba(192,192,192,.05))}
+.prize-card:hover .pr.r3{background:linear-gradient(135deg,rgba(205,127,50,.18),rgba(205,127,50,.06))}
 
 .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
 .ci{background:var(--dark3);border-radius:10px;padding:18px 22px;border:1px solid #222;display:flex;align-items:flex-start;gap:12px}
@@ -275,6 +306,9 @@ tr:hover td{background:rgba(255,255,255,.02)}
 .btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 24px;border-radius:8px;font-size:.95rem;font-weight:700;cursor:pointer;transition:.2s;line-height:1.4;text-align:center;min-height:54px;max-width:100%;white-space:normal}
 .btn-p{background:var(--gold);color:#000}.btn-p:hover{background:var(--gold2)}
 .btn-o{border:2px solid var(--gold);color:var(--gold);background:transparent}.btn-o:hover{background:var(--gold);color:#000}
+.floating-cta{position:fixed;right:20px;bottom:20px;z-index:1400;display:inline-flex;align-items:center;justify-content:center;min-width:168px;padding:14px 20px;border-radius:999px;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;font-size:.92rem;font-weight:800;box-shadow:0 18px 36px rgba(0,0,0,.3);border:1px solid rgba(255,255,255,.08)}
+.floating-cta:hover{transform:translateY(-2px);box-shadow:0 22px 42px rgba(0,0,0,.34)}
+.floating-cta small{display:block;font-size:.72rem;font-weight:600;opacity:.7;line-height:1.2}
 
 footer{background:#000;border-top:1px solid #1a1a1a;padding:36px 20px;text-align:center}
 footer .ftitle{color:var(--gold);font-size:1rem;font-weight:700;margin-bottom:6px}
@@ -354,6 +388,7 @@ nav a:hover{background:rgba(216,175,110,.14);color:#fff7ea}
   .hero-content{padding:34px 22px}
   .hero-side{grid-template-columns:1fr}
   .hero-panel{padding:20px 18px}
+  .hero-panel-actions{grid-template-columns:1fr}
   .hero-chip-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .hero-facts{margin:-42px auto 0;padding:0 16px}
   .fact-card,.abox,.card,.highlight-card,.news-card,.detail-card,.venue-card,.notice-item,.register-card,.score-item,.prize-card,.ci,.step{border-radius:18px}
@@ -363,6 +398,8 @@ nav a:hover{background:rgba(216,175,110,.14);color:#fff7ea}
   .sec-title{margin-bottom:32px}
   .fact-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .highlight-grid{grid-template-columns:1fr}
+  .timeline{grid-template-columns:1fr}
+  .timeline-step::after{display:none}
   .cards,.news-grid{grid-template-columns:1fr}
   .cards .card:first-child,.news-grid .news-card:first-child{grid-row:auto}
   .rules-shell{grid-template-columns:1fr}
@@ -390,6 +427,7 @@ nav a:hover{background:rgba(216,175,110,.14);color:#fff7ea}
   .register-grid{grid-template-columns:minmax(0,320px);max-width:320px}
   .register-card.paper{grid-column:auto;max-width:none;width:100%}
   .news-card,.detail-card,.register-card,.venue-card,.ci{padding:18px}
+  .floating-cta{left:16px;right:16px;bottom:16px;width:auto;min-width:0}
   .loader-ring{width:78px;height:78px}
   .loader-title{font-size:1.02rem}
   .loader-progress-wrap{width:min(280px,82vw)}
@@ -437,7 +475,7 @@ nav a:hover{background:rgba(216,175,110,.14);color:#fff7ea}
       <a href="#songs" data-i18n="nav_songs"></a>
     </nav>
     <div class="top-actions">
-      <a class="theme-link" href="./index_white.html">亮色版</a>
+      <a class="theme-link" href="./index_white.html" data-i18n="theme_light"></a>
       <div class="lang-switcher">
         <select class="lang-select" aria-label="Language" onchange="setLang(this.value)">
           <option value="zh">🇹🇼 中文</option>
@@ -466,7 +504,7 @@ nav a:hover{background:rgba(216,175,110,.14);color:#fff7ea}
         <option value="ph">🇵🇭 Philippines</option>
         <option value="id">🇮🇩 Indonesia</option>
       </select>
-      <a class="theme-link mobile-theme-link" href="./index_white.html">切換到亮色版</a>
+      <a class="theme-link mobile-theme-link" href="./index_white.html" data-i18n="theme_light_mobile"></a>
     </div>
   </div>
 </header>
@@ -478,70 +516,29 @@ nav a:hover{background:rgba(216,175,110,.14);color:#fff7ea}
   </video>
   <div class="hero-bg"></div>
   <div class="hero-sheen"></div>
-  <div class="hero-shell">
-    <div class="hero-content">
-      <div class="hero-sub" data-i18n="hero_org"></div>
-      <div class="hero-title-main" data-i18n="hero_title1"></div>
-      <div class="hero-title-sub" data-i18n="hero_title2"></div>
-      <div class="hero-en">2026 Labor Star Singing Contest</div>
-      <div class="hero-badges">
-        <span class="badge" data-i18n="group_charm"></span>
-        <span class="badge" data-i18n="group_vitality"></span>
-        <span class="badge" data-i18n="group_migrant"></span>
-      </div>
-      <div class="hero-actions">
-        <a href="#register" class="btn btn-p" data-i18n="hero_btn_primary"></a>
-        <a href="#songs" class="btn btn-o" data-i18n="hero_btn_secondary"></a>
+  <div class="hero-content">
+    <div class="hero-sub" data-i18n="hero_org"></div>
+    <div class="hero-title-main" data-i18n="hero_title1"></div>
+    <div class="hero-title-sub" data-i18n="hero_title2"></div>
+    <div class="hero-en">2026 Labor Star Singing Contest</div>
+    <div class="hero-badges">
+      <span class="badge" data-i18n="group_charm"></span>
+      <span class="badge" data-i18n="group_vitality"></span>
+      <span class="badge" data-i18n="group_migrant"></span>
+    </div>
+    <div class="hero-actions">
+      <a href="#register" class="btn btn-p" data-i18n="hero_btn_primary"></a>
+      <a href="#rules" class="btn btn-o" data-i18n="hero_btn_secondary"></a>
+    </div>
+    <div class="countdown-wrap">
+      <div class="cd-label" data-i18n="cd_label"></div>
+      <div class="cd-boxes">
+        <div class="cb"><div class="cb-num" id="cd-d">--</div><div class="cb-unit" data-i18n="cd_day"></div></div>
+        <div class="cb"><div class="cb-num" id="cd-h">--</div><div class="cb-unit" data-i18n="cd_hour"></div></div>
+        <div class="cb"><div class="cb-num" id="cd-m">--</div><div class="cb-unit" data-i18n="cd_min"></div></div>
+        <div class="cb"><div class="cb-num" id="cd-s">--</div><div class="cb-unit" data-i18n="cd_sec"></div></div>
       </div>
     </div>
-    <aside class="hero-side">
-      <div class="hero-panel">
-        <h3 data-i18n="cd_label"></h3>
-        <div class="countdown-wrap">
-          <div class="cd-boxes">
-            <div class="cb"><div class="cb-num" id="cd-d">--</div><div class="cb-unit" data-i18n="cd_day"></div></div>
-            <div class="cb"><div class="cb-num" id="cd-h">--</div><div class="cb-unit" data-i18n="cd_hour"></div></div>
-            <div class="cb"><div class="cb-num" id="cd-m">--</div><div class="cb-unit" data-i18n="cd_min"></div></div>
-            <div class="cb"><div class="cb-num" id="cd-s">--</div><div class="cb-unit" data-i18n="cd_sec"></div></div>
-          </div>
-        </div>
-      </div>
-      <div class="hero-panel">
-        <h3 data-i18n="highlight_title"></h3>
-        <ul>
-          <li>
-            <strong data-i18n="highlight1_title"></strong>
-            <span data-i18n="highlight1_desc"></span>
-          </li>
-          <li>
-            <strong data-i18n="highlight2_title"></strong>
-            <span data-i18n="highlight2_desc"></span>
-          </li>
-          <li>
-            <strong data-i18n="highlight3_title"></strong>
-            <span data-i18n="highlight3_desc"></span>
-          </li>
-        </ul>
-      </div>
-      <div class="hero-chip-grid">
-        <div class="hero-chip">
-          <strong>3</strong>
-          <span data-i18n="fact1_desc"></span>
-        </div>
-        <div class="hero-chip">
-          <strong>150</strong>
-          <span data-i18n="fact2_desc"></span>
-        </div>
-        <div class="hero-chip">
-          <strong>10 / 20</strong>
-          <span data-i18n="fact3_desc"></span>
-        </div>
-        <div class="hero-chip">
-          <strong>10.25</strong>
-          <span data-i18n="fact4_desc"></span>
-        </div>
-      </div>
-    </aside>
   </div>
 </section>
 
@@ -549,6 +546,34 @@ nav a:hover{background:rgba(216,175,110,.14);color:#fff7ea}
 <section class="section" id="info">
   <div class="section-inner">
     <div class="sec-title"><h2 data-i18n="nav_info"></h2></div>
+    <div class="quiz-shell reveal">
+      <div class="quiz-head">
+        <h3 data-i18n="quiz_title"></h3>
+        <p data-i18n="quiz_sub"></p>
+      </div>
+      <div class="quiz-grid">
+        <div class="quiz-group">
+          <label data-i18n="quiz_age_label"></label>
+          <div class="quiz-options" id="quiz-age">
+            <button type="button" class="quiz-btn" data-quiz-age="18_45" data-i18n="quiz_age_18_45"></button>
+            <button type="button" class="quiz-btn" data-quiz-age="46_plus" data-i18n="quiz_age_46_plus"></button>
+            <button type="button" class="quiz-btn" data-quiz-age="migrant" data-i18n="quiz_age_migrant"></button>
+          </div>
+        </div>
+        <div class="quiz-group">
+          <label data-i18n="quiz_identity_label"></label>
+          <div class="quiz-options" id="quiz-identity">
+            <button type="button" class="quiz-btn" data-quiz-identity="labor" data-i18n="quiz_identity_labor"></button>
+            <button type="button" class="quiz-btn" data-quiz-identity="migrant" data-i18n="quiz_identity_migrant"></button>
+          </div>
+        </div>
+      </div>
+      <div class="quiz-result" id="quiz-result">
+        <strong id="quiz-result-title"></strong>
+        <p id="quiz-result-desc"></p>
+        <a href="#register" class="btn btn-p" id="quiz-result-btn"></a>
+      </div>
+    </div>
     <div class="abox">
       <h3 data-i18n="reg_period_title"></h3>
       <ul>
@@ -634,65 +659,61 @@ nav a:hover{background:rgba(216,175,110,.14);color:#fff7ea}
     </div>
   </div>
 </section>
-<section class="section reveal">
+<!-- PRIZES -->
+<section class="section alt reveal" id="prizes">
   <div class="section-inner">
     <div class="sec-title">
-      <h2 data-i18n="highlight_title"></h2>
-      <p data-i18n="highlight_sub"></p>
+      <h2 data-i18n="nav_prize"></h2>
+      <p data-i18n="prizes_sub"></p>
     </div>
-    <div class="highlight-grid">
-      <div class="highlight-card reveal delay-1">
-        <div class="highlight-eyebrow" data-i18n="highlight1_eyebrow"></div>
-        <h3 data-i18n="highlight1_title"></h3>
-        <p data-i18n="highlight1_desc"></p>
-      </div>
-      <div class="highlight-card reveal delay-2">
-        <div class="highlight-eyebrow" data-i18n="highlight2_eyebrow"></div>
-        <h3 data-i18n="highlight2_title"></h3>
-        <p data-i18n="highlight2_desc"></p>
-      </div>
-      <div class="highlight-card reveal delay-3">
-        <div class="highlight-eyebrow" data-i18n="highlight3_eyebrow"></div>
-        <h3 data-i18n="highlight3_title"></h3>
-        <p data-i18n="highlight3_desc"></p>
-      </div>
-    </div>
-  </div>
-</section>
-<hr class="div">
-
-<section class="section alt reveal" id="news">
-  <div class="section-inner">
-    <div class="sec-title">
-      <h2 data-i18n="news_title"></h2>
-      <p data-i18n="news_sub"></p>
-    </div>
-    <div class="news-grid">
-      <article class="news-card reveal delay-1">
-        <div class="news-meta">
-          <span class="news-pill" data-i18n="news1_tag"></span>
-          <span class="news-date" data-i18n="news1_date"></span>
+    <div class="prize-grid">
+      <div class="prize-card">
+        <div class="ph-charm"><h3 data-i18n="group_charm"></h3></div>
+        <div class="prize-body">
+          <div class="pr r1 top3"><span class="pl" data-i18n="p1"></span><span class="am">NT$ 35,000</span></div>
+          <div class="pr r2 top3"><span class="pl" data-i18n="p2"></span><span class="am">NT$ 24,000</span></div>
+          <div class="pr r3 top3"><span class="pl" data-i18n="p3"></span><span class="am">NT$ 18,000</span></div>
+          <div class="pr"><span class="pl" data-i18n="p4"></span><span class="am">NT$ 12,000</span></div>
+          <div class="pr"><span class="pl" data-i18n="p5"></span><span class="am">NT$ 7,000</span></div>
+          <div class="pr"><span class="pl" data-i18n="p6_10"></span><span class="am">NT$ 3,000</span></div>
+          <div class="pr"><span class="pl" data-i18n="p11_20"></span><span class="am" data-i18n="trophy"></span></div>
+          <div class="pr"><span class="pl" data-i18n="best_style"></span><span class="am">NT$ 3,000</span></div>
+          <div class="pr"><span class="pl" data-i18n="best_stage"></span><span class="am">NT$ 3,000</span></div>
+          <div class="pr"><span class="pl" data-i18n="best_cheer"></span><span class="am">NT$ 3,000</span></div>
         </div>
-        <h3 data-i18n="news1_title"></h3>
-        <p data-i18n="news1_desc"></p>
-      </article>
-      <article class="news-card reveal delay-2">
-        <div class="news-meta">
-          <span class="news-pill" data-i18n="news2_tag"></span>
-          <span class="news-date" data-i18n="news2_date"></span>
+      </div>
+      <div class="prize-card">
+        <div class="ph-vitality"><h3 data-i18n="group_vitality"></h3></div>
+        <div class="prize-body">
+          <div class="pr r1 top3"><span class="pl" data-i18n="p1"></span><span class="am">NT$ 35,000</span></div>
+          <div class="pr r2 top3"><span class="pl" data-i18n="p2"></span><span class="am">NT$ 24,000</span></div>
+          <div class="pr r3 top3"><span class="pl" data-i18n="p3"></span><span class="am">NT$ 18,000</span></div>
+          <div class="pr"><span class="pl" data-i18n="p4"></span><span class="am">NT$ 12,000</span></div>
+          <div class="pr"><span class="pl" data-i18n="p5"></span><span class="am">NT$ 7,000</span></div>
+          <div class="pr"><span class="pl" data-i18n="p6_10"></span><span class="am">NT$ 3,000</span></div>
+          <div class="pr"><span class="pl" data-i18n="p11_20"></span><span class="am" data-i18n="trophy"></span></div>
+          <div class="pr"><span class="pl" data-i18n="best_style"></span><span class="am">NT$ 3,000</span></div>
+          <div class="pr"><span class="pl" data-i18n="best_stage"></span><span class="am">NT$ 3,000</span></div>
+          <div class="pr"><span class="pl" data-i18n="best_cheer"></span><span class="am">NT$ 3,000</span></div>
         </div>
-        <h3 data-i18n="news2_title"></h3>
-        <p data-i18n="news2_desc"></p>
-      </article>
-      <article class="news-card reveal delay-3">
-        <div class="news-meta">
-          <span class="news-pill" data-i18n="news3_tag"></span>
-          <span class="news-date" data-i18n="news3_date"></span>
+      </div>
+      <div class="prize-card">
+        <div class="ph-migrant"><h3 data-i18n="group_migrant"></h3></div>
+        <div class="prize-body">
+          <div class="pr r1 top3"><span class="pl" data-i18n="p1"></span><span class="am">NT$ 35,000</span></div>
+          <div class="pr r2 top3"><span class="pl" data-i18n="p2"></span><span class="am">NT$ 24,000</span></div>
+          <div class="pr r3 top3"><span class="pl" data-i18n="p3"></span><span class="am">NT$ 18,000</span></div>
+          <div class="pr"><span class="pl" data-i18n="p4"></span><span class="am">NT$ 12,000</span></div>
+          <div class="pr"><span class="pl" data-i18n="p5"></span><span class="am">NT$ 7,000</span></div>
+          <div class="pr"><span class="pl" data-i18n="p6_10"></span><span class="am">NT$ 3,000</span></div>
+          <div class="pr"><span class="pl" data-i18n="p11_20"></span><span class="am" data-i18n="trophy"></span></div>
+          <div class="pr"><span class="pl" data-i18n="best_style"></span><span class="am">NT$ 3,000</span></div>
+          <div class="pr"><span class="pl" data-i18n="best_stage"></span><span class="am">NT$ 3,000</span></div>
+          <div class="pr"><span class="pl" data-i18n="best_cheer"></span><span class="am">NT$ 3,000</span></div>
         </div>
-        <h3 data-i18n="news3_title"></h3>
-        <p data-i18n="news3_desc"></p>
-      </article>
+      </div>
     </div>
+    <p class="note" data-i18n="prizes_note"></p>
   </div>
 </section>
 <hr class="div">
@@ -701,6 +722,26 @@ nav a:hover{background:rgba(216,175,110,.14);color:#fff7ea}
 <section class="section alt reveal" id="schedule">
   <div class="section-inner">
     <div class="sec-title"><h2 data-i18n="nav_sched"></h2></div>
+    <div class="timeline">
+      <div class="timeline-step reveal delay-1 active" data-stage="prelim">
+        <div class="timeline-kicker" data-i18n="prelim"></div>
+        <h3 data-i18n="timeline_prelim_title"></h3>
+        <div class="timeline-date" data-i18n="timeline_prelim_date"></div>
+        <div class="timeline-meta" data-i18n="timeline_prelim_meta"></div>
+      </div>
+      <div class="timeline-step reveal delay-2" data-stage="semi">
+        <div class="timeline-kicker" data-i18n="semi"></div>
+        <h3 data-i18n="timeline_semi_title"></h3>
+        <div class="timeline-date" data-i18n="timeline_semi_date"></div>
+        <div class="timeline-meta" data-i18n="timeline_semi_meta"></div>
+      </div>
+      <div class="timeline-step reveal delay-3" data-stage="final">
+        <div class="timeline-kicker" data-i18n="final"></div>
+        <h3 data-i18n="timeline_final_title"></h3>
+        <div class="timeline-date" data-i18n="timeline_final_date"></div>
+        <div class="timeline-meta" data-i18n="timeline_final_meta"></div>
+      </div>
+    </div>
     <div class="tbl-wrap">
       <table>
         <thead>
@@ -713,35 +754,35 @@ nav a:hover{background:rgba(216,175,110,.14);color:#fff7ea}
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr data-stage="prelim">
             <td rowspan="3"><strong style="color:var(--text)" data-i18n="prelim"></strong></td>
             <td><span class="tag tc" data-i18n="group_charm"></span></td>
             <td data-i18n="date_pc"></td><td>9:00–16:30</td>
             <td rowspan="3" data-i18n="venue_1"></td>
           </tr>
-          <tr>
+          <tr data-stage="prelim">
             <td><span class="tag tv" data-i18n="group_vitality"></span></td>
             <td data-i18n="date_pv"></td><td>9:00–16:30</td>
           </tr>
-          <tr>
+          <tr data-stage="prelim">
             <td><span class="tag tm" data-i18n="group_migrant"></span></td>
             <td data-i18n="date_pm"></td><td>9:00–16:30</td>
           </tr>
-          <tr>
+          <tr data-stage="semi">
             <td rowspan="3"><strong style="color:var(--text)" data-i18n="semi"></strong></td>
             <td><span class="tag tc" data-i18n="group_charm"></span></td>
             <td data-i18n="date_sc"></td><td>13:00–17:30</td>
             <td rowspan="3" data-i18n="venue_1"></td>
           </tr>
-          <tr>
+          <tr data-stage="semi">
             <td><span class="tag tv" data-i18n="group_vitality"></span></td>
             <td data-i18n="date_sv"></td><td>13:00–17:30</td>
           </tr>
-          <tr>
+          <tr data-stage="semi">
             <td><span class="tag tm" data-i18n="group_migrant"></span></td>
             <td data-i18n="date_sm"></td><td>13:00–17:30</td>
           </tr>
-          <tr>
+          <tr data-stage="final">
             <td><strong style="color:var(--gold)" data-i18n="final"></strong></td>
             <td><span class="tag ta" data-i18n="all_groups"></span></td>
             <td><strong style="color:var(--gold)" data-i18n="date_f"></strong></td>
@@ -774,51 +815,51 @@ nav a:hover{background:rgba(216,175,110,.14);color:#fff7ea}
       <h2 data-i18n="rules_title"></h2>
       <p data-i18n="rules_sub"></p>
     </div>
-    <div class="rules-shell">
-      <div class="rules-tabs">
-        <button class="rule-tab active" type="button" data-rule-tab="prelim" data-i18n="rule_tab_prelim"></button>
-        <button class="rule-tab" type="button" data-rule-tab="semi" data-i18n="rule_tab_semi"></button>
-        <button class="rule-tab" type="button" data-rule-tab="final" data-i18n="rule_tab_final"></button>
-        <button class="rule-tab" type="button" data-rule-tab="judge" data-i18n="rule_tab_judge"></button>
-      </div>
-      <div class="rules-panels">
-      <div class="detail-card active" data-rule-panel="prelim">
-        <h3 data-i18n="rule_prelim_title"></h3>
-        <ul>
-          <li data-i18n="rule_prelim_1"></li>
-          <li data-i18n="rule_prelim_2"></li>
-          <li data-i18n="rule_prelim_3"></li>
-          <li data-i18n="rule_prelim_4"></li>
-        </ul>
-      </div>
-      <div class="detail-card" data-rule-panel="semi">
-        <h3 data-i18n="rule_semi_title"></h3>
-        <ul>
-          <li data-i18n="rule_semi_1"></li>
-          <li data-i18n="rule_semi_2"></li>
-          <li data-i18n="rule_semi_3"></li>
-          <li data-i18n="rule_semi_4"></li>
-        </ul>
-      </div>
-      <div class="detail-card" data-rule-panel="final">
-        <h3 data-i18n="rule_final_title"></h3>
-        <ul>
-          <li data-i18n="rule_final_1"></li>
-          <li data-i18n="rule_final_2"></li>
-          <li data-i18n="rule_final_3"></li>
-          <li data-i18n="rule_final_4"></li>
-        </ul>
-      </div>
-      <div class="detail-card" data-rule-panel="judge">
-        <h3 data-i18n="rule_judge_title"></h3>
-        <ul>
-          <li data-i18n="rule_judge_1"></li>
-          <li data-i18n="rule_judge_2"></li>
-          <li data-i18n="rule_judge_3"></li>
-          <li data-i18n="rule_judge_4"></li>
-        </ul>
-      </div>
-      </div>
+    <div class="rules-faq">
+      <details class="rule-accordion" open>
+        <summary data-i18n="rule_prelim_title"></summary>
+        <div class="rule-body">
+          <ul>
+            <li data-i18n="rule_prelim_1"></li>
+            <li data-i18n="rule_prelim_2"></li>
+            <li data-i18n="rule_prelim_3"></li>
+            <li data-i18n="rule_prelim_4"></li>
+          </ul>
+        </div>
+      </details>
+      <details class="rule-accordion">
+        <summary data-i18n="rule_semi_title"></summary>
+        <div class="rule-body">
+          <ul>
+            <li data-i18n="rule_semi_1"></li>
+            <li data-i18n="rule_semi_2"></li>
+            <li data-i18n="rule_semi_3"></li>
+            <li data-i18n="rule_semi_4"></li>
+          </ul>
+        </div>
+      </details>
+      <details class="rule-accordion">
+        <summary data-i18n="rule_final_title"></summary>
+        <div class="rule-body">
+          <ul>
+            <li data-i18n="rule_final_1"></li>
+            <li data-i18n="rule_final_2"></li>
+            <li data-i18n="rule_final_3"></li>
+            <li data-i18n="rule_final_4"></li>
+          </ul>
+        </div>
+      </details>
+      <details class="rule-accordion">
+        <summary data-i18n="rule_judge_title"></summary>
+        <div class="rule-body">
+          <ul>
+            <li data-i18n="rule_judge_1"></li>
+            <li data-i18n="rule_judge_2"></li>
+            <li data-i18n="rule_judge_3"></li>
+            <li data-i18n="rule_judge_4"></li>
+          </ul>
+        </div>
+      </details>
     </div>
   </div>
 </section>
@@ -829,70 +870,11 @@ nav a:hover{background:rgba(216,175,110,.14);color:#fff7ea}
   <div class="section-inner">
     <div class="sec-title"><h2 data-i18n="scoring_title"></h2></div>
     <div class="score-grid">
-      <div class="score-item"><div class="score-pct">40%</div><div class="score-name" data-i18n="score1_name"></div><div class="score-en">Pitch &amp; Technique</div></div>
-      <div class="score-item"><div class="score-pct">40%</div><div class="score-name" data-i18n="score2_name"></div><div class="score-en">Tone &amp; Emotion</div></div>
-      <div class="score-item"><div class="score-pct">10%</div><div class="score-name" data-i18n="score3_name"></div><div class="score-en">Stage Presence</div></div>
-      <div class="score-item"><div class="score-pct">10%</div><div class="score-name" data-i18n="score4_name"></div><div class="score-en">Styling</div></div>
+      <div class="score-item" data-score="40"><div class="score-ring"></div><div class="score-pct">40%</div><div class="score-name" data-i18n="score1_name"></div><div class="score-en">Pitch &amp; Technique</div></div>
+      <div class="score-item" data-score="40"><div class="score-ring"></div><div class="score-pct">40%</div><div class="score-name" data-i18n="score2_name"></div><div class="score-en">Tone &amp; Emotion</div></div>
+      <div class="score-item" data-score="10"><div class="score-ring"></div><div class="score-pct">10%</div><div class="score-name" data-i18n="score3_name"></div><div class="score-en">Stage Presence</div></div>
+      <div class="score-item" data-score="10"><div class="score-ring"></div><div class="score-pct">10%</div><div class="score-name" data-i18n="score4_name"></div><div class="score-en">Styling</div></div>
     </div>
-  </div>
-</section>
-<hr class="div">
-
-<!-- PRIZES -->
-<section class="section alt reveal" id="prizes">
-  <div class="section-inner">
-    <div class="sec-title">
-      <h2 data-i18n="nav_prize"></h2>
-      <p data-i18n="prizes_sub"></p>
-    </div>
-    <div class="prize-grid">
-      <div class="prize-card">
-        <div class="ph-charm"><h3 data-i18n="group_charm"></h3></div>
-        <div class="prize-body">
-          <div class="pr r1"><span class="pl" data-i18n="p1"></span><span class="am">NT$ 35,000</span></div>
-          <div class="pr r2"><span class="pl" data-i18n="p2"></span><span class="am">NT$ 24,000</span></div>
-          <div class="pr r3"><span class="pl" data-i18n="p3"></span><span class="am">NT$ 18,000</span></div>
-          <div class="pr"><span class="pl" data-i18n="p4"></span><span class="am">NT$ 12,000</span></div>
-          <div class="pr"><span class="pl" data-i18n="p5"></span><span class="am">NT$ 7,000</span></div>
-          <div class="pr"><span class="pl" data-i18n="p6_10"></span><span class="am">NT$ 3,000</span></div>
-          <div class="pr"><span class="pl" data-i18n="p11_20"></span><span class="am" data-i18n="trophy"></span></div>
-          <div class="pr"><span class="pl" data-i18n="best_style"></span><span class="am">NT$ 3,000</span></div>
-          <div class="pr"><span class="pl" data-i18n="best_stage"></span><span class="am">NT$ 3,000</span></div>
-          <div class="pr"><span class="pl" data-i18n="best_cheer"></span><span class="am">NT$ 3,000</span></div>
-        </div>
-      </div>
-      <div class="prize-card">
-        <div class="ph-vitality"><h3 data-i18n="group_vitality"></h3></div>
-        <div class="prize-body">
-          <div class="pr r1"><span class="pl" data-i18n="p1"></span><span class="am">NT$ 35,000</span></div>
-          <div class="pr r2"><span class="pl" data-i18n="p2"></span><span class="am">NT$ 24,000</span></div>
-          <div class="pr r3"><span class="pl" data-i18n="p3"></span><span class="am">NT$ 18,000</span></div>
-          <div class="pr"><span class="pl" data-i18n="p4"></span><span class="am">NT$ 12,000</span></div>
-          <div class="pr"><span class="pl" data-i18n="p5"></span><span class="am">NT$ 7,000</span></div>
-          <div class="pr"><span class="pl" data-i18n="p6_10"></span><span class="am">NT$ 3,000</span></div>
-          <div class="pr"><span class="pl" data-i18n="p11_20"></span><span class="am" data-i18n="trophy"></span></div>
-          <div class="pr"><span class="pl" data-i18n="best_style"></span><span class="am">NT$ 3,000</span></div>
-          <div class="pr"><span class="pl" data-i18n="best_stage"></span><span class="am">NT$ 3,000</span></div>
-          <div class="pr"><span class="pl" data-i18n="best_cheer"></span><span class="am">NT$ 3,000</span></div>
-        </div>
-      </div>
-      <div class="prize-card">
-        <div class="ph-migrant"><h3 data-i18n="group_migrant"></h3></div>
-        <div class="prize-body">
-          <div class="pr r1"><span class="pl" data-i18n="p1"></span><span class="am">NT$ 35,000</span></div>
-          <div class="pr r2"><span class="pl" data-i18n="p2"></span><span class="am">NT$ 24,000</span></div>
-          <div class="pr r3"><span class="pl" data-i18n="p3"></span><span class="am">NT$ 18,000</span></div>
-          <div class="pr"><span class="pl" data-i18n="p4"></span><span class="am">NT$ 12,000</span></div>
-          <div class="pr"><span class="pl" data-i18n="p5"></span><span class="am">NT$ 7,000</span></div>
-          <div class="pr"><span class="pl" data-i18n="p6_10"></span><span class="am">NT$ 3,000</span></div>
-          <div class="pr"><span class="pl" data-i18n="p11_20"></span><span class="am" data-i18n="trophy"></span></div>
-          <div class="pr"><span class="pl" data-i18n="best_style"></span><span class="am">NT$ 3,000</span></div>
-          <div class="pr"><span class="pl" data-i18n="best_stage"></span><span class="am">NT$ 3,000</span></div>
-          <div class="pr"><span class="pl" data-i18n="best_cheer"></span><span class="am">NT$ 3,000</span></div>
-        </div>
-      </div>
-    </div>
-    <p class="note" data-i18n="prizes_note"></p>
   </div>
 </section>
 <hr class="div">
@@ -1029,17 +1011,17 @@ nav a:hover{background:rgba(216,175,110,.14);color:#fff7ea}
   <h2 data-i18n="reg_cta_title"></h2>
   <p data-i18n="reg_cta_sub"></p>
   <div class="register-grid">
-    <div class="register-card reveal delay-1">
+    <div class="register-card reveal delay-1" id="register-vitality">
       <h3 data-i18n="register_vitality_title"></h3>
       <p data-i18n="register_vitality_desc"></p>
       <a href="#" class="btn btn-p" onclick="showI18nAlert('register_vitality_alert')" data-i18n="register_vitality_btn"></a>
     </div>
-    <div class="register-card reveal delay-2">
+    <div class="register-card reveal delay-2" id="register-charm">
       <h3 data-i18n="register_charm_title"></h3>
       <p data-i18n="register_charm_desc"></p>
       <a href="#" class="btn btn-p" onclick="showI18nAlert('register_charm_alert')" data-i18n="register_charm_btn"></a>
     </div>
-    <div class="register-card reveal delay-3">
+    <div class="register-card reveal delay-3" id="register-migrant">
       <h3 data-i18n="register_migrant_title"></h3>
       <p data-i18n="register_migrant_desc"></p>
       <a href="#" class="btn btn-p" onclick="showI18nAlert('register_migrant_alert')" data-i18n="register_migrant_btn"></a>
@@ -1051,6 +1033,69 @@ nav a:hover{background:rgba(216,175,110,.14);color:#fff7ea}
     </div>
   </div>
 </div>
+
+<section class="section reveal">
+  <div class="section-inner">
+    <div class="sec-title">
+      <h2 data-i18n="highlight_title"></h2>
+      <p data-i18n="highlight_sub"></p>
+    </div>
+    <div class="highlight-grid">
+      <div class="highlight-card reveal delay-1">
+        <div class="highlight-eyebrow" data-i18n="highlight1_eyebrow"></div>
+        <h3 data-i18n="highlight1_title"></h3>
+        <p data-i18n="highlight1_desc"></p>
+      </div>
+      <div class="highlight-card reveal delay-2">
+        <div class="highlight-eyebrow" data-i18n="highlight2_eyebrow"></div>
+        <h3 data-i18n="highlight2_title"></h3>
+        <p data-i18n="highlight2_desc"></p>
+      </div>
+      <div class="highlight-card reveal delay-3">
+        <div class="highlight-eyebrow" data-i18n="highlight3_eyebrow"></div>
+        <h3 data-i18n="highlight3_title"></h3>
+        <p data-i18n="highlight3_desc"></p>
+      </div>
+    </div>
+  </div>
+</section>
+<hr class="div">
+
+<section class="section alt reveal" id="news">
+  <div class="section-inner">
+    <div class="sec-title">
+      <h2 data-i18n="news_title"></h2>
+      <p data-i18n="news_sub"></p>
+    </div>
+    <div class="news-grid">
+      <article class="news-card reveal delay-1">
+        <div class="news-meta">
+          <span class="news-pill" data-i18n="news1_tag"></span>
+          <span class="news-date" data-i18n="news1_date"></span>
+        </div>
+        <h3 data-i18n="news1_title"></h3>
+        <p data-i18n="news1_desc"></p>
+      </article>
+      <article class="news-card reveal delay-2">
+        <div class="news-meta">
+          <span class="news-pill" data-i18n="news2_tag"></span>
+          <span class="news-date" data-i18n="news2_date"></span>
+        </div>
+        <h3 data-i18n="news2_title"></h3>
+        <p data-i18n="news2_desc"></p>
+      </article>
+      <article class="news-card reveal delay-3">
+        <div class="news-meta">
+          <span class="news-pill" data-i18n="news3_tag"></span>
+          <span class="news-date" data-i18n="news3_date"></span>
+        </div>
+        <h3 data-i18n="news3_title"></h3>
+        <p data-i18n="news3_desc"></p>
+      </article>
+    </div>
+  </div>
+</section>
+<hr class="div">
 
 <!-- CONTACT -->
 <section class="section alt reveal" id="contact">
@@ -1069,6 +1114,10 @@ nav a:hover{background:rgba(216,175,110,.14);color:#fff7ea}
   </div>
 </section>
 
+<a class="floating-cta" href="#register">
+  <span data-i18n="hero_btn_primary"></span>
+</a>
+
 <footer>
   <div class="ftitle" data-i18n="footer_title"></div>
   <p data-i18n="footer_org"></p>
@@ -1084,9 +1133,27 @@ const T = {
     org_short: '新北市政府勞工局',
     event_short: '115年勞工之星歌唱大賽',
     loader_title: '勞工之星歌唱大賽', loader_sub: '舞台即將開啟', loader_loading: '載入中',
+    theme_light: '亮色版', theme_light_mobile: '切換到亮色版',
     nav_info: '報名資訊', nav_reg: '我要報名', nav_sched: '賽程時間', nav_prize: '獎金獎項', nav_songs: '指定歌曲',
     hero_org: '新北市政府勞工局', hero_title1: '典唱新北 20 年', hero_title2: '115年 勞工之星歌唱大賽',
-    hero_btn_primary: '立即前往報名', hero_btn_secondary: '查看指定歌曲',
+    hero_btn_primary: '立即前往報名', hero_btn_secondary: '了解賽制',
+    quiz_title: '尋找你的賽別',
+    quiz_sub: '不用自己讀完整份資格表，先回答兩個問題，系統就會推薦最適合你的參賽組別。',
+    quiz_age_label: '您的年齡或參賽狀態？',
+    quiz_age_18_45: '18–45 歲',
+    quiz_age_46_plus: '46 歲以上',
+    quiz_age_migrant: '我是移工',
+    quiz_identity_label: '您的參賽身分？',
+    quiz_identity_labor: '新北勞工 / 工會會員',
+    quiz_identity_migrant: '在臺合法受聘移工',
+    quiz_result_prefix: '建議你報名',
+    quiz_result_vitality_desc: '依你的條件，最適合直接報名活力之星組。',
+    quiz_result_charm_desc: '依你的條件，最適合直接報名魅力之星組。',
+    quiz_result_migrant_desc: '依你的條件，最適合直接報名移工之星組。',
+    quiz_result_invalid_desc: '你的條件可能需要先確認資格，建議先查看賽制與應備文件。',
+    quiz_cta_vitality: '前往活力之星組報名',
+    quiz_cta_charm: '前往魅力之星組報名',
+    quiz_cta_migrant: '前往移工之星組報名',
     cd_label: '距離報名截止', cd_day: '天', cd_hour: '時', cd_min: '分', cd_sec: '秒',
     fact1_kicker: '參賽組別', fact1_desc: '魅力、活力、移工三組分流競賽',
     fact2_kicker: '指定曲目', fact2_desc: '國語、台語、外語共 150 首',
@@ -1131,6 +1198,9 @@ const T = {
     date_sc: '9月20日', date_sv: '9月26日', date_sm: '9月27日', date_f: '10月25日',
     venue_1: '新北市勞工活動中心（五股區）', venue_2: '新北市政府6樓大禮堂',
     sched_note: '★ 初賽晉級名額：魅力之星組、活力之星組各取前40名；移工之星組取前20名。複賽各組取前10名晉級決賽。',
+    timeline_prelim_title: '完成初賽分流報名與指定曲演唱', timeline_prelim_date: '8 月 8 日至 8 月 30 日', timeline_prelim_meta: '依三組分流辦理初賽，地點皆為新北市勞工活動中心。',
+    timeline_semi_title: '晉級複賽後抽籤決定演唱順序', timeline_semi_date: '9 月 20 日至 9 月 27 日', timeline_semi_meta: '各組複賽取前 10 名晉級決賽，並於現場抽出決賽順序。',
+    timeline_final_title: '三組同場決賽與頒獎', timeline_final_date: '10 月 25 日', timeline_final_meta: '於新北市政府 6 樓大禮堂舉行決賽，現場公布成績與頒獎。',
     venue_card1_title: '初賽／複賽地點', venue_card1_body: '新北市勞工活動中心演藝廳<br>新北市五股區五工六路9號',
     venue_card2_title: '決賽地點', venue_card2_body: '新北市政府 6 樓大禮堂<br>新北市板橋區中山路一段161號6樓', view_map: '查看地圖',
     rules_title: '比賽內容', rules_sub: '把 2025 官網缺少的正式規則補成可核對版本，之後若年度資訊更新，再逐條替換即可。',
@@ -1196,9 +1266,27 @@ const T = {
     org_short: 'New Taipei City Labor Affairs Bureau',
     event_short: '2026 Labor Star Singing Contest',
     loader_title: 'Labor Star Singing Contest', loader_sub: 'THE STAGE IS OPENING', loader_loading: 'LOADING',
+    theme_light: 'Light Mode', theme_light_mobile: 'Switch to Light Mode',
     nav_info: 'Registration Info', nav_reg: 'Register', nav_sched: 'Schedule', nav_prize: 'Prizes', nav_songs: 'Song List',
     hero_org: 'New Taipei City Labor Affairs Bureau', hero_title1: '20 Years of Singing in New Taipei', hero_title2: '2026 Labor Star Singing Contest',
-    hero_btn_primary: 'Register Now', hero_btn_secondary: 'View Required Songs',
+    hero_btn_primary: 'Register Now', hero_btn_secondary: 'Competition Rules',
+    quiz_title: 'Find Your Competition Group',
+    quiz_sub: 'No need to compare every eligibility line yourself. Answer two quick questions and we will suggest the best group for you.',
+    quiz_age_label: 'Your age or participant status?',
+    quiz_age_18_45: '18–45 years old',
+    quiz_age_46_plus: '46 and above',
+    quiz_age_migrant: 'I am a migrant worker',
+    quiz_identity_label: 'Your participant identity?',
+    quiz_identity_labor: 'New Taipei worker / union member',
+    quiz_identity_migrant: 'Legally employed migrant worker in Taiwan',
+    quiz_result_prefix: 'Recommended group:',
+    quiz_result_vitality_desc: 'Based on your profile, the Vitality Star Group is the best fit.',
+    quiz_result_charm_desc: 'Based on your profile, the Charm Star Group is the best fit.',
+    quiz_result_migrant_desc: 'Based on your profile, the Migrant Star Group is the best fit.',
+    quiz_result_invalid_desc: 'Your eligibility may need additional review. Please check the rules and required documents first.',
+    quiz_cta_vitality: 'Go to Vitality Group',
+    quiz_cta_charm: 'Go to Charm Group',
+    quiz_cta_migrant: 'Go to Migrant Group',
     cd_label: 'Countdown to Registration Deadline', cd_day: 'Days', cd_hour: 'Hours', cd_min: 'Mins', cd_sec: 'Secs',
     fact1_kicker: 'Competition Groups', fact1_desc: 'Three separate groups: Charm, Vitality, and Migrant',
     fact2_kicker: 'Required Songs', fact2_desc: '150 songs across Mandarin, Taiwanese, and foreign languages',
@@ -1243,6 +1331,9 @@ const T = {
     date_sc: 'Sep 20', date_sv: 'Sep 26', date_sm: 'Sep 27', date_f: 'Oct 25',
     venue_1: 'New Taipei Labor Activity Center (Wugu District)', venue_2: 'Main Auditorium, 6F, New Taipei City Hall',
     sched_note: '★ Preliminary qualifiers: top 40 each from the Charm and Vitality groups, and top 20 from the Migrant group. Semi-finals: top 10 from each group advance to the final.',
+    timeline_prelim_title: 'Complete preliminary registration and required-song performance', timeline_prelim_date: 'August 8 to August 30', timeline_prelim_meta: 'Preliminary rounds are divided into three groups at the New Taipei Labor Activity Center.',
+    timeline_semi_title: 'Qualified contestants draw lots for semi-finals', timeline_semi_date: 'September 20 to September 27', timeline_semi_meta: 'Top 10 contestants from each group advance to the finals and the final performance order is also drawn on-site.',
+    timeline_final_title: 'Combined final round and award ceremony', timeline_final_date: 'October 25', timeline_final_meta: 'The finals take place at the 6F Main Auditorium of New Taipei City Hall, with results announced live.',
     venue_card1_title: 'Preliminary / Semi-Final Venue', venue_card1_body: 'Performance Hall, New Taipei Labor Activity Center<br>No. 9, Wugong 6th Rd., Wugu District, New Taipei City',
     venue_card2_title: 'Final Venue', venue_card2_body: 'Main Auditorium, 6F, New Taipei City Hall<br>6F, No. 161, Sec. 1, Zhongshan Rd., Banqiao District, New Taipei City', view_map: 'View Map',
     rules_title: 'Competition Details', rules_sub: 'The missing formal rules from the 2025 official website are added here as a reviewable version, so future yearly updates can be replaced item by item.',
@@ -1308,9 +1399,10 @@ const T = {
     org_short: 'Cục Lao Động TP. Tân Bắc',
     event_short: 'Cuộc Thi Ngôi Sao Lao Động 2026',
     loader_title: 'Cuộc Thi Ngôi Sao Lao Động', loader_sub: 'SÂN KHẤU SẮP MỞ', loader_loading: 'ĐANG TẢI',
+    theme_light: 'Giao Diện Sáng', theme_light_mobile: 'Chuyển Sang Giao Diện Sáng',
     nav_info: 'Thông Tin Đăng Ký', nav_reg: 'Đăng Ký Ngay', nav_sched: 'Lịch Thi Đấu', nav_prize: 'Giải Thưởng', nav_songs: 'Danh Sách Bài Hát',
     hero_org: 'Cục Lao Động Thành Phố Tân Bắc', hero_title1: '20 Năm Hát Vang Tân Bắc', hero_title2: 'Cuộc Thi Ngôi Sao Lao Động 2026',
-    hero_btn_primary: 'Đăng Ký Ngay', hero_btn_secondary: 'Xem Danh Sách Bài Hát',
+    hero_btn_primary: 'Đăng Ký Ngay', hero_btn_secondary: 'Xem Thể Lệ',
     cd_label: 'Đếm ngược đến hạn đăng ký', cd_day: 'Ngày', cd_hour: 'Giờ', cd_min: 'Phút', cd_sec: 'Giây',
     fact1_kicker: 'Nhóm Thi', fact1_desc: '3 nhóm riêng: Quyến rũ, Năng động và Lao động di trú',
     fact2_kicker: 'Bài Hát Chỉ Định', fact2_desc: '150 bài gồm Quan Thoại, Đài Loan và Ngoại ngữ',
@@ -1355,6 +1447,9 @@ const T = {
     date_sc: '20/9', date_sv: '26/9', date_sm: '27/9', date_f: '25/10',
     venue_1: 'Trung Tâm Hoạt Động Lao Động New Taipei (Q. Wugu)', venue_2: 'Hội Trường Lớn Tầng 6, UBND TP. Tân Bắc',
     sched_note: '★ Sơ khảo: Nhóm QR và ND chọn 40 người; Nhóm Di Trú chọn 20 người. Bán kết: chọn top 10 mỗi nhóm vào chung kết.',
+    timeline_prelim_title: 'Hoàn tất đăng ký sơ khảo và hát ca khúc chỉ định', timeline_prelim_date: 'Từ 8/8 đến 30/8', timeline_prelim_meta: 'Vòng sơ khảo được tổ chức theo ba nhóm tại Trung tâm Hoạt động Lao động Tân Bắc.',
+    timeline_semi_title: 'Bốc thăm thứ tự sau khi vào bán kết', timeline_semi_date: 'Từ 20/9 đến 27/9', timeline_semi_meta: 'Mỗi nhóm lấy 10 thí sinh vào chung kết và bốc thăm thứ tự biểu diễn ngay tại hiện trường.',
+    timeline_final_title: 'Chung kết và trao giải chung ba nhóm', timeline_final_date: 'Ngày 25/10', timeline_final_meta: 'Đêm chung kết diễn ra tại Hội trường lớn tầng 6 của Chính quyền Thành phố Tân Bắc và công bố kết quả tại chỗ.',
     venue_card1_title: 'Địa Điểm Sơ Khảo / Bán Kết', venue_card1_body: 'Nhà hát Trung tâm Hoạt động Lao động New Taipei<br>Số 9, đường Wugong 6, quận Wugu, New Taipei',
     venue_card2_title: 'Địa Điểm Chung Kết', venue_card2_body: 'Hội trường lớn tầng 6, Chính quyền TP. Tân Bắc<br>Số 161, đoạn 1, đường Zhongshan, quận Banqiao, tầng 6', view_map: 'Xem bản đồ',
     rules_title: 'Nội Dung Cuộc Thi', rules_sub: 'Bổ sung các quy định chính thức còn thiếu từ website 2025 thành bản dễ đối chiếu, để sau này chỉ cần thay từng mục khi có cập nhật.',
@@ -1420,9 +1515,10 @@ const T = {
     org_short: 'กรมแรงงาน นครนิวไทเป',
     event_short: 'การแข่งขันดาวแรงงาน 2026',
     loader_title: 'การแข่งขันดาวแรงงาน', loader_sub: 'เวทีกำลังเปิด', loader_loading: 'กำลังโหลด',
+    theme_light: 'โหมดสว่าง', theme_light_mobile: 'สลับเป็นโหมดสว่าง',
     nav_info: 'ข้อมูลการสมัคร', nav_reg: 'สมัครเลย', nav_sched: 'ตารางแข่งขัน', nav_prize: 'รางวัล', nav_songs: 'เพลงที่กำหนด',
     hero_org: 'สำนักงานแรงงาน เมืองนิวไทเป', hero_title1: '20 ปี เสียงเพลงแห่งนิวไทเป', hero_title2: 'การแข่งขันดาวแรงงาน 2026',
-    hero_btn_primary: 'สมัครตอนนี้', hero_btn_secondary: 'ดูรายชื่อเพลง',
+    hero_btn_primary: 'สมัครตอนนี้', hero_btn_secondary: 'ดูกติกา',
     cd_label: 'นับถอยหลังปิดรับสมัคร', cd_day: 'วัน', cd_hour: 'ชั่วโมง', cd_min: 'นาที', cd_sec: 'วินาที',
     fact1_kicker: 'กลุ่มแข่งขัน', fact1_desc: '3 กลุ่มแยกแข่งขันตามคุณสมบัติผู้สมัคร',
     fact2_kicker: 'เพลงที่กำหนด', fact2_desc: 'รวม 150 เพลง จีนกลาง ไต้หวัน และต่างประเทศ',
@@ -1467,6 +1563,9 @@ const T = {
     date_sc: '20 ก.ย.', date_sv: '26 ก.ย.', date_sm: '27 ก.ย.', date_f: '25 ต.ค.',
     venue_1: 'ศูนย์กิจกรรมแรงงาน นิวไทเป (อำเภอหวู่กู่)', venue_2: 'หอประชุมใหญ่ ชั้น 6 ศาลากลาง นิวไทเป',
     sched_note: '★ รอบคัดเลือก: กลุ่มดาวเสน่ห์และดาวพลัง คัดเลือก 40 คน; กลุ่มแรงงานต่างด้าว 20 คน รอบรองชนะเลิศคัดเลือก 10 คนต่อกลุ่ม',
+    timeline_prelim_title: 'สมัครรอบคัดเลือกและร้องเพลงที่กำหนด', timeline_prelim_date: '8 สิงหาคม ถึง 30 สิงหาคม', timeline_prelim_meta: 'รอบคัดเลือกจัดแยกตาม 3 กลุ่มที่ศูนย์กิจกรรมแรงงานนครนิวไทเป',
+    timeline_semi_title: 'ผ่านเข้ารอบรองและจับฉลากลำดับร้อง', timeline_semi_date: '20 กันยายน ถึง 27 กันยายน', timeline_semi_meta: 'แต่ละกลุ่มคัด 10 คนเข้าสู่รอบชิง และจับฉลากลำดับการแสดงในวันแข่งขัน',
+    timeline_final_title: 'ชิงชนะเลิศรวม 3 กลุ่มและพิธีมอบรางวัล', timeline_final_date: '25 ตุลาคม', timeline_final_meta: 'รอบชิงจัดที่หอประชุมใหญ่ชั้น 6 ศาลาว่าการนครนิวไทเป พร้อมประกาศผลหน้างาน',
     venue_card1_title: 'สถานที่รอบคัดเลือก / รอบรอง', venue_card1_body: 'หอแสดงศิลป์ ศูนย์กิจกรรมแรงงานนิวไทเป<br>เลขที่ 9 ถนนอู่กง 6 เขตอู่กู่ นครนิวไทเป',
     venue_card2_title: 'สถานที่รอบชิง', venue_card2_body: 'หอประชุมใหญ่ ชั้น 6 ศาลากลางนครนิวไทเป<br>เลขที่ 161 ถนนจงซาน ตอนที่ 1 เขตปั่นเฉียว ชั้น 6', view_map: 'ดูแผนที่',
     rules_title: 'รายละเอียดการแข่งขัน', rules_sub: 'เติมกติกาทางการที่ขาดจากเว็บไซต์ปี 2025 ให้เป็นฉบับตรวจสอบได้ เพื่อให้ปีต่อไปเปลี่ยนเฉพาะรายละเอียดที่อัปเดตได้ง่าย',
@@ -1532,9 +1631,10 @@ const T = {
     org_short: 'Labor Bureau ng Lungsod ng New Taipei',
     event_short: '2026 Labor Star Singing Contest',
     loader_title: 'Labor Star Singing Contest', loader_sub: 'PAPARATING NA ANG ENTABLADO', loader_loading: 'NAGLO-LOAD',
+    theme_light: 'Light Mode', theme_light_mobile: 'Lumipat sa Light Mode',
     nav_info: 'Impormasyon', nav_reg: 'Mag-register', nav_sched: 'Iskedyul', nav_prize: 'Mga Gantimpala', nav_songs: 'Mga Awit',
     hero_org: 'Kawanihan ng Paggawa ng Lungsod ng New Taipei', hero_title1: '20 Taon ng Awit sa New Taipei', hero_title2: '2026 Labor Star Singing Contest',
-    hero_btn_primary: 'Magparehistro Ngayon', hero_btn_secondary: 'Tingnan ang Mga Awit',
+    hero_btn_primary: 'Magparehistro Ngayon', hero_btn_secondary: 'Alamin ang Patakaran',
     cd_label: 'Countdown sa Deadline ng Pagpaparehistro', cd_day: 'Araw', cd_hour: 'Oras', cd_min: 'Minuto', cd_sec: 'Segundo',
     fact1_kicker: 'Mga Grupo', fact1_desc: 'Tatlong hiwalay na kategorya para sa patas na kompetisyon',
     fact2_kicker: 'Mga Itinalagang Awit', fact2_desc: '150 kanta sa Mandarin, Taiwanese at iba pang wika',
@@ -1579,6 +1679,9 @@ const T = {
     date_sc: 'Sep 20', date_sv: 'Sep 26', date_sm: 'Sep 27', date_f: 'Oct 25',
     venue_1: 'New Taipei Labor Activity Center (Wugu District)', venue_2: 'Grand Hall, 6F, New Taipei City Hall',
     sched_note: '★ Preliminary qualifiers: Charm & Vitality Groups — top 40 each; Migrant Group — top 20. Semi-final: top 10 per group advance to finals.',
+    timeline_prelim_title: 'Tapusin ang registration at required-song performance sa prelims', timeline_prelim_date: 'Agosto 8 hanggang Agosto 30', timeline_prelim_meta: 'Isinasagawa ang preliminary round ayon sa tatlong grupo sa New Taipei Labor Activity Center.',
+    timeline_semi_title: 'Magbunutan ng order matapos makapasok sa semi-finals', timeline_semi_date: 'Setyembre 20 hanggang Setyembre 27', timeline_semi_meta: 'Top 10 bawat grupo ang aakyat sa finals at sa venue rin bubunutin ang final performance order.',
+    timeline_final_title: 'Pinagsamang finals at awarding ng tatlong grupo', timeline_final_date: 'Oktubre 25', timeline_final_meta: 'Gaganapin ang finals sa 6F Main Auditorium ng New Taipei City Hall at doon din iaanunsyo ang resulta.',
     venue_card1_title: 'Lugar ng Preliminary / Semi-Final', venue_card1_body: 'Performing Hall, New Taipei Labor Activity Center<br>No. 9, Wugong 6th Rd., Wugu District, New Taipei',
     venue_card2_title: 'Lugar ng Final', venue_card2_body: 'Grand Hall, 6th Floor, New Taipei City Government<br>No. 161, Sec. 1, Zhongshan Rd., Banqiao District, 6F', view_map: 'Tingnan ang mapa',
     rules_title: 'Mga Patakaran sa Paligsahan', rules_sub: 'Idinagdag dito ang kulang na pormal na patakaran mula sa 2025 official site bilang bersyong madaling i-review, para mapalitan na lang ang bawat item kapag may bagong update.',
@@ -1644,9 +1747,10 @@ const T = {
     org_short: 'Dinas Ketenagakerjaan Kota New Taipei',
     event_short: 'Kontes Bintang Buruh 2026',
     loader_title: 'Kontes Bintang Buruh', loader_sub: 'PANGGUNG SEGERA DIBUKA', loader_loading: 'MEMUAT',
+    theme_light: 'Mode Terang', theme_light_mobile: 'Beralih ke Mode Terang',
     nav_info: 'Informasi Pendaftaran', nav_reg: 'Daftar Sekarang', nav_sched: 'Jadwal Kompetisi', nav_prize: 'Hadiah', nav_songs: 'Daftar Lagu',
     hero_org: 'Dinas Ketenagakerjaan Kota New Taipei', hero_title1: '20 Tahun Bernyanyi di New Taipei', hero_title2: 'Kontes Bintang Buruh 2026',
-    hero_btn_primary: 'Daftar Sekarang', hero_btn_secondary: 'Lihat Daftar Lagu',
+    hero_btn_primary: 'Daftar Sekarang', hero_btn_secondary: 'Lihat Aturan',
     cd_label: 'Hitung Mundur Penutupan Pendaftaran', cd_day: 'Hari', cd_hour: 'Jam', cd_min: 'Menit', cd_sec: 'Detik',
     fact1_kicker: 'Kelompok Lomba', fact1_desc: '3 kelompok terpisah untuk kompetisi yang lebih adil',
     fact2_kicker: 'Lagu Wajib', fact2_desc: '150 lagu Mandarin, Taiwan, dan bahasa asing',
@@ -1691,6 +1795,9 @@ const T = {
     date_sc: '20 September', date_sv: '26 September', date_sm: '27 September', date_f: '25 Oktober',
     venue_1: 'Pusat Kegiatan Buruh New Taipei (Distrik Wugu)', venue_2: 'Aula Besar Lantai 6, Balai Kota New Taipei',
     sched_note: '★ Babak penyisihan: Grup Pesona & Vitalitas pilih 40 besar; Grup Migran pilih 20 besar. Semi-final: 10 besar per grup maju ke final.',
+    timeline_prelim_title: 'Selesaikan pendaftaran penyisihan dan nyanyikan lagu wajib', timeline_prelim_date: '8 Agustus sampai 30 Agustus', timeline_prelim_meta: 'Babak penyisihan dibagi menjadi tiga grup dan seluruhnya digelar di Pusat Kegiatan Buruh New Taipei.',
+    timeline_semi_title: 'Peserta lolos semifinal lalu undi urutan tampil', timeline_semi_date: '20 September sampai 27 September', timeline_semi_meta: '10 peserta terbaik tiap grup maju ke final dan urutan final juga diundi di lokasi.',
+    timeline_final_title: 'Final gabungan tiga grup dan penyerahan hadiah', timeline_final_date: '25 Oktober', timeline_final_meta: 'Final berlangsung di Aula Utama lantai 6 Balai Kota New Taipei dan hasil diumumkan langsung di tempat.',
     venue_card1_title: 'Lokasi Penyisihan / Semi-Final', venue_card1_body: 'Aula Pertunjukan Pusat Kegiatan Buruh New Taipei<br>No. 9, Wugong 6th Rd., Distrik Wugu, New Taipei',
     venue_card2_title: 'Lokasi Final', venue_card2_body: 'Aula Besar Lantai 6, Pemerintah Kota New Taipei<br>No. 161, Sec. 1, Zhongshan Rd., Distrik Banqiao, lantai 6', view_map: 'Lihat peta',
     rules_title: 'Isi Kompetisi', rules_sub: 'Aturan resmi yang belum ada di situs 2025 ditambahkan di sini sebagai versi yang mudah dicek, sehingga nanti cukup mengganti poin per poin saat ada pembaruan tahunan.',
@@ -1757,31 +1864,37 @@ let currentLang = 'zh';
 let activeSongTab = 'mand';
 let introLoaderStarted = false;
 let introLoaderFinished = false;
+let quizAge = '';
+let quizIdentity = '';
 
 function setLang(lang) {
   currentLang = lang;
-  const d = T[lang];
+  const d = T[lang] || T.zh;
   document.documentElement.lang = lang === 'zh' ? 'zh-TW' : lang;
   document.body.setAttribute('data-lang', lang);
   if (d.page_title) document.title = d.page_title;
   // text nodes
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
-    if (d[key] !== undefined) el.textContent = d[key];
+    const value = d[key] ?? T.zh[key];
+    if (value !== undefined) el.textContent = value;
   });
   // html nodes
   document.querySelectorAll('[data-i18n-html]').forEach(el => {
     const key = el.getAttribute('data-i18n-html');
-    if (d[key] !== undefined) el.innerHTML = d[key];
+    const value = d[key] ?? T.zh[key];
+    if (value !== undefined) el.innerHTML = value;
   });
   document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
     const key = el.getAttribute('data-i18n-placeholder');
-    if (d[key] !== undefined) el.setAttribute('placeholder', d[key]);
+    const value = d[key] ?? T.zh[key];
+    if (value !== undefined) el.setAttribute('placeholder', value);
   });
   document.querySelectorAll('.lang-select').forEach(select => {
     select.value = lang;
   });
   updateSongStatus();
+  updateQuizResult();
 }
 
 function toggleNav() {
@@ -1850,6 +1963,68 @@ function showI18nAlert(key) {
   alert(d[key] || T.zh[key] || '');
 }
 
+function setQuizChoice(type, value) {
+  if (type === 'age') {
+    quizAge = value;
+    document.querySelectorAll('[data-quiz-age]').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.quizAge === value);
+    });
+    return;
+  }
+  quizIdentity = value;
+  document.querySelectorAll('[data-quiz-identity]').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.quizIdentity === value);
+  });
+}
+
+function updateQuizResult() {
+  const resultEl = document.getElementById('quiz-result');
+  const titleEl = document.getElementById('quiz-result-title');
+  const descEl = document.getElementById('quiz-result-desc');
+  const btnEl = document.getElementById('quiz-result-btn');
+  if (!resultEl || !titleEl || !descEl || !btnEl) return;
+  if (!quizAge || !quizIdentity) {
+    resultEl.classList.remove('show');
+    return;
+  }
+
+  const d = T[currentLang] || T.zh;
+  let groupKey = '';
+  let descKey = '';
+  let btnKey = '';
+  let href = '#rules';
+
+  if (quizIdentity === 'migrant' || quizAge === 'migrant') {
+    groupKey = 'group_migrant';
+    descKey = 'quiz_result_migrant_desc';
+    btnKey = 'quiz_cta_migrant';
+    href = '#register-migrant';
+  } else if (quizAge === '46_plus') {
+    groupKey = 'group_charm';
+    descKey = 'quiz_result_charm_desc';
+    btnKey = 'quiz_cta_charm';
+    href = '#register-charm';
+  } else if (quizAge === '18_45' && quizIdentity === 'labor') {
+    groupKey = 'group_vitality';
+    descKey = 'quiz_result_vitality_desc';
+    btnKey = 'quiz_cta_vitality';
+    href = '#register-vitality';
+  } else {
+    titleEl.textContent = d.quiz_result_prefix ?? T.zh.quiz_result_prefix;
+    descEl.textContent = d.quiz_result_invalid_desc ?? T.zh.quiz_result_invalid_desc;
+    btnEl.textContent = d.hero_btn_secondary ?? T.zh.hero_btn_secondary;
+    btnEl.setAttribute('href', '#rules');
+    resultEl.classList.add('show');
+    return;
+  }
+
+  titleEl.textContent = `${d.quiz_result_prefix ?? T.zh.quiz_result_prefix} ${d[groupKey] ?? T.zh[groupKey]}`;
+  descEl.textContent = d[descKey] ?? T.zh[descKey];
+  btnEl.textContent = d[btnKey] ?? T.zh[btnKey];
+  btnEl.setAttribute('href', href);
+  resultEl.classList.add('show');
+}
+
 function setupRevealAnimations() {
   const revealEls = document.querySelectorAll('.reveal');
   if (!('IntersectionObserver' in window)) {
@@ -1865,6 +2040,41 @@ function setupRevealAnimations() {
     });
   }, {threshold:.14, rootMargin:'0px 0px -8% 0px'});
   revealEls.forEach(el => io.observe(el));
+}
+
+function setupScoreAnimation() {
+  const scoreSection = document.getElementById('scoring');
+  const scoreItems = document.querySelectorAll('.score-item[data-score]');
+  if (!scoreSection || !scoreItems.length) return;
+  const activateScores = () => {
+    scoreItems.forEach(item => {
+      item.style.setProperty('--score-current', item.dataset.score || '0');
+    });
+  };
+  if (!('IntersectionObserver' in window)) {
+    activateScores();
+    return;
+  }
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        activateScores();
+        io.disconnect();
+      }
+    });
+  }, {threshold: .35});
+  io.observe(scoreSection);
+}
+
+function setTimelineStage(stage) {
+  document.querySelectorAll('.timeline-step[data-stage]').forEach(step => {
+    step.classList.toggle('active', step.dataset.stage === stage);
+  });
+  const wrap = document.querySelector('#schedule .tbl-wrap');
+  if (wrap) wrap.classList.add('is-focused');
+  document.querySelectorAll('#schedule tbody tr[data-stage]').forEach(row => {
+    row.classList.toggle('row-active', row.dataset.stage === stage);
+  });
 }
 
 function updateScrollEffects() {
@@ -1900,9 +2110,23 @@ document.querySelectorAll('.rule-tab').forEach(btn => {
   btn.addEventListener('click', () => switchRuleTab(btn.dataset.ruleTab));
 });
 
+document.querySelectorAll('.quiz-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    if (btn.dataset.quizAge) setQuizChoice('age', btn.dataset.quizAge);
+    if (btn.dataset.quizIdentity) setQuizChoice('identity', btn.dataset.quizIdentity);
+    updateQuizResult();
+  });
+});
+
+document.querySelectorAll('.timeline-step[data-stage]').forEach(step => {
+  step.addEventListener('click', () => setTimelineStage(step.dataset.stage));
+});
+
 // Init
 setLang('zh');
 setupRevealAnimations();
+setupScoreAnimation();
+setTimelineStage('prelim');
 updateScrollEffects();
 window.addEventListener('scroll', updateScrollEffects, {passive:true});
 window.addEventListener('load', runIntroLoader, {once:true});
