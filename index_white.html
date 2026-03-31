@@ -219,13 +219,13 @@ hr.div{border:none;border-top:1px solid #1a1a1a;margin:0}
 tr.row-active td{background:rgba(95,151,234,.08)}
 tr.row-active td:first-child strong,tr.row-active td strong{color:var(--blue)!important}
 .rules-faq{display:grid;gap:14px;max-width:920px;margin:0 auto}
-.rule-accordion{background:var(--dark3);border:1px solid rgba(15,63,134,.12);border-radius:18px;overflow:hidden;box-shadow:0 14px 30px rgba(15,63,134,.08);display:grid;grid-template-rows:auto 0fr;transition:grid-template-rows .28s ease,border-color .28s ease,box-shadow .28s ease}
+.rule-accordion{background:var(--dark3);border:1px solid rgba(15,63,134,.12);border-radius:18px;overflow:hidden;box-shadow:0 14px 30px rgba(15,63,134,.08);transition:border-color .24s ease,box-shadow .24s ease}
 .rule-accordion summary{list-style:none;cursor:pointer;padding:18px 22px;color:var(--blue);font-size:1rem;font-weight:800;display:flex;align-items:center;justify-content:space-between;gap:16px}
 .rule-accordion summary::-webkit-details-marker{display:none}
 .rule-accordion summary::after{content:'+';font-size:1.2rem;color:var(--gold);flex-shrink:0;transition:transform .28s ease}
 .rule-accordion[open] summary::after{transform:rotate(45deg)}
-.rule-accordion[open]{grid-template-rows:auto 1fr;border-color:rgba(15,63,134,.22);box-shadow:0 18px 36px rgba(15,63,134,.12)}
-.rule-body{padding:0 22px 18px;overflow:hidden;will-change:height}
+.rule-accordion[open]{border-color:rgba(15,63,134,.22);box-shadow:0 18px 36px rgba(15,63,134,.12)}
+.rule-body{padding:0 22px 18px;overflow:hidden;will-change:height,opacity;opacity:0;transform:translateY(-6px)}
 .rule-body ul{padding-left:18px}
 .rule-body li{color:var(--text2);font-size:.9rem;line-height:1.8;margin-bottom:8px}
 .rules-shell{display:grid;grid-template-columns:260px minmax(0,1fr);gap:20px;align-items:start}
@@ -249,7 +249,7 @@ tr.row-active td:first-child strong,tr.row-active td strong{color:var(--blue)!im
 .notice-item summary::-webkit-details-marker{display:none}
 .notice-item summary::after{content:'+';font-size:1.2rem;color:var(--gold);flex-shrink:0;transition:transform .28s ease}
 .notice-item[open] summary::after{transform:rotate(45deg)}
-.notice-body{padding:0 18px 16px;color:var(--text2);font-size:.9rem;line-height:1.8;overflow:hidden;will-change:height}
+.notice-body{padding:0 18px 16px;color:var(--text2);font-size:.9rem;line-height:1.8;overflow:hidden;will-change:height,opacity;opacity:0;transform:translateY(-6px)}
 .register-grid{display:grid;grid-template-columns:repeat(3,minmax(220px,260px));justify-content:center;gap:18px 20px;margin:26px auto 0;align-items:start;max-width:860px}
 .register-card{background:var(--dark2);border:1px solid rgba(216,175,110,.16);border-radius:14px;padding:20px 18px;text-align:left;min-width:0;min-height:100%}
 .register-card h3{font-size:1rem;color:var(--gold);margin-bottom:8px}
@@ -344,6 +344,16 @@ tr:hover td{background:rgba(255,255,255,.02)}
 .ci-icon{font-size:1.5rem;flex-shrink:0;margin-top:2px}
 .ci label{display:block;font-size:.75rem;color:var(--text2);margin-bottom:3px;letter-spacing:1px}
 .ci strong{color:var(--text);font-size:.9rem}
+.org-strip{padding:34px 20px 26px;background:linear-gradient(180deg,rgba(255,255,255,.84),rgba(246,250,255,.96));border-top:1px solid rgba(20,74,154,.1);border-bottom:1px solid rgba(20,74,154,.08)}
+.org-strip-inner{max-width:1260px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-start;gap:28px}
+.org-group{flex:1;min-width:0;display:flex;flex-direction:column;gap:12px}
+.org-group.support{flex:1.55}
+.org-group h3{font-size:.96rem;color:var(--text);margin:0;font-weight:800;letter-spacing:.02em}
+.org-logos{display:flex;flex-wrap:nowrap;gap:14px;align-items:center}
+.org-logo-link{display:inline-flex;align-items:center;justify-content:center;width:280px;min-width:280px;height:78px;padding:12px 18px;border-radius:20px;background:linear-gradient(180deg,rgba(255,255,255,.98),rgba(248,250,255,.94));border:1px solid rgba(20,74,154,.12);box-shadow:0 14px 28px rgba(15,63,134,.08),inset 0 1px 0 rgba(255,255,255,.82);transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.org-logo-link:hover{transform:translateY(-2px);border-color:rgba(15,63,134,.22);box-shadow:0 18px 34px rgba(15,63,134,.12)}
+.org-logo-link img{display:block;max-width:100%;max-height:46px;width:auto;object-fit:contain}
+.org-group.support .org-logo-link{width:240px;min-width:240px}
 
 .reg-cta{text-align:center;padding:56px 20px;background:linear-gradient(135deg,rgba(216,175,110,.07),rgba(216,175,110,.02))}
 .reg-cta h2{font-size:clamp(1.3rem,3vw,1.9rem);color:var(--gold);margin-bottom:10px}
@@ -638,6 +648,9 @@ footer p{color:var(--text2)}
   .song-columns{grid-template-columns:1fr}
   .stab{min-width:0;width:min(100%,320px)}
   .register-grid,.news-grid,.venue-grid,.contact-grid{gap:14px}
+  .org-strip-inner{flex-direction:column;gap:20px}
+  .org-group{width:100%}
+  .org-logos{flex-wrap:wrap}
   .register-grid{grid-template-columns:repeat(2,minmax(220px,240px));max-width:520px}
   .register-card.paper{grid-column:1/-1;max-width:240px}
   .song-col-no{width:52px}
@@ -657,6 +670,9 @@ footer p{color:var(--text2)}
   .register-grid{grid-template-columns:minmax(0,320px);max-width:320px}
   .register-card.paper{grid-column:auto;max-width:none;width:100%}
   .news-card,.detail-card,.register-card,.venue-card,.ci{padding:18px}
+  .org-strip{padding:24px 16px 18px}
+  .org-logo-link{width:100%;min-width:0;height:68px;justify-content:center;padding:12px 14px}
+  .org-logo-link img{max-height:40px}
   .floating-cta{left:16px;right:16px;bottom:16px;width:auto;min-width:0}
   .loader-ring{width:78px;height:78px}
   .loader-title{font-size:1.02rem}
@@ -1349,7 +1365,7 @@ footer p{color:var(--text2)}
   <div class="section-inner">
     <div class="sec-title"><h2 data-i18n="contact_title"></h2></div>
     <div class="contact-grid">
-      <div class="ci"><div class="ci-icon">TEL</div><div><label data-i18n="lbl_phone"></label><strong>(02) 2700-4519</strong></div></div>
+      <div class="ci"><div class="ci-icon">TEL</div><div><label data-i18n="lbl_phone"></label><strong>(02) 2550-1224</strong></div></div>
       <div class="ci"><div class="ci-icon">FAX</div><div><label data-i18n="lbl_fax"></label><strong>(02) 2700-3149</strong></div></div>
       <div class="ci"><div class="ci-icon">MAIL</div><div><label data-i18n="lbl_email"></label><strong><a href="mailto:ntpcstar2026@gmail.com">ntpcstar2026@gmail.com</a></strong></div></div>
       <div class="ci"><div class="ci-icon">LINE</div><div><label data-i18n="lbl_line"></label><strong>@634edkrg</strong></div></div>
@@ -1364,6 +1380,38 @@ footer p{color:var(--text2)}
 <a class="floating-cta" href="#register">
   <span data-i18n="hero_btn_primary"></span>
 </a>
+
+<section class="org-strip reveal" aria-label="Organization Logos">
+  <div class="org-strip-inner">
+    <div class="org-group support">
+      <h3 data-i18n="org_support_title"></h3>
+      <div class="org-logos">
+        <a class="org-logo-link" href="https://www.ntpc.gov.tw/ch/index.jsp" target="_blank" rel="noopener noreferrer">
+          <img src="./newtaipeicite-logo.png" alt="New Taipei City Government">
+        </a>
+        <a class="org-logo-link" href="https://www.wda.gov.tw/" target="_blank" rel="noopener noreferrer">
+          <img src="./workforce_logo.png" alt="Workforce Development Agency">
+        </a>
+      </div>
+    </div>
+    <div class="org-group host">
+      <h3 data-i18n="org_host_title"></h3>
+      <div class="org-logos">
+        <a class="org-logo-link" href="https://ilabor.ntpc.gov.tw/" target="_blank" rel="noopener noreferrer">
+          <img src="./newtaipeicitywork-logo.png" alt="New Taipei City Labor Affairs Bureau">
+        </a>
+      </div>
+    </div>
+    <div class="org-group exec">
+      <h3 data-i18n="org_exec_title"></h3>
+      <div class="org-logos">
+        <a class="org-logo-link" href="https://longlove.tw/" target="_blank" rel="noopener noreferrer">
+          <img src="./longlove_logo.png" alt="Long Love Cultural Creative">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <footer>
   <div class="ftitle" data-i18n="footer_title"></div>
@@ -1380,6 +1428,7 @@ const T = {
     org_short: '新北市政府勞工局',
     event_short: '115年勞工之星歌唱大賽',
     loader_title: '勞工之星歌唱大賽', loader_sub: '舞台即將開啟', loader_loading: '載入中',
+    org_support_title: '指導單位', org_host_title: '主辦單位', org_exec_title: '承辦單位',
     theme_dark: '暗色版', theme_dark_mobile: '切換到暗色版',
     quiz_title: '尋找你的賽別',
     quiz_sub: '不用自己讀完整份資格表，先回答兩個問題，系統就會推薦最適合你的參賽組別。',
@@ -1437,7 +1486,7 @@ const T = {
     doc_3: '比賽當日需攜帶原始證件（身分證、駕照、護照或居留證）',
     reg_methods_title: '報名方式',
     step1_title: '線上報名', step1_desc: '至本網站填寫線上報名表單（Google 表單）',
-    step2_title: '郵寄報名', step2_desc: '下載報名表，寄至：114061 台北市內湖區文湖街88號2樓（信封請註明「115勞工之星歌唱大賽」）',
+    step2_title: '郵寄報名', step2_desc: '下載報名表，寄至：103台北市大同區涼州街6號2樓之2（信封請註明「115勞工之星歌唱大賽」）',
     step3_title: 'Email / 傳真 / Line', step3_desc: 'Email：ntpcstar2026@gmail.com<br>傳真：(02)2700-3149<br>Line：@634edkrg',
     th_round: '賽事', th_group: '組別', th_date: '日期', th_time: '時間', th_venue: '地點',
     prelim: '初賽', semi: '複賽', final: '決賽', all_groups: '三組同場',
@@ -1502,10 +1551,10 @@ const T = {
     register_vitality_alert: '活力之星組報名連結尚未設定', register_charm_alert: '魅力之星組報名連結尚未設定', register_migrant_alert: '移工之星組報名連結尚未設定', register_paper_alert: '紙本報名檔案尚未設定', register_form_alert: 'Google表單連結尚未設定', register_download_alert: '報名表下載連結尚未設定',
     btn_register: '線上報名表單', btn_download: '下載報名表',
     contact_title: '聯絡資訊', lbl_phone: '電話', lbl_fax: '傳真', lbl_email: 'Email', lbl_line: 'LINE 官方帳號', lbl_addr: '承辦單位地址',
-    addr_val: '114061 台北市內湖區文湖街88號2樓<br>上多利國際娛樂有限公司',
+    addr_val: '103台北市大同區涼州街6號2樓之2<br>榮樂文創有限公司',
     footer_title: '115年勞工之星歌唱大賽｜典唱新北20年',
     footer_org: '主辦單位：新北市政府勞工局',
-    footer_exec: '承辦單位：上多利國際娛樂有限公司',
+    footer_exec: '承辦單位：榮樂文創有限公司',
     footer_copy: '© 2026 新北市政府勞工局 All Rights Reserved.'
   },
   en: {
@@ -1513,6 +1562,7 @@ const T = {
     org_short: 'New Taipei City Labor Affairs Bureau',
     event_short: '2026 Labor Star Singing Contest',
     loader_title: 'Labor Star Singing Contest', loader_sub: 'THE STAGE IS OPENING', loader_loading: 'LOADING',
+    org_support_title: 'Supervising Organizations', org_host_title: 'Organizer', org_exec_title: 'Executing Unit',
     theme_dark: 'Dark Mode', theme_dark_mobile: 'Switch to Dark Mode',
     quiz_title: 'Find Your Competition Group',
     quiz_sub: 'No need to compare every eligibility line yourself. Answer two quick questions and we will suggest the best group for you.',
@@ -1570,7 +1620,7 @@ const T = {
     doc_3: 'Original documents must be brought on the contest day (ID card, driver’s license, passport, or residence permit)',
     reg_methods_title: 'How to Register',
     step1_title: 'Online Registration', step1_desc: 'Fill out the online registration form on this website (Google Form)',
-    step2_title: 'Mail Registration', step2_desc: 'Download the form and mail it to: 2F, No. 88, Wenhu St., Neihu Dist., Taipei 114061 (please mark “2026 Labor Star Singing Contest” on the envelope)',
+    step2_title: 'Mail Registration', step2_desc: 'Download the form and mail it to: 2F-2, No. 6, Liangzhou St., Datong Dist., Taipei City 103 (please mark “2026 Labor Star Singing Contest” on the envelope)',
     step3_title: 'Email / Fax / Line', step3_desc: 'Email: ntpcstar2026@gmail.com<br>Fax: (02)2700-3149<br>Line: @634edkrg',
     th_round: 'Round', th_group: 'Group', th_date: 'Date', th_time: 'Time', th_venue: 'Venue',
     prelim: 'Preliminary', semi: 'Semi-Final', final: 'Final', all_groups: 'All Groups',
@@ -1635,10 +1685,10 @@ const T = {
     register_vitality_alert: 'The registration link for the Vitality Star Group has not been set yet', register_charm_alert: 'The registration link for the Charm Star Group has not been set yet', register_migrant_alert: 'The registration link for the Migrant Star Group has not been set yet', register_paper_alert: 'The paper registration file has not been set yet', register_form_alert: 'The Google Form link has not been set yet', register_download_alert: 'The download link for the registration form has not been set yet',
     btn_register: 'Online Registration Form', btn_download: 'Download Registration Form',
     contact_title: 'Contact Information', lbl_phone: 'Phone', lbl_fax: 'Fax', lbl_email: 'Email', lbl_line: 'Official LINE Account', lbl_addr: 'Organizer Address',
-    addr_val: '2F, No. 88, Wenhu St., Neihu Dist., Taipei 114061<br>Shangduo International Entertainment Co., Ltd.',
+    addr_val: '2F-2, No. 6, Liangzhou St., Datong Dist., Taipei City 103<br>Rong Le Cultural Creative Co., Ltd.',
     footer_title: '2026 Labor Star Singing Contest | 20 Years of Singing in New Taipei',
     footer_org: 'Organizer: New Taipei City Labor Affairs Bureau',
-    footer_exec: 'Executing Unit: Shangduo International Entertainment Co., Ltd.',
+    footer_exec: 'Executing Unit: Rong Le Cultural Creative Co., Ltd.',
     footer_copy: '© 2026 New Taipei City Labor Affairs Bureau. All Rights Reserved.'
   },
   vi: {
@@ -1686,7 +1736,7 @@ const T = {
     doc_3: 'Ngày thi cần mang theo giấy tờ gốc (CMND, bằng lái xe, hộ chiếu hoặc giấy cư trú)',
     reg_methods_title: 'Phương Thức Đăng Ký',
     step1_title: 'Đăng Ký Online', step1_desc: 'Điền vào biểu mẫu đăng ký trực tuyến trên website này (Google Form)',
-    step2_title: 'Đăng Ký Qua Bưu Điện', step2_desc: 'Tải mẫu đơn và gửi đến: 2F, 88 Wunhu St., Neihu, Taipei 114061 (Ghi "115 Labor Star Singing Contest")',
+    step2_title: 'Đăng Ký Qua Bưu Điện', step2_desc: 'Tải mẫu đơn và gửi đến: 2F-2, No. 6, Liangzhou St., Datong Dist., Taipei City 103 (Ghi "115 Labor Star Singing Contest")',
     step3_title: 'Email / Fax / Line', step3_desc: 'Email: ntpcstar2026@gmail.com<br>Fax: (02)2700-3149<br>Line: @634edkrg',
     th_round: 'Vòng Thi', th_group: 'Nhóm', th_date: 'Ngày', th_time: 'Giờ', th_venue: 'Địa Điểm',
     prelim: 'Sơ Khảo', semi: 'Bán Kết', final: 'Chung Kết', all_groups: 'Ba Nhóm Cùng Thi',
@@ -1751,10 +1801,10 @@ const T = {
     register_vitality_alert: 'Liên kết đăng ký của nhóm Năng Động vẫn chưa được thiết lập', register_charm_alert: 'Liên kết đăng ký của nhóm Quyến Rũ vẫn chưa được thiết lập', register_migrant_alert: 'Liên kết đăng ký của nhóm Di Trú vẫn chưa được thiết lập', register_paper_alert: 'Tệp hồ sơ đăng ký bản giấy vẫn chưa được thiết lập', register_form_alert: 'Liên kết Google Form vẫn chưa được thiết lập', register_download_alert: 'Liên kết tải biểu mẫu vẫn chưa được thiết lập',
     btn_register: 'Đăng Ký Online', btn_download: 'Tải Mẫu Đơn',
     contact_title: 'Thông Tin Liên Hệ', lbl_phone: 'Điện Thoại', lbl_fax: 'Fax', lbl_email: 'Email', lbl_line: 'Tài Khoản LINE Chính Thức', lbl_addr: 'Địa Chỉ Đơn Vị Thực Hiện',
-    addr_val: '2F, 88 Wunhu St., Neihu Dist., Taipei 114061<br>Shangduo International Entertainment Co., Ltd.',
+    addr_val: '2F-2, No. 6, Liangzhou St., Datong Dist., Taipei City 103<br>Rong Le Cultural Creative Co., Ltd.',
     footer_title: 'Cuộc Thi Ngôi Sao Lao Động 2026｜20 Năm Hát Vang Tân Bắc',
     footer_org: 'Ban Tổ Chức: Cục Lao Động Thành Phố Tân Bắc',
-    footer_exec: 'Đơn Vị Thực Hiện: Shangduo International Entertainment Co., Ltd.',
+    footer_exec: 'Đơn Vị Thực Hiện: Rong Le Cultural Creative Co., Ltd.',
     footer_copy: '© 2026 Cục Lao Động TP. Tân Bắc. Bảo lưu mọi quyền.'
   },
   th: {
@@ -1867,10 +1917,10 @@ const T = {
     register_vitality_alert: 'ยังไม่ได้ตั้งค่าลิงก์สมัครกลุ่มดาวพลัง', register_charm_alert: 'ยังไม่ได้ตั้งค่าลิงก์สมัครกลุ่มดาวเสน่ห์', register_migrant_alert: 'ยังไม่ได้ตั้งค่าลิงก์สมัครกลุ่มแรงงานต่างด้าว', register_paper_alert: 'ยังไม่ได้ตั้งค่าไฟล์เอกสารสมัครแบบกระดาษ', register_form_alert: 'ยังไม่ได้ตั้งค่าลิงก์ Google Form', register_download_alert: 'ยังไม่ได้ตั้งค่าลิงก์ดาวน์โหลดใบสมัคร',
     btn_register: 'สมัครออนไลน์', btn_download: 'ดาวน์โหลดใบสมัคร',
     contact_title: 'ข้อมูลติดต่อ', lbl_phone: 'โทรศัพท์', lbl_fax: 'แฟกซ์', lbl_email: 'อีเมล', lbl_line: 'บัญชี LINE ทางการ', lbl_addr: 'ที่อยู่หน่วยงาน',
-    addr_val: 'ชั้น 2, 88 ถนนเหวินหู, เขตเน่ยหู, ไทเป 114061<br>Shangduo International Entertainment Co., Ltd.',
+    addr_val: '2F-2, No. 6, Liangzhou St., Datong Dist., Taipei City 103<br>Rong Le Cultural Creative Co., Ltd.',
     footer_title: 'การแข่งขันดาวแรงงาน 2026｜20 ปี เสียงเพลงแห่งนิวไทเป',
     footer_org: 'ผู้จัด: สำนักงานแรงงาน เมืองนิวไทเป',
-    footer_exec: 'ผู้ดำเนินการ: Shangduo International Entertainment Co., Ltd.',
+    footer_exec: 'ผู้ดำเนินการ: Rong Le Cultural Creative Co., Ltd.',
     footer_copy: '© 2026 สำนักงานแรงงาน เมืองนิวไทเป สงวนสิทธิ์ทั้งหมด'
   },
   ph: {
@@ -1918,7 +1968,7 @@ const T = {
     doc_3: 'Sa araw ng paligsahan, magdala ng orihinal na dokumento (ID, lisensya, pasaporte o permit)',
     reg_methods_title: 'Paraan ng Pagpaparehistro',
     step1_title: 'Online Registration', step1_desc: 'Punan ang online registration form sa website na ito (Google Form)',
-    step2_title: 'Pagpapadala sa Koreo', step2_desc: 'I-download ang form at ipadala sa: 2F, 88 Wunhu St., Neihu, Taipei 114061 (isulat "115 Labor Star Singing Contest")',
+    step2_title: 'Pagpapadala sa Koreo', step2_desc: 'I-download ang form at ipadala sa: 2F-2, No. 6, Liangzhou St., Datong Dist., Taipei City 103 (isulat "115 Labor Star Singing Contest")',
     step3_title: 'Email / Fax / Line', step3_desc: 'Email: ntpcstar2026@gmail.com<br>Fax: (02)2700-3149<br>Line: @634edkrg',
     th_round: 'Rounds', th_group: 'Grupo', th_date: 'Petsa', th_time: 'Oras', th_venue: 'Lugar',
     prelim: 'Preliminary', semi: 'Semi-Final', final: 'Final', all_groups: 'Lahat ng Grupo',
@@ -1983,10 +2033,10 @@ const T = {
     register_vitality_alert: 'Hindi pa nakatakda ang registration link para sa Vitality Group', register_charm_alert: 'Hindi pa nakatakda ang registration link para sa Charm Group', register_migrant_alert: 'Hindi pa nakatakda ang registration link para sa Migrant Group', register_paper_alert: 'Hindi pa nakatakda ang paper registration file', register_form_alert: 'Hindi pa nakatakda ang Google Form link', register_download_alert: 'Hindi pa nakatakda ang download link ng form',
     btn_register: 'Online Registration', btn_download: 'I-download ang Form',
     contact_title: 'Impormasyon sa Pakikipag-ugnayan', lbl_phone: 'Telepono', lbl_fax: 'Fax', lbl_email: 'Email', lbl_line: 'Opisyal na LINE Account', lbl_addr: 'Address ng Executing Unit',
-    addr_val: '2F, 88 Wunhu St., Neihu District, Taipei 114061<br>Shangduo International Entertainment Co., Ltd.',
+    addr_val: '2F-2, No. 6, Liangzhou St., Datong Dist., Taipei City 103<br>Rong Le Cultural Creative Co., Ltd.',
     footer_title: '2026 Labor Star Singing Contest｜20 Taon ng Awit sa New Taipei',
     footer_org: 'Organizer: Kawanihan ng Paggawa ng Lungsod ng New Taipei',
-    footer_exec: 'Executing Unit: Shangduo International Entertainment Co., Ltd.',
+    footer_exec: 'Executing Unit: Rong Le Cultural Creative Co., Ltd.',
     footer_copy: '© 2026 New Taipei City Government Labor Affairs Bureau. All Rights Reserved.'
   },
   id: {
@@ -2034,7 +2084,7 @@ const T = {
     doc_3: 'Pada hari kompetisi bawa dokumen asli (KTP, SIM, paspor atau izin tinggal)',
     reg_methods_title: 'Cara Pendaftaran',
     step1_title: 'Pendaftaran Online', step1_desc: 'Isi formulir pendaftaran online di website ini (Google Form)',
-    step2_title: 'Pendaftaran via Pos', step2_desc: 'Unduh formulir dan kirim ke: Lantai 2, 88 Wunhu St., Distrik Neihu, Taipei 114061 (tulis "115 Labor Star Singing Contest")',
+    step2_title: 'Pendaftaran via Pos', step2_desc: 'Unduh formulir dan kirim ke: 2F-2, No. 6, Liangzhou St., Datong Dist., Taipei City 103 (tulis "115 Labor Star Singing Contest")',
     step3_title: 'Email / Faks / Line', step3_desc: 'Email: ntpcstar2026@gmail.com<br>Faks: (02)2700-3149<br>Line: @634edkrg',
     th_round: 'Babak', th_group: 'Kelompok', th_date: 'Tanggal', th_time: 'Waktu', th_venue: 'Lokasi',
     prelim: 'Babak Penyisihan', semi: 'Semi-Final', final: 'Final', all_groups: 'Semua Grup',
@@ -2099,10 +2149,10 @@ const T = {
     register_vitality_alert: 'Tautan pendaftaran Grup Vitalitas belum diatur', register_charm_alert: 'Tautan pendaftaran Grup Pesona belum diatur', register_migrant_alert: 'Tautan pendaftaran Grup Migran belum diatur', register_paper_alert: 'Berkas pendaftaran cetak belum diatur', register_form_alert: 'Tautan Google Form belum diatur', register_download_alert: 'Tautan unduh formulir belum diatur',
     btn_register: 'Daftar Online', btn_download: 'Unduh Formulir',
     contact_title: 'Informasi Kontak', lbl_phone: 'Telepon', lbl_fax: 'Faks', lbl_email: 'Email', lbl_line: 'Akun LINE Resmi', lbl_addr: 'Alamat Unit Pelaksana',
-    addr_val: 'Lantai 2, 88 Wunhu St., Distrik Neihu, Taipei 114061<br>Shangduo International Entertainment Co., Ltd.',
+    addr_val: '2F-2, No. 6, Liangzhou St., Datong Dist., Taipei City 103<br>Rong Le Cultural Creative Co., Ltd.',
     footer_title: 'Kontes Bintang Buruh 2026｜20 Tahun Bernyanyi di New Taipei',
     footer_org: 'Penyelenggara: Dinas Ketenagakerjaan Kota New Taipei',
-    footer_exec: 'Unit Pelaksana: Shangduo International Entertainment Co., Ltd.',
+    footer_exec: 'Unit Pelaksana: Rong Le Cultural Creative Co., Ltd.',
     footer_copy: '© 2026 Dinas Ketenagakerjaan Kota New Taipei. Hak Cipta Dilindungi.'
   }
 };
@@ -2373,22 +2423,31 @@ function setupAnimatedAccordions(selector, bodySelector) {
   const accordions = Array.from(document.querySelectorAll(selector));
   if (!accordions.length) return;
 
+  const stopBodyAnimation = body => {
+    body.getAnimations?.().forEach(animation => animation.cancel());
+  };
+
   const closeItem = item => {
     const body = item.querySelector(bodySelector);
     if (!body || !item.open) return;
-    body.style.height = `${body.scrollHeight}px`;
-    requestAnimationFrame(() => {
-      body.style.transition = 'height .3s ease';
-      body.style.height = '0px';
-    });
-    const onEnd = event => {
-      if (event.propertyName !== 'height') return;
-      body.removeEventListener('transitionend', onEnd);
+    stopBodyAnimation(body);
+    const startHeight = body.offsetHeight || body.scrollHeight;
+    body.style.height = `${startHeight}px`;
+    body.style.opacity = '1';
+    body.style.transform = 'translateY(0)';
+    const animation = body.animate(
+      [
+        { height: `${startHeight}px`, opacity: 1, transform: 'translateY(0)' },
+        { height: '0px', opacity: 0, transform: 'translateY(-6px)' }
+      ],
+      { duration: 240, easing: 'cubic-bezier(.32,0,.2,1)' }
+    );
+    animation.onfinish = () => {
       item.open = false;
-      body.style.transition = '';
-      body.style.height = '';
+      body.style.height = '0px';
+      body.style.opacity = '0';
+      body.style.transform = 'translateY(-6px)';
     };
-    body.addEventListener('transitionend', onEnd);
   };
 
   const openItem = item => {
@@ -2398,25 +2457,38 @@ function setupAnimatedAccordions(selector, bodySelector) {
       if (other !== item) closeItem(other);
     });
     item.open = true;
+    stopBodyAnimation(body);
     body.style.height = '0px';
-    requestAnimationFrame(() => {
-      body.style.transition = 'height .32s ease';
-      body.style.height = `${body.scrollHeight}px`;
-    });
-    const onEnd = event => {
-      if (event.propertyName !== 'height') return;
-      body.removeEventListener('transitionend', onEnd);
-      body.style.transition = '';
+    body.style.opacity = '0';
+    body.style.transform = 'translateY(-6px)';
+    const endHeight = body.scrollHeight;
+    const animation = body.animate(
+      [
+        { height: '0px', opacity: 0, transform: 'translateY(-6px)' },
+        { height: `${endHeight}px`, opacity: 1, transform: 'translateY(0)' }
+      ],
+      { duration: 300, easing: 'cubic-bezier(.22,1,.36,1)' }
+    );
+    animation.onfinish = () => {
       body.style.height = 'auto';
+      body.style.opacity = '1';
+      body.style.transform = 'translateY(0)';
     };
-    body.addEventListener('transitionend', onEnd);
   };
 
   accordions.forEach(item => {
     const summary = item.querySelector('summary');
     const body = item.querySelector(bodySelector);
     if (!summary || !body) return;
-    body.style.height = item.open ? 'auto' : '0px';
+    if (item.open) {
+      body.style.height = 'auto';
+      body.style.opacity = '1';
+      body.style.transform = 'translateY(0)';
+    } else {
+      body.style.height = '0px';
+      body.style.opacity = '0';
+      body.style.transform = 'translateY(-6px)';
+    }
     summary.addEventListener('click', event => {
       event.preventDefault();
       if (item.open) closeItem(item);
