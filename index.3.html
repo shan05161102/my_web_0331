@@ -1,0 +1,1852 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>115年勞工之星歌唱大賽｜典唱新北20年</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--gold:#D8AF6E;--gold2:#FFD700;--dark:#060606;--dark2:#111;--dark3:#1a1a1a;--text:#DDD;--text2:#AAA;--scroll-progress:0%;--hero-shift:0px}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans TC','Noto Sans',sans-serif;background:var(--dark);color:var(--text);line-height:1.7;word-break:break-word}
+body.loading{overflow:hidden}
+a{color:var(--gold);text-decoration:none}
+.page-loader{position:fixed;inset:0;z-index:2000;display:grid;place-items:center;background:radial-gradient(circle at top,rgba(216,175,110,.18),transparent 40%),linear-gradient(180deg,#050505 0%,#0f0b08 100%);transition:opacity .7s ease,visibility .7s ease;overflow:hidden}
+.page-loader.hidden{opacity:0;visibility:hidden}
+.loader-door{position:absolute;top:0;bottom:0;width:50.5%;background:linear-gradient(180deg,#120d09 0%,#050505 100%);z-index:1;transition:transform 1.15s cubic-bezier(.77,0,.18,1),box-shadow 1.15s ease}
+.loader-door::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(216,175,110,.08),transparent 18%,transparent 82%,rgba(216,175,110,.05));opacity:.8}
+.loader-door::after{content:'';position:absolute;top:0;bottom:0;width:1px;background:rgba(255,220,160,.2)}
+.loader-door.left{left:0;border-right:1px solid rgba(216,175,110,.12);box-shadow:inset -18px 0 38px rgba(0,0,0,.5)}
+.loader-door.left::after{right:0}
+.loader-door.right{right:0;border-left:1px solid rgba(216,175,110,.12);box-shadow:inset 18px 0 38px rgba(0,0,0,.5)}
+.loader-door.right::after{left:0}
+.page-loader.opening .loader-door.left{transform:translateX(-102%)}
+.page-loader.opening .loader-door.right{transform:translateX(102%)}
+.loader-core{text-align:center;padding:24px;position:relative;z-index:2;opacity:0;transform:translateY(10px);transition:opacity .45s ease,transform .45s ease}
+.page-loader.show-progress .loader-core{opacity:1;transform:translateY(0)}
+.loader-ring{width:92px;height:92px;border-radius:50%;margin:0 auto 22px;position:relative;border:1px solid rgba(216,175,110,.18);box-shadow:0 0 0 1px rgba(255,255,255,.03) inset}
+.loader-ring::before,.loader-ring::after{content:'';position:absolute;inset:0;border-radius:50%}
+.loader-ring::before{border:2px solid transparent;border-top-color:var(--gold);border-right-color:rgba(216,175,110,.45);animation:spinLoader 1.2s linear infinite}
+.loader-ring::after{inset:12px;border:1px solid rgba(216,175,110,.25);animation:pulseLoader 1.6s ease-in-out infinite}
+.loader-title{font-size:1.15rem;font-weight:800;color:var(--gold);letter-spacing:1px}
+.loader-sub{font-size:.82rem;color:var(--text2);margin-top:8px;letter-spacing:2px}
+.loader-progress-wrap{width:min(320px,72vw);margin:18px auto 0}
+.loader-progress-top{display:flex;justify-content:space-between;align-items:center;gap:14px;font-size:.82rem;color:var(--text2);margin-bottom:8px}
+.loader-progress-num{font-size:1rem;color:var(--gold);font-weight:800;min-width:52px;text-align:right}
+.loader-progress-bar{height:8px;border-radius:999px;background:rgba(255,255,255,.08);overflow:hidden;box-shadow:inset 0 0 0 1px rgba(216,175,110,.1)}
+.loader-progress-fill{height:100%;width:0;background:linear-gradient(90deg,var(--gold),#ffe6ad);box-shadow:0 0 16px rgba(216,175,110,.45);transition:width .08s linear}
+.scroll-progress{position:fixed;top:0;left:0;height:3px;width:var(--scroll-progress);z-index:1500;background:linear-gradient(90deg,var(--gold),#ffe6ad);box-shadow:0 0 16px rgba(216,175,110,.55)}
+#header{position:fixed;top:0;left:0;width:100%;z-index:999;background:rgba(6,6,6,.97);border-bottom:1px solid #222}
+.header-inner{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo-text{font-size:1rem;font-weight:700;color:var(--gold);line-height:1.3;min-width:0;max-width:260px}
+.logo-text small{display:block;font-size:.72rem;color:var(--text2);font-weight:400}
+nav{display:flex;align-items:center;gap:2px;flex-wrap:wrap;justify-content:flex-end}
+nav a{padding:6px 11px;border-radius:4px;font-size:.88rem;color:var(--text);transition:.2s;line-height:1.35;text-align:center}
+nav a:hover{background:#222;color:var(--gold)}
+.lang-switcher{display:flex;align-items:center;margin-left:10px;border-left:1px solid #333;padding-left:10px}
+.lang-select{min-width:146px;padding:8px 34px 8px 12px;border-radius:8px;border:1px solid rgba(216,175,110,.35);background:rgba(16,16,16,.95);color:var(--text);font-size:.82rem;line-height:1.2;cursor:pointer;appearance:none;-webkit-appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--gold) 50%),linear-gradient(135deg,var(--gold) 50%,transparent 50%);background-position:calc(100% - 18px) calc(50% - 3px),calc(100% - 12px) calc(50% - 3px);background-size:6px 6px,6px 6px;background-repeat:no-repeat}
+.lang-select:hover,.lang-select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 1px rgba(216,175,110,.3)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px}
+.hamburger span{display:block;width:24px;height:2px;background:var(--text)}
+#mobile-nav{display:none;flex-direction:column;background:rgba(6,6,6,.98);padding:16px 20px;border-top:1px solid #222}
+#mobile-nav.open{display:flex}
+#mobile-nav a{padding:12px 0;border-bottom:1px solid #1a1a1a;color:var(--text)}
+.mobile-lang{padding-top:16px}
+.mobile-lang .lang-select{width:100%}
+
+#hero{margin-top:64px;position:relative;min-height:640px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:linear-gradient(180deg,#050505 0%,#120b06 55%,#080808 100%)}
+.hero-video{position:absolute;inset:-2%;width:104%;height:104%;object-fit:cover;object-position:center 42%;opacity:.58;filter:saturate(1.1) contrast(1.06) brightness(.78);transform:scale(1.015);animation:heroVideoDrift 20s ease-in-out infinite alternate}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.08) 0%,rgba(0,0,0,.28) 48%,rgba(0,0,0,.46) 100%),radial-gradient(ellipse at 20% 50%,rgba(216,175,110,.18) 0%,transparent 62%),radial-gradient(ellipse at 80% 30%,rgba(216,175,110,.12) 0%,transparent 54%);animation:heroGlow 12s ease-in-out infinite}
+.hero-bg::before,.hero-bg::after{content:'';position:absolute;border-radius:999px;filter:blur(10px);pointer-events:none}
+.hero-bg::before{width:34vw;height:34vw;min-width:260px;min-height:260px;left:-6vw;top:14%;background:radial-gradient(circle,rgba(255,208,120,.18) 0%,rgba(255,208,120,.06) 34%,transparent 72%);animation:orbFloatA 14s ease-in-out infinite}
+.hero-bg::after{width:28vw;height:28vw;min-width:220px;min-height:220px;right:-4vw;bottom:4%;background:radial-gradient(circle,rgba(255,180,90,.12) 0%,rgba(255,180,90,.04) 38%,transparent 74%);animation:orbFloatB 16s ease-in-out infinite}
+.hero-sheen{position:absolute;inset:-8% auto -8% -14%;width:30%;background:linear-gradient(90deg,transparent 0%,rgba(255,226,171,.03) 44%,rgba(255,232,185,.1) 52%,rgba(255,226,171,.03) 60%,transparent 100%);transform:skewX(-16deg);filter:blur(10px);animation:heroSweep 11s linear infinite;pointer-events:none;z-index:0}
+.hero-content{position:relative;z-index:1;text-align:center;padding:60px 20px;animation:heroContentIn 1.1s ease-out both;transform:translateY(calc(var(--hero-shift) * .35))}
+.hero-sub{font-size:.9rem;letter-spacing:3px;color:var(--gold);margin-bottom:14px}
+.hero-title-main{font-size:clamp(2rem,5vw,3.6rem);font-weight:800;color:var(--gold);line-height:1.2;max-width:13ch;margin:0 auto}
+.hero-title-sub{font-size:clamp(1.1rem,2.5vw,1.9rem);font-weight:600;color:var(--text2);margin-top:8px;max-width:20ch;margin-left:auto;margin-right:auto}
+.hero-en{font-size:clamp(.8rem,1.8vw,1rem);color:#666;letter-spacing:2px;margin-top:12px}
+.hero-badges{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+.hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:28px;align-items:stretch}
+.badge{padding:7px 18px;border:1px solid rgba(216,175,110,.9);border-radius:30px;font-size:.85rem;color:var(--gold);background:rgba(0,0,0,.24);backdrop-filter:blur(8px);text-align:center;line-height:1.35}
+.countdown-wrap{margin-top:32px}
+.cd-label{font-size:.82rem;color:var(--text2);margin-bottom:10px;letter-spacing:2px}
+.cd-boxes{display:flex;gap:10px;justify-content:center}
+.cb{background:rgba(0,0,0,.34);border:1px solid rgba(216,175,110,.85);border-radius:8px;padding:10px 16px;text-align:center;min-width:64px;backdrop-filter:blur(10px);box-shadow:0 10px 28px rgba(0,0,0,.18)}
+.cb-num{font-size:1.7rem;font-weight:800;color:var(--gold);line-height:1}
+.cb-unit{font-size:.68rem;color:var(--text2);margin-top:4px}
+.hero-facts{position:relative;z-index:1;max-width:1080px;margin:-64px auto 0;padding:0 20px;transform:translateY(calc(var(--hero-shift) * .18))}
+.fact-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.fact-card{background:rgba(10,10,10,.76);backdrop-filter:blur(14px);border:1px solid rgba(216,175,110,.3);border-radius:14px;padding:18px 20px;box-shadow:0 18px 42px rgba(0,0,0,.32);animation:factFloat 6.5s ease-in-out infinite;min-height:148px}
+.fact-card:nth-child(2){animation-delay:.8s}
+.fact-card:nth-child(3){animation-delay:1.6s}
+.fact-card:nth-child(4){animation-delay:2.4s}
+.fact-kicker{font-size:.72rem;letter-spacing:1.5px;color:var(--text2);text-transform:uppercase;line-height:1.45}
+.fact-value{font-size:1.55rem;font-weight:800;color:var(--gold);margin-top:7px;line-height:1.2}
+.fact-desc{font-size:.84rem;color:var(--text2);margin-top:6px;line-height:1.6}
+
+@keyframes heroVideoDrift{
+  0%{transform:scale(1.015) translate3d(0,0,0)}
+  50%{transform:scale(1.045) translate3d(-.8%,.5%,0)}
+  100%{transform:scale(1.03) translate3d(.8%,-.5%,0)}
+}
+@keyframes heroGlow{
+  0%,100%{transform:scale(1);opacity:1}
+  50%{transform:scale(1.02);opacity:.95}
+}
+@keyframes heroSweep{
+  0%{transform:translateX(-12%) skewX(-16deg)}
+  100%{transform:translateX(360%) skewX(-16deg)}
+}
+@keyframes orbFloatA{
+  0%,100%{transform:translate3d(0,0,0)}
+  50%{transform:translate3d(6%,8%,0)}
+}
+@keyframes orbFloatB{
+  0%,100%{transform:translate3d(0,0,0)}
+  50%{transform:translate3d(-8%,-10%,0)}
+}
+@keyframes heroContentIn{
+  from{opacity:0;transform:translateY(26px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@keyframes factFloat{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-8px)}
+}
+
+.section{padding:68px 20px}
+.section-inner{max-width:1080px;margin:0 auto}
+.section.alt{background:var(--dark2)}
+.reveal{opacity:0;transform:translateY(34px) scale(.985);transition:opacity .75s ease,transform .75s ease}
+.reveal.in-view{opacity:1;transform:translateY(0) scale(1)}
+.reveal.delay-1{transition-delay:.08s}
+.reveal.delay-2{transition-delay:.16s}
+.reveal.delay-3{transition-delay:.24s}
+.sec-title{text-align:center;margin-bottom:44px}
+.sec-title h2{font-size:clamp(1.4rem,3vw,2rem);font-weight:800;color:var(--gold);position:relative;display:inline-block;padding-bottom:14px}
+.sec-title h2::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:50px;height:3px;background:var(--gold)}
+.sec-title p{color:var(--text2);margin-top:10px;font-size:.9rem}
+hr.div{border:none;border-top:1px solid #1a1a1a;margin:0}
+
+.abox{background:linear-gradient(135deg,rgba(216,175,110,.1),rgba(216,175,110,.05));border:1px solid rgba(216,175,110,.35);border-radius:10px;padding:20px 24px;margin-bottom:22px}
+.abox h3{color:var(--gold);font-size:1rem;margin-bottom:8px}
+.abox ul{padding-left:18px;color:var(--text2)}
+.abox ul li{margin-bottom:5px;font-size:.92rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.card{background:var(--dark3);border:1px solid #2a2a2a;border-radius:10px;padding:24px;transition:.2s}
+.card:hover{border-color:var(--gold);transform:translateY(-2px)}
+.card-icon{font-size:1.8rem;margin-bottom:10px}
+.card h3{color:var(--gold);font-size:1rem;margin-bottom:8px;font-weight:700}
+.card p,.card li{color:var(--text2);font-size:.9rem;line-height:1.8}
+.card ul{padding-left:16px}
+.highlight-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.highlight-card{background:linear-gradient(135deg,rgba(216,175,110,.12),rgba(255,255,255,.03));border:1px solid rgba(216,175,110,.22);border-radius:14px;padding:24px;min-height:236px}
+.highlight-eyebrow{font-size:.74rem;letter-spacing:1.5px;color:var(--gold);text-transform:uppercase}
+.highlight-card h3{font-size:1.08rem;color:var(--text);margin:10px 0 8px;line-height:1.45}
+.highlight-card p{font-size:.9rem;color:var(--text2);line-height:1.8}
+.news-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.news-card{background:linear-gradient(145deg,rgba(255,255,255,.04),rgba(216,175,110,.06));border:1px solid rgba(216,175,110,.18);border-radius:14px;padding:22px;position:relative;overflow:hidden}
+.news-card::after{content:'';position:absolute;inset:auto 0 0 0;height:3px;background:linear-gradient(90deg,transparent,rgba(216,175,110,.8),transparent);opacity:.5}
+.news-meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.news-pill{display:inline-flex;align-items:center;padding:4px 10px;border-radius:999px;font-size:.75rem;font-weight:700;background:rgba(216,175,110,.12);color:var(--gold);border:1px solid rgba(216,175,110,.24)}
+.news-date{font-size:.8rem;color:var(--text2)}
+.news-card h3{font-size:1.02rem;color:var(--text);margin-bottom:8px;line-height:1.5}
+.news-card p{font-size:.9rem;color:var(--text2);line-height:1.8}
+.rules-shell{display:grid;grid-template-columns:260px minmax(0,1fr);gap:20px;align-items:start}
+.rules-tabs{display:grid;gap:10px;position:sticky;top:88px}
+.rule-tab{width:100%;padding:14px 16px;border-radius:12px;border:1px solid #2b2b2b;background:rgba(255,255,255,.03);color:var(--text2);text-align:left;font:inherit;font-weight:700;cursor:pointer;transition:.2s}
+.rule-tab:hover{border-color:rgba(216,175,110,.45);color:var(--text)}
+.rule-tab.active{background:linear-gradient(135deg,rgba(216,175,110,.18),rgba(216,175,110,.08));border-color:rgba(216,175,110,.5);color:var(--gold)}
+.rules-panels{position:relative}
+.detail-card{background:var(--dark3);border:1px solid #262626;border-radius:14px;padding:24px;display:none}
+.detail-card.active{display:block;animation:fadePanel .24s ease-out}
+.detail-card h3{font-size:1.02rem;color:var(--gold);margin-bottom:12px}
+.detail-card ul{padding-left:18px}
+.detail-card li{color:var(--text2);font-size:.9rem;line-height:1.8;margin-bottom:8px}
+.venue-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.venue-card{background:rgba(255,255,255,.03);border:1px solid #262626;border-radius:14px;padding:22px}
+.venue-card h3{font-size:1rem;color:var(--gold);margin-bottom:8px}
+.venue-card p{font-size:.9rem;color:var(--text2);line-height:1.8}
+.notice-list{display:grid;gap:12px}
+.notice-item{background:rgba(255,255,255,.03);border:1px solid #242424;border-radius:12px;overflow:hidden}
+.notice-item summary{list-style:none;cursor:pointer;padding:16px 18px;color:var(--text);font-size:.94rem;font-weight:700;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.notice-item summary::-webkit-details-marker{display:none}
+.notice-item summary::after{content:'+';font-size:1.2rem;color:var(--gold);flex-shrink:0}
+.notice-item[open] summary::after{content:'−'}
+.notice-body{padding:0 18px 16px;color:var(--text2);font-size:.9rem;line-height:1.8}
+.register-grid{display:grid;grid-template-columns:repeat(3,minmax(220px,240px));justify-content:center;gap:18px 20px;margin:26px auto 0;align-items:start;max-width:820px}
+.register-card{background:var(--dark2);border:1px solid rgba(216,175,110,.16);border-radius:14px;padding:20px 18px;text-align:left;min-width:0;min-height:100%}
+.register-card h3{font-size:1rem;color:var(--gold);margin-bottom:8px}
+.register-card p{font-size:.85rem;color:var(--text2);line-height:1.72;margin-bottom:14px}
+.register-card .btn{width:100%}
+.register-card.paper{grid-column:1/-1;width:min(240px,100%);max-width:240px;justify-self:center;text-align:center}
+@keyframes fadePanel{
+  from{opacity:0;transform:translateY(8px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@keyframes spinLoader{
+  to{transform:rotate(360deg)}
+}
+@keyframes pulseLoader{
+  0%,100%{transform:scale(.92);opacity:.45}
+  50%{transform:scale(1);opacity:1}
+}
+
+.steps{display:flex;flex-direction:column;gap:14px}
+.step{display:flex;gap:18px;align-items:flex-start;background:var(--dark3);border-radius:10px;padding:18px 22px;border:1px solid #222}
+.step-num{min-width:38px;height:38px;background:var(--gold);color:#000;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1rem;flex-shrink:0}
+.step h4{color:var(--gold);font-size:.95rem;margin-bottom:5px}
+.step p{color:var(--text2);font-size:.88rem}
+
+.tbl-wrap{overflow-x:auto;border-radius:10px;border:1px solid #2a2a2a}
+table{width:100%;border-collapse:collapse;background:var(--dark2);table-layout:fixed}
+th{background:rgba(216,175,110,.13);color:var(--gold);font-weight:700;padding:13px 14px;text-align:center;font-size:.88rem;white-space:nowrap}
+td{padding:11px 14px;border-top:1px solid #1f1f1f;font-size:.88rem;text-align:center;color:var(--text2);vertical-align:middle}
+tr:hover td{background:rgba(255,255,255,.02)}
+.song-col-no{width:64px}
+.song-col-title{width:auto}
+.song-col-artist{width:120px}
+.song-col-code{width:88px}
+.song-cell-no,.song-cell-artist,.song-cell-code{text-align:center}
+.song-cell-title{text-align:left;line-height:1.6}
+.tag{display:inline-block;padding:3px 10px;border-radius:12px;font-size:.76rem;font-weight:600}
+.tc{background:rgba(180,120,220,.2);color:#c890f0;border:1px solid rgba(180,120,220,.4)}
+.tv{background:rgba(36,138,204,.2);color:#70bfef;border:1px solid rgba(36,138,204,.4)}
+.tm{background:rgba(80,200,120,.2);color:#70e09a;border:1px solid rgba(80,200,120,.4)}
+.ta{background:rgba(216,175,110,.2);color:var(--gold);border:1px solid rgba(216,175,110,.4)}
+
+.score-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}
+.score-item{background:var(--dark3);border-radius:10px;padding:22px 14px;text-align:center;border:1px solid #222}
+.score-pct{font-size:2rem;font-weight:800;color:var(--gold);margin-bottom:5px}
+.score-name{font-size:.92rem;color:var(--text);font-weight:600}
+.score-en{font-size:.78rem;color:var(--text2);margin-top:4px}
+
+.prize-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:22px}
+.prize-card{background:var(--dark2);border-radius:12px;overflow:hidden;border:1px solid #222}
+.ph-charm{background:linear-gradient(135deg,rgba(180,120,220,.3),rgba(100,60,150,.3));border-bottom:2px solid #c890f0;padding:16px 22px;text-align:center}
+.ph-vitality{background:linear-gradient(135deg,rgba(36,138,204,.3),rgba(20,80,140,.3));border-bottom:2px solid #70bfef;padding:16px 22px;text-align:center}
+.ph-migrant{background:linear-gradient(135deg,rgba(80,200,120,.3),rgba(40,120,70,.3));border-bottom:2px solid #70e09a;padding:16px 22px;text-align:center}
+.ph-charm h3{color:#c890f0;font-size:1.05rem;font-weight:800}
+.ph-vitality h3{color:#70bfef;font-size:1.05rem;font-weight:800}
+.ph-migrant h3{color:#70e09a;font-size:1.05rem;font-weight:800}
+.prize-body{padding:14px 18px}
+.pr{display:flex;justify-content:space-between;align-items:center;padding:7px 10px;border-radius:5px;margin-bottom:3px}
+.pr:nth-child(odd){background:rgba(255,255,255,.03)}
+.pr .pl{font-weight:600;color:var(--text);font-size:.88rem}
+.pr .am{font-weight:700;color:var(--gold2);font-size:.9rem}
+.pr.r1 .pl{color:#FFD700}.pr.r1 .am{color:#FFD700;font-size:1rem}
+.pr.r2 .pl{color:#C0C0C0}.pr.r2 .am{color:#C0C0C0}
+.pr.r3 .pl{color:#CD7F32}.pr.r3 .am{color:#CD7F32}
+
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.ci{background:var(--dark3);border-radius:10px;padding:18px 22px;border:1px solid #222;display:flex;align-items:flex-start;gap:12px}
+.ci-icon{font-size:1.5rem;flex-shrink:0;margin-top:2px}
+.ci label{display:block;font-size:.75rem;color:var(--text2);margin-bottom:3px;letter-spacing:1px}
+.ci strong{color:var(--text);font-size:.9rem}
+
+.reg-cta{text-align:center;padding:56px 20px;background:linear-gradient(135deg,rgba(216,175,110,.07),rgba(216,175,110,.02))}
+.reg-cta h2{font-size:clamp(1.3rem,3vw,1.9rem);color:var(--gold);margin-bottom:10px}
+.reg-cta p{color:var(--text2);margin-bottom:28px}
+.reg-cta > h2,.reg-cta > p{max-width:640px;margin-left:auto;margin-right:auto}
+.btn-group{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 24px;border-radius:8px;font-size:.95rem;font-weight:700;cursor:pointer;transition:.2s;line-height:1.4;text-align:center;min-height:54px;max-width:100%;white-space:normal}
+.btn-p{background:var(--gold);color:#000}.btn-p:hover{background:var(--gold2)}
+.btn-o{border:2px solid var(--gold);color:var(--gold);background:transparent}.btn-o:hover{background:var(--gold);color:#000}
+
+footer{background:#000;border-top:1px solid #1a1a1a;padding:36px 20px;text-align:center}
+footer .ftitle{color:var(--gold);font-size:1rem;font-weight:700;margin-bottom:6px}
+footer p{color:#555;font-size:.82rem;margin-bottom:3px}
+
+.note{font-size:.8rem;color:var(--text2);background:rgba(255,255,255,.04);border-left:3px solid var(--gold);padding:10px 14px;border-radius:0 6px 6px 0;margin-top:14px}
+.song-tabs{display:flex;gap:10px;margin:0 auto 18px;flex-wrap:wrap;justify-content:center}
+.stab{padding:10px 22px;border-radius:999px;font-size:.9rem;font-weight:600;cursor:pointer;border:1px solid #333;background:#1a1a1a;color:var(--text2);transition:.2s;font-family:inherit;min-width:220px;text-align:center}
+.stab.active{background:var(--gold);color:#000;border-color:var(--gold)}
+.stab:hover:not(.active){border-color:var(--gold);color:var(--gold)}
+.song-panel{display:none}.song-panel.active{display:block}
+.song-columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+#song-search:focus{border-color:var(--gold)}
+.song-status{font-size:.84rem;color:var(--text2);margin-top:12px}
+
+body[data-lang="id"] .logo-text{max-width:220px}
+body[data-lang="id"] nav a{font-size:.82rem;padding:6px 9px}
+body[data-lang="id"] .hero-title-main{font-size:clamp(1.8rem,4.2vw,3.1rem);max-width:16ch}
+body[data-lang="id"] .hero-title-sub{font-size:clamp(1rem,2.1vw,1.6rem);max-width:24ch}
+body[data-lang="id"] .hero-actions .btn{max-width:240px;font-size:.9rem;padding:12px 18px}
+body[data-lang="id"] .fact-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+body[data-lang="id"] .fact-card{min-height:168px}
+body[data-lang="id"] .fact-kicker{font-size:.68rem;letter-spacing:1.1px}
+body[data-lang="id"] .fact-desc{font-size:.8rem}
+body[data-lang="id"] .highlight-grid{grid-template-columns:1fr}
+body[data-lang="id"] .highlight-card{min-height:auto}
+body[data-lang="id"] .highlight-card h3{font-size:1rem}
+body[data-lang="id"] .highlight-card p{font-size:.86rem;line-height:1.72}
+
+@media(max-width:768px){
+  nav,.lang-switcher{display:none}
+  .hamburger{display:flex}
+  #hero{min-height:580px}
+  .hero-video{opacity:.52;filter:saturate(1.06) contrast(1.04) brightness(.72)}
+  .hero-content{padding:44px 16px}
+  .hero-facts{margin:-42px auto 0;padding:0 16px}
+  .hero-actions{gap:10px}
+  .hero-actions .btn{width:min(100%,280px)}
+  .section{padding:56px 16px}
+  .sec-title{margin-bottom:32px}
+  .fact-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .highlight-grid{grid-template-columns:1fr}
+  .rules-shell{grid-template-columns:1fr}
+  .rules-tabs{position:static;grid-template-columns:repeat(2,minmax(0,1fr))}
+  .song-columns{grid-template-columns:1fr}
+  .stab{min-width:0;width:min(100%,320px)}
+  .register-grid,.news-grid,.venue-grid,.contact-grid{gap:14px}
+  .register-grid{grid-template-columns:repeat(2,minmax(220px,240px));max-width:520px}
+  .register-card.paper{grid-column:1/-1;max-width:240px}
+  .song-col-no{width:52px}
+  .song-col-artist{width:96px}
+  .song-col-code{width:78px}
+  .cb{min-width:52px;padding:8px 10px}
+  th,td{padding:9px 8px;font-size:.8rem}
+}
+@media(max-width:520px){
+  .fact-grid{grid-template-columns:1fr}
+  .logo-text{max-width:180px}
+  .hero-title-main,.hero-title-sub{max-width:none}
+  .rules-tabs{grid-template-columns:1fr}
+  .cd-boxes{gap:6px}
+  .cb{min-width:0;flex:1}
+  .register-grid{grid-template-columns:minmax(0,320px);max-width:320px}
+  .register-card.paper{grid-column:auto;max-width:none;width:100%}
+  .news-card,.detail-card,.register-card,.venue-card,.ci{padding:18px}
+  .loader-ring{width:78px;height:78px}
+  .loader-title{font-size:1.02rem}
+  .loader-progress-wrap{width:min(280px,82vw)}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body class="loading">
+
+<div class="page-loader" id="page-loader" aria-hidden="true">
+  <div class="loader-door left"></div>
+  <div class="loader-door right"></div>
+  <div class="loader-core">
+    <div class="loader-ring"></div>
+    <div class="loader-title" data-i18n="loader_title"></div>
+    <div class="loader-sub" data-i18n="loader_sub"></div>
+    <div class="loader-progress-wrap">
+      <div class="loader-progress-top">
+        <span data-i18n="loader_loading"></span>
+        <span class="loader-progress-num" id="loader-progress-num">0%</span>
+      </div>
+      <div class="loader-progress-bar">
+        <div class="loader-progress-fill" id="loader-progress-fill"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="scroll-progress" aria-hidden="true"></div>
+
+<header id="header">
+  <div class="header-inner">
+    <div class="logo-text">
+      <span data-i18n="org_short"></span>
+      <small data-i18n="event_short"></small>
+    </div>
+    <nav>
+      <a href="#info" data-i18n="nav_info"></a>
+      <a href="#register" data-i18n="nav_reg"></a>
+      <a href="#schedule" data-i18n="nav_sched"></a>
+      <a href="#prizes" data-i18n="nav_prize"></a>
+      <a href="#songs" data-i18n="nav_songs"></a>
+    </nav>
+    <div class="lang-switcher">
+      <select class="lang-select" aria-label="Language" onchange="setLang(this.value)">
+        <option value="zh">🇹🇼 中文</option>
+        <option value="en">🇬🇧 English</option>
+        <option value="vi">🇻🇳 Việt Nam</option>
+        <option value="th">🇹🇭 ไทย</option>
+        <option value="ph">🇵🇭 Philippines</option>
+        <option value="id">🇮🇩 Indonesia</option>
+      </select>
+    </div>
+    <div class="hamburger" onclick="toggleNav()"><span></span><span></span><span></span></div>
+  </div>
+  <div id="mobile-nav">
+    <a href="#info" onclick="toggleNav()" data-i18n="nav_info"></a>
+    <a href="#register" onclick="toggleNav()" data-i18n="nav_reg"></a>
+    <a href="#schedule" onclick="toggleNav()" data-i18n="nav_sched"></a>
+    <a href="#prizes" onclick="toggleNav()" data-i18n="nav_prize"></a>
+    <a href="#songs" onclick="toggleNav()" data-i18n="nav_songs"></a>
+    <div class="mobile-lang">
+      <select class="lang-select" aria-label="Language" onchange="setLang(this.value);toggleNav()">
+        <option value="zh">🇹🇼 中文</option>
+        <option value="en">🇬🇧 English</option>
+        <option value="vi">🇻🇳 Việt Nam</option>
+        <option value="th">🇹🇭 ไทย</option>
+        <option value="ph">🇵🇭 Philippines</option>
+        <option value="id">🇮🇩 Indonesia</option>
+      </select>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="hero">
+  <video class="hero-video" autoplay muted loop playsinline poster="">
+    <source src="./背景.mp4" type="video/mp4">
+  </video>
+  <div class="hero-bg"></div>
+  <div class="hero-sheen"></div>
+  <div class="hero-content">
+    <div class="hero-sub" data-i18n="hero_org"></div>
+    <div class="hero-title-main" data-i18n="hero_title1"></div>
+    <div class="hero-title-sub" data-i18n="hero_title2"></div>
+    <div class="hero-en">2026 Labor Star Singing Contest</div>
+    <div class="hero-badges">
+      <span class="badge" data-i18n="group_charm"></span>
+      <span class="badge" data-i18n="group_vitality"></span>
+      <span class="badge" data-i18n="group_migrant"></span>
+    </div>
+    <div class="hero-actions">
+      <a href="#register" class="btn btn-p" data-i18n="hero_btn_primary"></a>
+      <a href="#songs" class="btn btn-o" data-i18n="hero_btn_secondary"></a>
+    </div>
+    <div class="countdown-wrap">
+      <div class="cd-label" data-i18n="cd_label"></div>
+      <div class="cd-boxes">
+        <div class="cb"><div class="cb-num" id="cd-d">--</div><div class="cb-unit" data-i18n="cd_day"></div></div>
+        <div class="cb"><div class="cb-num" id="cd-h">--</div><div class="cb-unit" data-i18n="cd_hour"></div></div>
+        <div class="cb"><div class="cb-num" id="cd-m">--</div><div class="cb-unit" data-i18n="cd_min"></div></div>
+        <div class="cb"><div class="cb-num" id="cd-s">--</div><div class="cb-unit" data-i18n="cd_sec"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REGISTRATION INFO -->
+<section class="section" id="info">
+  <div class="section-inner">
+    <div class="sec-title"><h2 data-i18n="nav_info"></h2></div>
+    <div class="abox">
+      <h3 data-i18n="reg_period_title"></h3>
+      <ul>
+        <li data-i18n-html="reg_period_1"></li>
+        <li data-i18n="reg_period_2"></li>
+      </ul>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="card-icon">01</div>
+        <h3 data-i18n="group_vitality"></h3>
+        <ul>
+          <li data-i18n="vitality_age"></li>
+          <li data-i18n="vitality_birth"></li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-icon">02</div>
+        <h3 data-i18n="group_charm"></h3>
+        <ul>
+          <li data-i18n="charm_age"></li>
+          <li data-i18n="charm_birth"></li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-icon">03</div>
+        <h3 data-i18n="group_migrant"></h3>
+        <ul>
+          <li data-i18n="migrant_age"></li>
+          <li data-i18n="migrant_desc"></li>
+        </ul>
+      </div>
+    </div>
+    <div style="margin-top:28px">
+      <div class="abox">
+        <h3 data-i18n="elig_title"></h3>
+        <ul>
+          <li data-i18n="elig_1"></li>
+          <li data-i18n="elig_2"></li>
+          <li data-i18n="elig_3"></li>
+        </ul>
+      </div>
+      <div class="abox">
+        <h3 data-i18n="docs_title"></h3>
+        <ul>
+          <li data-i18n="doc_1"></li>
+          <li data-i18n="doc_2"></li>
+          <li data-i18n="doc_3"></li>
+        </ul>
+      </div>
+    </div>
+    <div style="margin-top:28px">
+      <h3 style="color:var(--gold);margin-bottom:14px" data-i18n="reg_methods_title"></h3>
+      <div class="steps">
+        <div class="step"><div class="step-num">1</div><div><h4 data-i18n="step1_title"></h4><p data-i18n="step1_desc"></p></div></div>
+        <div class="step"><div class="step-num">2</div><div><h4 data-i18n="step2_title"></h4><p data-i18n="step2_desc"></p></div></div>
+        <div class="step"><div class="step-num">3</div><div><h4 data-i18n="step3_title"></h4><p data-i18n-html="step3_desc"></p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="hero-facts reveal">
+  <div class="fact-grid">
+    <div class="fact-card reveal delay-1">
+      <div class="fact-kicker" data-i18n="fact1_kicker"></div>
+      <div class="fact-value">3</div>
+      <div class="fact-desc" data-i18n="fact1_desc"></div>
+    </div>
+    <div class="fact-card reveal delay-2">
+      <div class="fact-kicker" data-i18n="fact2_kicker"></div>
+      <div class="fact-value">150</div>
+      <div class="fact-desc" data-i18n="fact2_desc"></div>
+    </div>
+    <div class="fact-card reveal delay-3">
+      <div class="fact-kicker" data-i18n="fact3_kicker"></div>
+      <div class="fact-value">10 / 20</div>
+      <div class="fact-desc" data-i18n="fact3_desc"></div>
+    </div>
+    <div class="fact-card reveal">
+      <div class="fact-kicker" data-i18n="fact4_kicker"></div>
+      <div class="fact-value">10.25</div>
+      <div class="fact-desc" data-i18n="fact4_desc"></div>
+    </div>
+  </div>
+</section>
+<section class="section reveal">
+  <div class="section-inner">
+    <div class="sec-title">
+      <h2 data-i18n="highlight_title"></h2>
+      <p data-i18n="highlight_sub"></p>
+    </div>
+    <div class="highlight-grid">
+      <div class="highlight-card reveal delay-1">
+        <div class="highlight-eyebrow" data-i18n="highlight1_eyebrow"></div>
+        <h3 data-i18n="highlight1_title"></h3>
+        <p data-i18n="highlight1_desc"></p>
+      </div>
+      <div class="highlight-card reveal delay-2">
+        <div class="highlight-eyebrow" data-i18n="highlight2_eyebrow"></div>
+        <h3 data-i18n="highlight2_title"></h3>
+        <p data-i18n="highlight2_desc"></p>
+      </div>
+      <div class="highlight-card reveal delay-3">
+        <div class="highlight-eyebrow" data-i18n="highlight3_eyebrow"></div>
+        <h3 data-i18n="highlight3_title"></h3>
+        <p data-i18n="highlight3_desc"></p>
+      </div>
+    </div>
+  </div>
+</section>
+<hr class="div">
+
+<section class="section alt reveal" id="news">
+  <div class="section-inner">
+    <div class="sec-title">
+      <h2 data-i18n="news_title"></h2>
+      <p data-i18n="news_sub"></p>
+    </div>
+    <div class="news-grid">
+      <article class="news-card reveal delay-1">
+        <div class="news-meta">
+          <span class="news-pill" data-i18n="news1_tag"></span>
+          <span class="news-date" data-i18n="news1_date"></span>
+        </div>
+        <h3 data-i18n="news1_title"></h3>
+        <p data-i18n="news1_desc"></p>
+      </article>
+      <article class="news-card reveal delay-2">
+        <div class="news-meta">
+          <span class="news-pill" data-i18n="news2_tag"></span>
+          <span class="news-date" data-i18n="news2_date"></span>
+        </div>
+        <h3 data-i18n="news2_title"></h3>
+        <p data-i18n="news2_desc"></p>
+      </article>
+      <article class="news-card reveal delay-3">
+        <div class="news-meta">
+          <span class="news-pill" data-i18n="news3_tag"></span>
+          <span class="news-date" data-i18n="news3_date"></span>
+        </div>
+        <h3 data-i18n="news3_title"></h3>
+        <p data-i18n="news3_desc"></p>
+      </article>
+    </div>
+  </div>
+</section>
+<hr class="div">
+
+<!-- SCHEDULE -->
+<section class="section alt reveal" id="schedule">
+  <div class="section-inner">
+    <div class="sec-title"><h2 data-i18n="nav_sched"></h2></div>
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th data-i18n="th_round"></th>
+            <th data-i18n="th_group"></th>
+            <th data-i18n="th_date"></th>
+            <th data-i18n="th_time"></th>
+            <th data-i18n="th_venue"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="3"><strong style="color:var(--text)" data-i18n="prelim"></strong></td>
+            <td><span class="tag tc" data-i18n="group_charm"></span></td>
+            <td data-i18n="date_pc"></td><td>9:00–16:30</td>
+            <td rowspan="3" data-i18n="venue_1"></td>
+          </tr>
+          <tr>
+            <td><span class="tag tv" data-i18n="group_vitality"></span></td>
+            <td data-i18n="date_pv"></td><td>9:00–16:30</td>
+          </tr>
+          <tr>
+            <td><span class="tag tm" data-i18n="group_migrant"></span></td>
+            <td data-i18n="date_pm"></td><td>9:00–16:30</td>
+          </tr>
+          <tr>
+            <td rowspan="3"><strong style="color:var(--text)" data-i18n="semi"></strong></td>
+            <td><span class="tag tc" data-i18n="group_charm"></span></td>
+            <td data-i18n="date_sc"></td><td>13:00–17:30</td>
+            <td rowspan="3" data-i18n="venue_1"></td>
+          </tr>
+          <tr>
+            <td><span class="tag tv" data-i18n="group_vitality"></span></td>
+            <td data-i18n="date_sv"></td><td>13:00–17:30</td>
+          </tr>
+          <tr>
+            <td><span class="tag tm" data-i18n="group_migrant"></span></td>
+            <td data-i18n="date_sm"></td><td>13:00–17:30</td>
+          </tr>
+          <tr>
+            <td><strong style="color:var(--gold)" data-i18n="final"></strong></td>
+            <td><span class="tag ta" data-i18n="all_groups"></span></td>
+            <td><strong style="color:var(--gold)" data-i18n="date_f"></strong></td>
+            <td>13:00–18:00</td>
+            <td data-i18n="venue_2"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note" data-i18n="sched_note"></p>
+    <div class="venue-grid" style="margin-top:22px">
+      <div class="venue-card reveal delay-1">
+        <h3 data-i18n="venue_card1_title"></h3>
+        <p data-i18n-html="venue_card1_body"></p>
+        <a class="btn btn-o" href="https://www.google.com/maps/search/?api=1&query=%E6%96%B0%E5%8C%97%E5%B8%82%E5%8B%9E%E5%B7%A5%E6%B4%BB%E5%8B%95%E4%B8%AD%E5%BF%83%E6%BC%94%E8%97%9D%E5%BB%B3" target="_blank" rel="noopener noreferrer" data-i18n="view_map"></a>
+      </div>
+      <div class="venue-card reveal delay-2">
+        <h3 data-i18n="venue_card2_title"></h3>
+        <p data-i18n-html="venue_card2_body"></p>
+        <a class="btn btn-o" href="https://www.google.com/maps/search/?api=1&query=%E6%96%B0%E5%8C%97%E5%B8%82%E6%94%BF%E5%BA%9C+6%E6%A8%93%E5%A4%A7%E7%A6%AE%E5%A0%82" target="_blank" rel="noopener noreferrer" data-i18n="view_map"></a>
+      </div>
+    </div>
+  </div>
+</section>
+<hr class="div">
+
+<section class="section reveal" id="rules">
+  <div class="section-inner">
+    <div class="sec-title">
+      <h2 data-i18n="rules_title"></h2>
+      <p data-i18n="rules_sub"></p>
+    </div>
+    <div class="rules-shell">
+      <div class="rules-tabs">
+        <button class="rule-tab active" type="button" data-rule-tab="prelim" data-i18n="rule_tab_prelim"></button>
+        <button class="rule-tab" type="button" data-rule-tab="semi" data-i18n="rule_tab_semi"></button>
+        <button class="rule-tab" type="button" data-rule-tab="final" data-i18n="rule_tab_final"></button>
+        <button class="rule-tab" type="button" data-rule-tab="judge" data-i18n="rule_tab_judge"></button>
+      </div>
+      <div class="rules-panels">
+      <div class="detail-card active" data-rule-panel="prelim">
+        <h3 data-i18n="rule_prelim_title"></h3>
+        <ul>
+          <li data-i18n="rule_prelim_1"></li>
+          <li data-i18n="rule_prelim_2"></li>
+          <li data-i18n="rule_prelim_3"></li>
+          <li data-i18n="rule_prelim_4"></li>
+        </ul>
+      </div>
+      <div class="detail-card" data-rule-panel="semi">
+        <h3 data-i18n="rule_semi_title"></h3>
+        <ul>
+          <li data-i18n="rule_semi_1"></li>
+          <li data-i18n="rule_semi_2"></li>
+          <li data-i18n="rule_semi_3"></li>
+          <li data-i18n="rule_semi_4"></li>
+        </ul>
+      </div>
+      <div class="detail-card" data-rule-panel="final">
+        <h3 data-i18n="rule_final_title"></h3>
+        <ul>
+          <li data-i18n="rule_final_1"></li>
+          <li data-i18n="rule_final_2"></li>
+          <li data-i18n="rule_final_3"></li>
+          <li data-i18n="rule_final_4"></li>
+        </ul>
+      </div>
+      <div class="detail-card" data-rule-panel="judge">
+        <h3 data-i18n="rule_judge_title"></h3>
+        <ul>
+          <li data-i18n="rule_judge_1"></li>
+          <li data-i18n="rule_judge_2"></li>
+          <li data-i18n="rule_judge_3"></li>
+          <li data-i18n="rule_judge_4"></li>
+        </ul>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+<hr class="div">
+
+<!-- SCORING -->
+<section class="section reveal" id="scoring">
+  <div class="section-inner">
+    <div class="sec-title"><h2 data-i18n="scoring_title"></h2></div>
+    <div class="score-grid">
+      <div class="score-item"><div class="score-pct">40%</div><div class="score-name" data-i18n="score1_name"></div><div class="score-en">Pitch &amp; Technique</div></div>
+      <div class="score-item"><div class="score-pct">40%</div><div class="score-name" data-i18n="score2_name"></div><div class="score-en">Tone &amp; Emotion</div></div>
+      <div class="score-item"><div class="score-pct">10%</div><div class="score-name" data-i18n="score3_name"></div><div class="score-en">Stage Presence</div></div>
+      <div class="score-item"><div class="score-pct">10%</div><div class="score-name" data-i18n="score4_name"></div><div class="score-en">Styling</div></div>
+    </div>
+  </div>
+</section>
+<hr class="div">
+
+<!-- PRIZES -->
+<section class="section alt reveal" id="prizes">
+  <div class="section-inner">
+    <div class="sec-title">
+      <h2 data-i18n="nav_prize"></h2>
+      <p data-i18n="prizes_sub"></p>
+    </div>
+    <div class="prize-grid">
+      <div class="prize-card">
+        <div class="ph-charm"><h3 data-i18n="group_charm"></h3></div>
+        <div class="prize-body">
+          <div class="pr r1"><span class="pl" data-i18n="p1"></span><span class="am">NT$ 35,000</span></div>
+          <div class="pr r2"><span class="pl" data-i18n="p2"></span><span class="am">NT$ 24,000</span></div>
+          <div class="pr r3"><span class="pl" data-i18n="p3"></span><span class="am">NT$ 18,000</span></div>
+          <div class="pr"><span class="pl" data-i18n="p4"></span><span class="am">NT$ 12,000</span></div>
+          <div class="pr"><span class="pl" data-i18n="p5"></span><span class="am">NT$ 7,000</span></div>
+          <div class="pr"><span class="pl" data-i18n="p6_10"></span><span class="am">NT$ 3,000</span></div>
+          <div class="pr"><span class="pl" data-i18n="p11_20"></span><span class="am" data-i18n="trophy"></span></div>
+          <div class="pr"><span class="pl" data-i18n="best_style"></span><span class="am">NT$ 3,000</span></div>
+          <div class="pr"><span class="pl" data-i18n="best_stage"></span><span class="am">NT$ 3,000</span></div>
+          <div class="pr"><span class="pl" data-i18n="best_cheer"></span><span class="am">NT$ 3,000</span></div>
+        </div>
+      </div>
+      <div class="prize-card">
+        <div class="ph-vitality"><h3 data-i18n="group_vitality"></h3></div>
+        <div class="prize-body">
+          <div class="pr r1"><span class="pl" data-i18n="p1"></span><span class="am">NT$ 35,000</span></div>
+          <div class="pr r2"><span class="pl" data-i18n="p2"></span><span class="am">NT$ 24,000</span></div>
+          <div class="pr r3"><span class="pl" data-i18n="p3"></span><span class="am">NT$ 18,000</span></div>
+          <div class="pr"><span class="pl" data-i18n="p4"></span><span class="am">NT$ 12,000</span></div>
+          <div class="pr"><span class="pl" data-i18n="p5"></span><span class="am">NT$ 7,000</span></div>
+          <div class="pr"><span class="pl" data-i18n="p6_10"></span><span class="am">NT$ 3,000</span></div>
+          <div class="pr"><span class="pl" data-i18n="p11_20"></span><span class="am" data-i18n="trophy"></span></div>
+          <div class="pr"><span class="pl" data-i18n="best_style"></span><span class="am">NT$ 3,000</span></div>
+          <div class="pr"><span class="pl" data-i18n="best_stage"></span><span class="am">NT$ 3,000</span></div>
+          <div class="pr"><span class="pl" data-i18n="best_cheer"></span><span class="am">NT$ 3,000</span></div>
+        </div>
+      </div>
+      <div class="prize-card">
+        <div class="ph-migrant"><h3 data-i18n="group_migrant"></h3></div>
+        <div class="prize-body">
+          <div class="pr r1"><span class="pl" data-i18n="p1"></span><span class="am">NT$ 35,000</span></div>
+          <div class="pr r2"><span class="pl" data-i18n="p2"></span><span class="am">NT$ 24,000</span></div>
+          <div class="pr r3"><span class="pl" data-i18n="p3"></span><span class="am">NT$ 18,000</span></div>
+          <div class="pr"><span class="pl" data-i18n="p4"></span><span class="am">NT$ 12,000</span></div>
+          <div class="pr"><span class="pl" data-i18n="p5"></span><span class="am">NT$ 7,000</span></div>
+          <div class="pr"><span class="pl" data-i18n="p6_10"></span><span class="am">NT$ 3,000</span></div>
+          <div class="pr"><span class="pl" data-i18n="p11_20"></span><span class="am" data-i18n="trophy"></span></div>
+          <div class="pr"><span class="pl" data-i18n="best_style"></span><span class="am">NT$ 3,000</span></div>
+          <div class="pr"><span class="pl" data-i18n="best_stage"></span><span class="am">NT$ 3,000</span></div>
+          <div class="pr"><span class="pl" data-i18n="best_cheer"></span><span class="am">NT$ 3,000</span></div>
+        </div>
+      </div>
+    </div>
+    <p class="note" data-i18n="prizes_note"></p>
+  </div>
+</section>
+<hr class="div">
+
+<section class="section reveal" id="notices">
+  <div class="section-inner">
+    <div class="sec-title">
+      <h2 data-i18n="notices_title"></h2>
+      <p data-i18n="notices_sub"></p>
+    </div>
+    <div class="notice-list">
+      <details class="notice-item" open>
+        <summary data-i18n="notice1_title"></summary>
+        <div class="notice-body" data-i18n="notice1_body"></div>
+      </details>
+      <details class="notice-item">
+        <summary data-i18n="notice2_title"></summary>
+        <div class="notice-body" data-i18n="notice2_body"></div>
+      </details>
+      <details class="notice-item">
+        <summary data-i18n="notice3_title"></summary>
+        <div class="notice-body" data-i18n="notice3_body"></div>
+      </details>
+      <details class="notice-item">
+        <summary data-i18n="notice4_title"></summary>
+        <div class="notice-body" data-i18n="notice4_body"></div>
+      </details>
+      <details class="notice-item">
+        <summary data-i18n="notice5_title"></summary>
+        <div class="notice-body" data-i18n="notice5_body"></div>
+      </details>
+      <details class="notice-item">
+        <summary data-i18n="notice6_title"></summary>
+        <div class="notice-body" data-i18n="notice6_body"></div>
+      </details>
+    </div>
+  </div>
+</section>
+<hr class="div">
+
+<!-- SONGS -->
+<section class="section reveal" id="songs">
+  <div class="section-inner">
+    <div class="sec-title">
+      <h2 data-i18n="nav_songs"></h2>
+      <p data-i18n="songs_sub"></p>
+    </div>
+    <!-- Song search -->
+    <div style="margin-bottom:20px;display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+      <input id="song-search" type="text" data-i18n-placeholder="song_search_placeholder" placeholder="" oninput="filterSongs()"
+        style="flex:1;min-width:180px;padding:9px 14px;background:#1a1a1a;border:1px solid #333;border-radius:6px;color:var(--text);font-size:.9rem;outline:none">
+    </div>
+    <!-- Tabs -->
+    <div class="song-tabs">
+      <button class="stab active" id="stab-mand" onclick="switchSongTab('mand')" data-i18n="song1_tab"></button>
+      <button class="stab" id="stab-tw" onclick="switchSongTab('tw')" data-i18n="song2_tab"></button>
+      <button class="stab" id="stab-for" onclick="switchSongTab('for')" data-i18n="song3_tab"></button>
+    </div>
+    <!-- Tables -->
+    <div id="song-panel-mand" class="song-panel active">
+      <div class="song-columns">
+        <div class="tbl-wrap"><table>
+          <thead><tr>
+            <th class="song-col-no" data-i18n="th_no"></th>
+            <th class="song-col-title" data-i18n="th_song"></th>
+            <th class="song-col-artist" data-i18n="th_artist"></th>
+            <th class="song-col-code" data-i18n="th_code"></th>
+          </tr></thead>
+          <tbody id="tbody-mand-1"></tbody>
+        </table></div>
+        <div class="tbl-wrap"><table>
+          <thead><tr>
+            <th class="song-col-no" data-i18n="th_no"></th>
+            <th class="song-col-title" data-i18n="th_song"></th>
+            <th class="song-col-artist" data-i18n="th_artist"></th>
+            <th class="song-col-code" data-i18n="th_code"></th>
+          </tr></thead>
+          <tbody id="tbody-mand-2"></tbody>
+        </table></div>
+      </div>
+    </div>
+    <div id="song-panel-tw" class="song-panel">
+      <div class="song-columns">
+        <div class="tbl-wrap"><table>
+          <thead><tr>
+            <th class="song-col-no" data-i18n="th_no"></th>
+            <th class="song-col-title" data-i18n="th_song"></th>
+            <th class="song-col-artist" data-i18n="th_artist"></th>
+            <th class="song-col-code" data-i18n="th_code"></th>
+          </tr></thead>
+          <tbody id="tbody-tw-1"></tbody>
+        </table></div>
+        <div class="tbl-wrap"><table>
+          <thead><tr>
+            <th class="song-col-no" data-i18n="th_no"></th>
+            <th class="song-col-title" data-i18n="th_song"></th>
+            <th class="song-col-artist" data-i18n="th_artist"></th>
+            <th class="song-col-code" data-i18n="th_code"></th>
+          </tr></thead>
+          <tbody id="tbody-tw-2"></tbody>
+        </table></div>
+      </div>
+    </div>
+    <div id="song-panel-for" class="song-panel">
+      <div class="song-columns">
+        <div class="tbl-wrap"><table>
+          <thead><tr>
+            <th class="song-col-no" data-i18n="th_no"></th>
+            <th class="song-col-title" data-i18n="th_song"></th>
+            <th class="song-col-artist" data-i18n="th_artist"></th>
+            <th class="song-col-code" data-i18n="th_code"></th>
+          </tr></thead>
+          <tbody id="tbody-for-1"></tbody>
+        </table></div>
+        <div class="tbl-wrap"><table>
+          <thead><tr>
+            <th class="song-col-no" data-i18n="th_no"></th>
+            <th class="song-col-title" data-i18n="th_song"></th>
+            <th class="song-col-artist" data-i18n="th_artist"></th>
+            <th class="song-col-code" data-i18n="th_code"></th>
+          </tr></thead>
+          <tbody id="tbody-for-2"></tbody>
+        </table></div>
+      </div>
+    </div>
+    <div class="song-status" id="song-status" data-i18n="song_status_default"></div>
+    <p class="note" data-i18n="songs_note"></p>
+  </div>
+</section>
+<hr class="div">
+
+<!-- REGISTER CTA -->
+<div class="reg-cta reveal" id="register">
+  <h2 data-i18n="reg_cta_title"></h2>
+  <p data-i18n="reg_cta_sub"></p>
+  <div class="register-grid">
+    <div class="register-card reveal delay-1">
+      <h3 data-i18n="register_vitality_title"></h3>
+      <p data-i18n="register_vitality_desc"></p>
+      <a href="#" class="btn btn-p" onclick="showI18nAlert('register_vitality_alert')" data-i18n="register_vitality_btn"></a>
+    </div>
+    <div class="register-card reveal delay-2">
+      <h3 data-i18n="register_charm_title"></h3>
+      <p data-i18n="register_charm_desc"></p>
+      <a href="#" class="btn btn-p" onclick="showI18nAlert('register_charm_alert')" data-i18n="register_charm_btn"></a>
+    </div>
+    <div class="register-card reveal delay-3">
+      <h3 data-i18n="register_migrant_title"></h3>
+      <p data-i18n="register_migrant_desc"></p>
+      <a href="#" class="btn btn-p" onclick="showI18nAlert('register_migrant_alert')" data-i18n="register_migrant_btn"></a>
+    </div>
+    <div class="register-card paper reveal">
+      <h3 data-i18n="register_paper_title"></h3>
+      <p data-i18n="register_paper_desc"></p>
+      <a href="#" class="btn btn-o" onclick="showI18nAlert('register_paper_alert')" data-i18n="register_paper_btn"></a>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section class="section alt reveal" id="contact">
+  <div class="section-inner">
+    <div class="sec-title"><h2 data-i18n="contact_title"></h2></div>
+    <div class="contact-grid">
+      <div class="ci"><div class="ci-icon">TEL</div><div><label data-i18n="lbl_phone"></label><strong>(02) 2700-4519</strong></div></div>
+      <div class="ci"><div class="ci-icon">FAX</div><div><label data-i18n="lbl_fax"></label><strong>(02) 2700-3149</strong></div></div>
+      <div class="ci"><div class="ci-icon">MAIL</div><div><label data-i18n="lbl_email"></label><strong><a href="mailto:ntpcstar2026@gmail.com">ntpcstar2026@gmail.com</a></strong></div></div>
+      <div class="ci"><div class="ci-icon">LINE</div><div><label data-i18n="lbl_line"></label><strong>@634edkrg</strong></div></div>
+      <div class="ci" style="grid-column:1/-1">
+        <div class="ci-icon">MAP</div>
+        <div><label data-i18n="lbl_addr"></label><strong data-i18n-html="addr_val"></strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="ftitle" data-i18n="footer_title"></div>
+  <p data-i18n="footer_org"></p>
+  <p data-i18n="footer_exec"></p>
+  <p style="margin-top:10px;font-size:.75rem;color:#333" data-i18n="footer_copy"></p>
+</footer>
+
+<script src="./songs-data.js"></script>
+<script>
+const T = {
+  zh: {
+    page_title: '115年勞工之星歌唱大賽｜典唱新北20年',
+    org_short: '新北市政府勞工局',
+    event_short: '115年勞工之星歌唱大賽',
+    loader_title: '勞工之星歌唱大賽', loader_sub: '舞台即將開啟', loader_loading: '載入中',
+    nav_info: '報名資訊', nav_reg: '我要報名', nav_sched: '賽程時間', nav_prize: '獎金獎項', nav_songs: '指定歌曲',
+    hero_org: '新北市政府勞工局', hero_title1: '典唱新北 20 年', hero_title2: '115年 勞工之星歌唱大賽',
+    hero_btn_primary: '立即前往報名', hero_btn_secondary: '查看指定歌曲',
+    cd_label: '距離報名截止', cd_day: '天', cd_hour: '時', cd_min: '分', cd_sec: '秒',
+    fact1_kicker: '參賽組別', fact1_desc: '魅力、活力、移工三組分流競賽',
+    fact2_kicker: '指定曲目', fact2_desc: '國語、台語、外語共 150 首',
+    fact3_kicker: '晉級名額', fact3_desc: '複賽每組 10 名，移工組初賽取前 20',
+    fact4_kicker: '決賽日期', fact4_desc: '10 月 25 日於新北市政府大禮堂登場',
+    highlight_title: '活動亮點', highlight_sub: '把關流程、舞台節奏與參賽體驗，一頁快速掌握',
+    highlight1_eyebrow: 'Easy Entry',
+    highlight1_title: '多管道報名，降低參賽門檻',
+    highlight1_desc: '可透過線上、郵寄、Email、傳真與 Line 送件，方便不同工作型態的勞工彈性報名。',
+    highlight2_eyebrow: 'Fair Selection',
+    highlight2_title: '分組競賽，評分標準一致透明',
+    highlight2_desc: '依年齡與身分類別分組，並以音準、音色感情、台風與造型作為主要評分依據。',
+    highlight3_eyebrow: 'Showtime',
+    highlight3_title: '從初賽到決賽，完整舞台曝光',
+    highlight3_desc: '8 月啟動初賽，9 月進入複賽，10 月決賽同場演出，讓參賽者累積舞台經驗與亮點時刻。',
+    news_title: '公告資訊', news_sub: '先補上正式網站常見的活動進度與公告架構，之後可直接替換成最新消息內容。',
+    news1_tag: '最新消息', news1_date: '建議補件', news1_title: '報名截止、場次名單與晉級公告，建議集中放在本區管理', news1_desc: '目前頁面尚未有公告模組。正式上線時可依序放入報名截止提醒、初賽出場順序、複賽與決賽晉級名單，以及各組比賽注意事項。',
+    news2_tag: '賽事公告', news2_date: '建議補件', news2_title: '各組成績公告與決賽資訊可在這裡集中更新', news2_desc: '可沿用 2025 官網做法，區分魅力之星、活力之星、移工之星，分別公告複賽總成績、晉級決賽名單與決賽當日報到資訊。',
+    news3_tag: '營運提醒', news3_date: '建議補件', news3_title: '若資訊有異動，以本區最新公告與主辦單位通知為準', news3_desc: '像是比賽時間微調、伴唱繳交期限、現場流程、補件截止時間，都建議透過這裡做統一公告，避免資訊分散。',
+    group_charm: '魅力之星組', group_vitality: '活力之星組', group_migrant: '移工之星組',
+    reg_period_title: '報名期間',
+    reg_period_1: '即日起至 <strong>115年7月25日（星期五）下午6時</strong> 截止',
+    reg_period_2: '報名資料寄出後，請於3個工作日內（不含週六、日及國定假日）確認是否送達',
+    vitality_age: '年齡：18～45歲', vitality_birth: '民國70年至97年（含）出生者',
+    charm_age: '年齡：46歲以上', charm_birth: '民國69年（含）以前出生者',
+    migrant_age: '年齡：18歲以上', migrant_desc: '在臺合法受聘僱之外籍勞工',
+    elig_title: '參賽資格',
+    elig_1: '年滿18歲以上',
+    elig_2: '設籍或受僱於新北市之勞工，或在臺合法受聘僱之外籍勞工',
+    elig_3: '歷屆曾榮獲本局勞工之星歌唱比賽冠軍者，不得參加',
+    docs_title: '應備文件',
+    doc_1: '勞保加保同意書（或近3個月勞保投保狀況表、工會繳費收據）',
+    doc_2: '身分證正反面影本或居留證影本',
+    doc_3: '比賽當日需攜帶原始證件（身分證、駕照、護照或居留證）',
+    reg_methods_title: '報名方式',
+    step1_title: '線上報名', step1_desc: '至本網站填寫線上報名表單（Google 表單）',
+    step2_title: '郵寄報名', step2_desc: '下載報名表，寄至：114061 台北市內湖區文湖街88號2樓（信封請註明「115勞工之星歌唱大賽」）',
+    step3_title: 'Email / 傳真 / Line', step3_desc: 'Email：ntpcstar2026@gmail.com<br>傳真：(02)2700-3149<br>Line：@634edkrg',
+    th_round: '賽事', th_group: '組別', th_date: '日期', th_time: '時間', th_venue: '地點',
+    prelim: '初賽', semi: '複賽', final: '決賽', all_groups: '三組同場',
+    date_pc: '8月8日～9日', date_pv: '8月15日～16日', date_pm: '8月30日',
+    date_sc: '9月20日', date_sv: '9月26日', date_sm: '9月27日', date_f: '10月25日',
+    venue_1: '新北市勞工活動中心（五股區）', venue_2: '新北市政府6樓大禮堂',
+    sched_note: '★ 初賽晉級名額：魅力之星組、活力之星組各取前40名；移工之星組取前20名。複賽各組取前10名晉級決賽。',
+    venue_card1_title: '初賽／複賽地點', venue_card1_body: '新北市勞工活動中心演藝廳<br>新北市五股區五工六路9號',
+    venue_card2_title: '決賽地點', venue_card2_body: '新北市政府 6 樓大禮堂<br>新北市板橋區中山路一段161號6樓', view_map: '查看地圖',
+    rules_title: '比賽內容', rules_sub: '把 2025 官網缺少的正式規則補成可核對版本，之後若年度資訊更新，再逐條替換即可。',
+    rule_tab_prelim: '初賽規則', rule_tab_semi: '複賽規則', rule_tab_final: '決賽規則', rule_tab_judge: '評審方式',
+    rule_prelim_title: '初賽規則',
+    rule_prelim_1: '每位參賽者以報名一場初賽為限，報名時可填寫優先參與場次；若場次超過人數上限，將依實際報名先後調整場次。',
+    rule_prelim_2: '初賽出場順序於報名截止後 1 週內公告於活動網站，名單公布後不得再更改場次。',
+    rule_prelim_3: '比賽當天報到時須攜帶附照片之法定證件正本，經查資格不符者取消參賽資格。',
+    rule_prelim_4: '初賽僅限演唱指定 150 首歌曲中的一段，不接受自備伴唱帶；各場次成績總排序後，魅力與活力各取前 40 名、移工組取前 20 名進入複賽。',
+    rule_semi_title: '複賽規則',
+    rule_semi_1: '複賽當天報到後進行抽籤決定演唱順序，仍須攜帶附照片之法定證件供主辦單位查驗。',
+    rule_semi_2: '每位參賽者演唱完整歌曲一首，依複賽總成績排序，各組取前 10 名進入決賽。',
+    rule_semi_3: '各組第 11 至 20 名參賽者於決賽會場統一頒獎；複賽結束時同步抽出決賽演唱順序，未到場者由主辦單位代抽。',
+    rule_semi_4: '若因個人因素放棄晉級或經複查資格不符，將依成績順序遞補，並於比賽前 1 週公告。',
+    rule_final_title: '決賽規則',
+    rule_final_1: '進入決賽者需演唱完整歌曲一首，報到時同樣須攜帶附照片之法定證件正本。',
+    rule_final_2: '決賽依評審總和評分或序位法列組排名，並選出最佳造型獎、最佳台風獎與最佳啦啦隊獎等特殊獎項。',
+    rule_final_3: '各組得獎成績於決賽當日現場公布，獎座與彩帶當日領取，獎金以匯款方式支付。',
+    rule_final_4: '複賽與決賽歌曲不得重複，自備伴唱或自彈自唱者，請於比賽日前一週繳交 MP3 與相關資訊。',
+    rule_judge_title: '評審及評分方式',
+    rule_judge_1: '評審團建議維持 3 至 5 位專業評審，以客觀、公正、公開方式進行評選。',
+    rule_judge_2: '評分項目為音準技巧 40%、音色感情 40%、台風 10%、造型 10%。',
+    rule_judge_3: '初、複賽若遇同分，依音準技巧、音色感情、台風、造型順序比序；若各項分數皆相同，得由評審共同決議。',
+    rule_judge_4: '決賽可採序位法評選，序位加總最低者為優勝；如序位相同，再由評審團共同討論議決。',
+    scoring_title: '評分標準',
+    score1_name: '音準技巧', score2_name: '音色感情', score3_name: '台風', score4_name: '造型',
+    prizes_sub: '三組各別設獎，名次獎勵豐厚',
+    p1: '冠軍', p2: '亞軍', p3: '季軍', p4: '第4名', p5: '第5名', p6_10: '第6–10名', p11_20: '第11–20名',
+    trophy: '獎座', best_style: '最佳造型獎', best_stage: '最佳台風獎', best_cheer: '最佳啦啦隊獎',
+    prizes_note: '★ 得獎金額達新臺幣2萬元以上（含）者，需由執行單位代扣10%稅金。在臺居住未滿183天之外籍人士，代扣20%稅金。',
+    songs_sub: '共150首，含國語50首、台語50首、外語50首',
+    song1_tab: '國語歌曲（50首）', song2_tab: '台語歌曲（50首）', song3_tab: '外語歌曲（50首）',
+    th_no: '編號', th_song: '歌曲名稱', th_artist: '主唱者', th_code: '序號',
+    song_search_placeholder: '搜尋歌曲名稱、歌手或序號',
+    song_status_default: '目前顯示 150 首指定歌曲，可依分頁與關鍵字快速篩選。',
+    song_status_result: '找到 {count} 首符合「{query}」的歌曲',
+    song_data_missing: '指定歌曲資料未載入，請確認 songs-data.js 是否存在。',
+    songs_note: '★ 比賽一律使用現場伴唱系統，不接受自備伴奏。複賽可自備MP3伴奏，需於指定期限前提交。',
+    notices_title: '注意事項', notices_sub: '先把正式簡章常見的參賽須知整合進頁面，讓後續確認資訊時有明確清單可對照。',
+    notice1_title: '報名與補件', notice1_body: '凡報名參加本比賽者，視為已充分瞭解並同意遵守本比賽規則與主辦單位公告之相關規定。報名資料若不完整或內容模糊，主辦單位通知後請於 2 日內完成補正；逾期未補正者，視同放棄參賽資格。所有報名資料請自行留存底稿，主辦單位原則上不予退件。',
+    notice2_title: '報到與證件查驗', notice2_body: '比賽當天須攜帶附照片之身分證明文件正本，包括身分證、駕照、護照、居留證等法定證件，其他證件恕不受理。若經查驗資格不符，將取消參賽資格。',
+    notice3_title: '換歌、試音與演出流程', notice3_body: '初賽、複賽、決賽前一週不得臨時變更參賽歌曲；每位參賽者以變更一次為原則，並須於主辦單位規定期限內完成。為維持賽程流暢，試音時間將視場地條件安排，無法保證每位參賽者有完全相同之試音條件；決賽彩排時段依主辦單位規劃辦理。',
+    notice4_title: '自備伴唱與版權責任', notice4_body: '自備伴唱帶或自彈自唱者，須自行取得音樂版權並自負侵權責任；自備伴唱檔請於指定期限前繳交 MP3 檔與歌曲資訊，自彈自唱者亦應配合主辦單位提供必要資料。',
+    notice5_title: '健康、稅務與現場規範', notice5_body: '參賽者應自行評估健康狀況是否適合參與活動；若因隱瞞身體狀況致生事故，概由當事人自行負責。獎金超過新臺幣 20,000 元以上（含）者，依法代扣 10% 稅金；在臺居住未滿 183 天之外籍人士，依規定代扣 20% 稅金。活動現場部分區域為評審席、計時席與成績作業席等管制區，非經工作人員同意請勿進入；並請配合垃圾分類與自備水杯等環保規範。',
+    notice6_title: '公告與主辦單位保留權利', notice6_body: '最新活動消息、補件期限、流程異動與未盡事宜，均以活動網站公告及主辦單位最新通知為準，主辦單位保留修正、補充及變更之權利。',
+    reg_cta_title: '立即報名', reg_cta_sub: '報名截止：115年7月25日（星期五）下午6時',
+    register_vitality_title: '活力之星組', register_vitality_desc: '年齡 18 至 45 歲，建議之後補上該組專屬 Google 表單連結，方便直接分流報名。', register_vitality_btn: '活力之星組報名',
+    register_charm_title: '魅力之星組', register_charm_desc: '年齡 46 歲以上，建議和正式官網一樣配置獨立報名入口，避免填錯組別。', register_charm_btn: '魅力之星組報名',
+    register_migrant_title: '移工之星組', register_migrant_desc: '年滿 18 歲且在臺合法受僱之外籍勞工，可補上多語表單或 QR code，提升完成率。', register_migrant_btn: '移工之星組報名',
+    register_paper_title: '紙本報名檔案', register_paper_desc: '建議後續補上 PDF 報名表與相關說明檔下載，並一併附上寄送地址與截止時間。', register_paper_btn: '下載紙本報名表',
+    register_note: '服務時間建議補充為週一至週五 10:00–18:00，六日及國定假日恕不受理；報名資料寄出後，請於 3 個工作日內主動確認送達狀況。',
+    register_vitality_alert: '活力之星組報名連結尚未設定', register_charm_alert: '魅力之星組報名連結尚未設定', register_migrant_alert: '移工之星組報名連結尚未設定', register_paper_alert: '紙本報名檔案尚未設定', register_form_alert: 'Google表單連結尚未設定', register_download_alert: '報名表下載連結尚未設定',
+    btn_register: '線上報名表單', btn_download: '下載報名表',
+    contact_title: '聯絡資訊', lbl_phone: '電話', lbl_fax: '傳真', lbl_email: 'Email', lbl_line: 'LINE 官方帳號', lbl_addr: '承辦單位地址',
+    addr_val: '114061 台北市內湖區文湖街88號2樓<br>上多利國際娛樂有限公司',
+    footer_title: '115年勞工之星歌唱大賽｜典唱新北20年',
+    footer_org: '主辦單位：新北市政府勞工局',
+    footer_exec: '承辦單位：上多利國際娛樂有限公司',
+    footer_copy: '© 2026 新北市政府勞工局 All Rights Reserved.'
+  },
+  en: {
+    page_title: '2026 Labor Star Singing Contest | 20 Years of Singing in New Taipei',
+    org_short: 'New Taipei City Labor Affairs Bureau',
+    event_short: '2026 Labor Star Singing Contest',
+    loader_title: 'Labor Star Singing Contest', loader_sub: 'THE STAGE IS OPENING', loader_loading: 'LOADING',
+    nav_info: 'Registration Info', nav_reg: 'Register', nav_sched: 'Schedule', nav_prize: 'Prizes', nav_songs: 'Song List',
+    hero_org: 'New Taipei City Labor Affairs Bureau', hero_title1: '20 Years of Singing in New Taipei', hero_title2: '2026 Labor Star Singing Contest',
+    hero_btn_primary: 'Register Now', hero_btn_secondary: 'View Required Songs',
+    cd_label: 'Countdown to Registration Deadline', cd_day: 'Days', cd_hour: 'Hours', cd_min: 'Mins', cd_sec: 'Secs',
+    fact1_kicker: 'Competition Groups', fact1_desc: 'Three separate groups: Charm, Vitality, and Migrant',
+    fact2_kicker: 'Required Songs', fact2_desc: '150 songs across Mandarin, Taiwanese, and foreign languages',
+    fact3_kicker: 'Advancing Spots', fact3_desc: '10 finalists per group; migrant preliminaries take top 20',
+    fact4_kicker: 'Final Date', fact4_desc: 'October 25 at the main auditorium of New Taipei City Hall',
+    highlight_title: 'Highlights', highlight_sub: 'A quick overview of entry, competition flow, and stage experience',
+    highlight1_eyebrow: 'Easy Entry',
+    highlight1_title: 'Multiple registration channels',
+    highlight1_desc: 'Applications can be submitted online, by mail, email, fax, or Line, making entry more flexible for workers with different schedules.',
+    highlight2_eyebrow: 'Fair Selection',
+    highlight2_title: 'Grouped competition with transparent scoring',
+    highlight2_desc: 'Contestants are divided by age and identity category, and judged by the same standards for pitch, emotion, stage presence, and styling.',
+    highlight3_eyebrow: 'Showtime',
+    highlight3_title: 'A full stage journey from preliminaries to finals',
+    highlight3_desc: 'Preliminaries begin in August, semi-finals in September, and finals in October, giving contestants a complete performance experience.',
+    news_title: 'Announcements', news_sub: 'A standard announcement structure is prepared here first so it can later be replaced with official updates.',
+    news1_tag: 'Latest News', news1_date: 'To Be Confirmed', news1_title: 'Registration deadlines, session lists, and qualifier announcements should be managed in this section', news1_desc: 'This page does not yet have a formal announcement module. When the site goes live, this area can be used for registration reminders, preliminary performance order, semi-final and final qualifiers, and group-specific notices.',
+    news2_tag: 'Competition Notice', news2_date: 'To Be Confirmed', news2_title: 'Group results and final-round information can be updated here in one place', news2_desc: 'You can follow the structure of the 2025 official website by separating the Charm Star, Vitality Star, and Migrant Star groups for semi-final scores, finalist lists, and final-day check-in details.',
+    news3_tag: 'Operations Reminder', news3_date: 'To Be Confirmed', news3_title: 'If anything changes, the latest notice here and the organizer’s update will prevail', news3_desc: 'Items such as schedule adjustments, backing-track deadlines, on-site procedures, and document supplement deadlines are best announced centrally here to avoid scattered information.',
+    group_charm: 'Charm Star Group', group_vitality: 'Vitality Star Group', group_migrant: 'Migrant Star Group',
+    reg_period_title: 'Registration Period',
+    reg_period_1: 'From now until <strong>July 25, 2026 (Friday), 6:00 PM</strong>',
+    reg_period_2: 'After sending your application, please confirm delivery within 3 working days (excluding weekends and public holidays)',
+    vitality_age: 'Age: 18–45', vitality_birth: 'Born between 1981 and 2008',
+    charm_age: 'Age: 46 and above', charm_birth: 'Born in 1980 or earlier',
+    migrant_age: 'Age: 18 and above', migrant_desc: 'Foreign workers legally employed in Taiwan',
+    elig_title: 'Eligibility',
+    elig_1: 'Must be 18 years old or above',
+    elig_2: 'Registered in or employed in New Taipei City, or a foreign worker legally employed in Taiwan',
+    elig_3: 'Previous champions of this contest are not eligible to participate',
+    docs_title: 'Required Documents',
+    doc_1: 'Labor insurance consent form (or labor insurance status statement for the past 3 months, or union payment receipt)',
+    doc_2: 'Copy of ID card (front and back) or residence permit',
+    doc_3: 'Original documents must be brought on the contest day (ID card, driver’s license, passport, or residence permit)',
+    reg_methods_title: 'How to Register',
+    step1_title: 'Online Registration', step1_desc: 'Fill out the online registration form on this website (Google Form)',
+    step2_title: 'Mail Registration', step2_desc: 'Download the form and mail it to: 2F, No. 88, Wenhu St., Neihu Dist., Taipei 114061 (please mark “2026 Labor Star Singing Contest” on the envelope)',
+    step3_title: 'Email / Fax / Line', step3_desc: 'Email: ntpcstar2026@gmail.com<br>Fax: (02)2700-3149<br>Line: @634edkrg',
+    th_round: 'Round', th_group: 'Group', th_date: 'Date', th_time: 'Time', th_venue: 'Venue',
+    prelim: 'Preliminary', semi: 'Semi-Final', final: 'Final', all_groups: 'All Groups',
+    date_pc: 'Aug 8–9', date_pv: 'Aug 15–16', date_pm: 'Aug 30',
+    date_sc: 'Sep 20', date_sv: 'Sep 26', date_sm: 'Sep 27', date_f: 'Oct 25',
+    venue_1: 'New Taipei Labor Activity Center (Wugu District)', venue_2: 'Main Auditorium, 6F, New Taipei City Hall',
+    sched_note: '★ Preliminary qualifiers: top 40 each from the Charm and Vitality groups, and top 20 from the Migrant group. Semi-finals: top 10 from each group advance to the final.',
+    venue_card1_title: 'Preliminary / Semi-Final Venue', venue_card1_body: 'Performance Hall, New Taipei Labor Activity Center<br>No. 9, Wugong 6th Rd., Wugu District, New Taipei City',
+    venue_card2_title: 'Final Venue', venue_card2_body: 'Main Auditorium, 6F, New Taipei City Hall<br>6F, No. 161, Sec. 1, Zhongshan Rd., Banqiao District, New Taipei City', view_map: 'View Map',
+    rules_title: 'Competition Details', rules_sub: 'The missing formal rules from the 2025 official website are added here as a reviewable version, so future yearly updates can be replaced item by item.',
+    rule_tab_prelim: 'Preliminary Rules', rule_tab_semi: 'Semi-Final Rules', rule_tab_final: 'Final Rules', rule_tab_judge: 'Judging',
+    rule_prelim_title: 'Preliminary Rules',
+    rule_prelim_1: 'Each contestant may register for only one preliminary session. Preferred sessions may be indicated during registration; if a session exceeds capacity, placement will be adjusted according to registration order.',
+    rule_prelim_2: 'The preliminary performance order will be announced on the event website within one week after registration closes. Once announced, the session may not be changed.',
+    rule_prelim_3: 'On the contest day, contestants must bring an original government-issued photo ID for check-in. Those found ineligible will be disqualified.',
+    rule_prelim_4: 'In the preliminary round, contestants may sing only one section of a song from the 150 required songs, and personal backing tracks are not accepted. After the overall ranking of all sessions, the Charm and Vitality groups will each take the top 40, while the Migrant group will take the top 20 for the semi-finals.',
+    rule_semi_title: 'Semi-Final Rules',
+    rule_semi_1: 'On the semi-final day, contestants will draw lots for performance order after check-in and must still present an original photo ID for verification.',
+    rule_semi_2: 'Each contestant performs one full song. Based on the total semi-final scores, the top 10 of each group advance to the final.',
+    rule_semi_3: 'Contestants ranked 11th to 20th in each group will receive awards at the final venue. The final performance order will also be drawn after the semi-final; if absent, the organizer will draw on the contestant’s behalf.',
+    rule_semi_4: 'If a contestant gives up advancement or is later found ineligible after review, replacement will be made in score order and announced one week before the contest.',
+    rule_final_title: 'Final Rules',
+    rule_final_1: 'Finalists must perform one full song and must also bring an original government-issued photo ID at check-in.',
+    rule_final_2: 'The final ranking will be determined by the judges’ total scores or a ranking method, and special awards such as Best Styling, Best Stage Presence, and Best Cheer Squad will also be selected.',
+    rule_final_3: 'Winners in each group will be announced on site on the day of the final. Trophies and sashes will be collected that day, while prize money will be paid by bank transfer.',
+    rule_final_4: 'Semi-final and final songs may not be repeated. Contestants using their own backing track or self-accompaniment must submit the MP3 file and related information one week before the contest.',
+    rule_judge_title: 'Judging and Scoring',
+    rule_judge_1: 'It is recommended to maintain a panel of 3 to 5 professional judges to ensure objective, fair, and open evaluation.',
+    rule_judge_2: 'Scoring criteria are: pitch and technique 40%, tone and emotion 40%, stage presence 10%, and styling 10%.',
+    rule_judge_3: 'If scores are tied in the preliminary or semi-final rounds, the tie will be broken in the order of pitch and technique, tone and emotion, stage presence, and styling. If still tied, the judges will decide together.',
+    rule_judge_4: 'The final may use a ranking method, in which the contestant with the lowest total ranking wins. If rankings are still tied, the judging panel will discuss and make a final decision together.',
+    scoring_title: 'Scoring Criteria',
+    score1_name: 'Pitch & Technique', score2_name: 'Tone & Emotion', score3_name: 'Stage Presence', score4_name: 'Styling',
+    prizes_sub: 'Each group has its own set of awards',
+    p1: 'Champion', p2: 'Runner-Up', p3: 'Third Place', p4: '4th Place', p5: '5th Place', p6_10: '6th–10th Place', p11_20: '11th–20th Place',
+    trophy: 'Trophy', best_style: 'Best Styling Award', best_stage: 'Best Stage Presence Award', best_cheer: 'Best Cheer Squad Award',
+    prizes_note: '★ Prize money of NTD 20,000 or above is subject to 10% withholding tax. Foreign nationals residing in Taiwan for fewer than 183 days are subject to 20% withholding tax.',
+    songs_sub: '150 songs in total: 50 Mandarin, 50 Taiwanese, and 50 foreign-language songs',
+    song1_tab: 'Mandarin (50 Songs)', song2_tab: 'Taiwanese (50 Songs)', song3_tab: 'Foreign Languages (50 Songs)',
+    th_no: 'No.', th_song: 'Song Title', th_artist: 'Original Singer', th_code: 'Code',
+    song_search_placeholder: 'Search by song title, singer, or code',
+    song_status_default: 'Currently showing 150 required songs. You can filter by tab and keyword.',
+    song_status_result: 'Found {count} songs matching "{query}"',
+    song_data_missing: 'Required song data was not loaded. Please check whether songs-data.js exists.',
+    songs_note: '★ All rounds use the on-site accompaniment system and do not accept personal accompaniment. MP3 accompaniment may be used in the semi-final and must be submitted before the deadline.',
+    notices_title: 'Important Notes', notices_sub: 'Common participant notices from the official handbook are organized here first so the information can be reviewed more easily later.',
+    notice1_title: 'Registration and Missing Documents', notice1_body: 'Anyone who registers for this contest is deemed to have fully understood and agreed to follow the contest rules and all related announcements issued by the organizer. If registration documents are incomplete or unclear, they must be corrected within 2 days after notice from the organizer; otherwise, the contestant will be deemed to have given up participation. Please keep your own copy of all submitted documents, as they will generally not be returned.',
+    notice2_title: 'Check-In and ID Verification', notice2_body: 'On the contest day, contestants must bring an original photo identification document, such as a national ID card, driver’s license, passport, or residence permit. Other documents will not be accepted. Those found ineligible after verification will be disqualified.',
+    notice3_title: 'Song Changes, Sound Check, and Performance Flow', notice3_body: 'Song changes are not allowed within one week before the preliminary, semi-final, or final. As a general rule, each contestant may change their song only once and must complete the change within the organizer’s stated deadline. To keep the event running smoothly, sound-check time will be arranged according to venue conditions and cannot guarantee identical conditions for every contestant. Final rehearsal times will follow the organizer’s plan.',
+    notice4_title: 'Personal Backing Tracks and Copyright', notice4_body: 'Contestants using their own backing track or self-accompaniment must obtain the necessary music rights on their own and bear responsibility for any copyright infringement. MP3 files and song information must be submitted before the deadline, and self-accompaniment contestants must also cooperate in providing required materials.',
+    notice5_title: 'Health, Tax, and On-Site Rules', notice5_body: 'Contestants are responsible for assessing whether their physical condition is suitable for participation. Any accident caused by concealing health conditions is the contestant’s own responsibility. Prize money of NTD 20,000 or above is subject to a 10% withholding tax by law; foreign nationals residing in Taiwan for fewer than 183 days are subject to a 20% withholding tax. Certain on-site areas, such as the judges’ table, timing table, and score-processing area, are restricted zones and may not be entered without staff permission. Please also cooperate with waste sorting and bring your own water bottle.',
+    notice6_title: 'Announcements and Organizer Rights', notice6_body: 'The latest event news, deadlines for supplemental documents, process changes, and any matters not otherwise specified shall be based on announcements on the event website and the organizer’s latest notice. The organizer reserves the right to revise, supplement, and change the contents.',
+    reg_cta_title: 'Register Now', reg_cta_sub: 'Deadline: July 25, 2026 (Friday), 6:00 PM',
+    register_vitality_title: 'Vitality Star Group', register_vitality_desc: 'For contestants aged 18 to 45. A dedicated Google Form link can be added later for direct group-specific registration.', register_vitality_btn: 'Register for Vitality Group',
+    register_charm_title: 'Charm Star Group', register_charm_desc: 'For contestants aged 46 and above. A separate registration entry like the official site is recommended to avoid selecting the wrong group.', register_charm_btn: 'Register for Charm Group',
+    register_migrant_title: 'Migrant Star Group', register_migrant_desc: 'For foreign workers aged 18 and above who are legally employed in Taiwan. A multilingual form or QR code can be added later to improve completion rates.', register_migrant_btn: 'Register for Migrant Group',
+    register_paper_title: 'Paper Registration Files', register_paper_desc: 'A PDF registration form and related download files can be added later together with the mailing address and submission deadline.', register_paper_btn: 'Download Paper Form',
+    register_note: 'Suggested service hours are Monday to Friday, 10:00 AM to 6:00 PM. Weekends and public holidays are not available for inquiries. After mailing your documents, please confirm delivery within 3 working days.',
+    register_vitality_alert: 'The registration link for the Vitality Star Group has not been set yet', register_charm_alert: 'The registration link for the Charm Star Group has not been set yet', register_migrant_alert: 'The registration link for the Migrant Star Group has not been set yet', register_paper_alert: 'The paper registration file has not been set yet', register_form_alert: 'The Google Form link has not been set yet', register_download_alert: 'The download link for the registration form has not been set yet',
+    btn_register: 'Online Registration Form', btn_download: 'Download Registration Form',
+    contact_title: 'Contact Information', lbl_phone: 'Phone', lbl_fax: 'Fax', lbl_email: 'Email', lbl_line: 'Official LINE Account', lbl_addr: 'Organizer Address',
+    addr_val: '2F, No. 88, Wenhu St., Neihu Dist., Taipei 114061<br>Shangduo International Entertainment Co., Ltd.',
+    footer_title: '2026 Labor Star Singing Contest | 20 Years of Singing in New Taipei',
+    footer_org: 'Organizer: New Taipei City Labor Affairs Bureau',
+    footer_exec: 'Executing Unit: Shangduo International Entertainment Co., Ltd.',
+    footer_copy: '© 2026 New Taipei City Labor Affairs Bureau. All Rights Reserved.'
+  },
+  vi: {
+    page_title: 'Cuộc Thi Ngôi Sao Lao Động 2026｜20 Năm Hát Vang Tân Bắc',
+    org_short: 'Cục Lao Động TP. Tân Bắc',
+    event_short: 'Cuộc Thi Ngôi Sao Lao Động 2026',
+    loader_title: 'Cuộc Thi Ngôi Sao Lao Động', loader_sub: 'SÂN KHẤU SẮP MỞ', loader_loading: 'ĐANG TẢI',
+    nav_info: 'Thông Tin Đăng Ký', nav_reg: 'Đăng Ký Ngay', nav_sched: 'Lịch Thi Đấu', nav_prize: 'Giải Thưởng', nav_songs: 'Danh Sách Bài Hát',
+    hero_org: 'Cục Lao Động Thành Phố Tân Bắc', hero_title1: '20 Năm Hát Vang Tân Bắc', hero_title2: 'Cuộc Thi Ngôi Sao Lao Động 2026',
+    hero_btn_primary: 'Đăng Ký Ngay', hero_btn_secondary: 'Xem Danh Sách Bài Hát',
+    cd_label: 'Đếm ngược đến hạn đăng ký', cd_day: 'Ngày', cd_hour: 'Giờ', cd_min: 'Phút', cd_sec: 'Giây',
+    fact1_kicker: 'Nhóm Thi', fact1_desc: '3 nhóm riêng: Quyến rũ, Năng động và Lao động di trú',
+    fact2_kicker: 'Bài Hát Chỉ Định', fact2_desc: '150 bài gồm Quan Thoại, Đài Loan và Ngoại ngữ',
+    fact3_kicker: 'Suất Vào Vòng Trong', fact3_desc: '10 người mỗi nhóm vào chung kết; nhóm di trú lấy top 20 từ sơ khảo',
+    fact4_kicker: 'Ngày Chung Kết', fact4_desc: 'Ngày 25/10 tại hội trường lớn của chính quyền TP. Tân Bắc',
+    highlight_title: 'Điểm Nổi Bật', highlight_sub: 'Nắm nhanh cách tham gia, nhịp thi đấu và trải nghiệm sân khấu',
+    highlight1_eyebrow: 'Easy Entry',
+    highlight1_title: 'Nhiều kênh đăng ký thuận tiện',
+    highlight1_desc: 'Có thể nộp qua online, bưu điện, email, fax hoặc Line, phù hợp với lịch làm việc khác nhau của người lao động.',
+    highlight2_eyebrow: 'Fair Selection',
+    highlight2_title: 'Thi theo nhóm, chấm điểm minh bạch',
+    highlight2_desc: 'Phân nhóm theo độ tuổi và thân phận tham dự, chấm theo kỹ thuật, cảm xúc, phong thái sân khấu và trang phục.',
+    highlight3_eyebrow: 'Showtime',
+    highlight3_title: 'Lộ trình thi đấu rõ ràng từ sơ khảo đến chung kết',
+    highlight3_desc: 'Sơ khảo tháng 8, bán kết tháng 9 và chung kết tháng 10 giúp thí sinh tích lũy trải nghiệm sân khấu.',
+    news_title: 'Thông Báo', news_sub: 'Bổ sung sẵn cấu trúc thông báo thường thấy trên website chính thức để sau này thay bằng nội dung mới nhất.',
+    news1_tag: 'Tin Mới', news1_date: 'Cần bổ sung', news1_title: 'Nên tập trung quản lý hạn đăng ký, danh sách thi và thông báo thăng hạng tại khu vực này', news1_desc: 'Hiện trang này chưa có mô-đun thông báo. Khi chính thức vận hành, có thể lần lượt đăng nhắc hạn đăng ký, thứ tự thi sơ khảo, danh sách vào bán kết và chung kết, cùng lưu ý cho từng nhóm.',
+    news2_tag: 'Thông Báo Thi Đấu', news2_date: 'Cần bổ sung', news2_title: 'Kết quả từng nhóm và thông tin vòng chung kết có thể cập nhật tập trung tại đây', news2_desc: 'Có thể tham khảo cách làm của website 2025, tách riêng nhóm Quyến Rũ, Năng Động và Lao Động Di Trú để công bố điểm bán kết, danh sách vào chung kết và thông tin check-in ngày thi.',
+    news3_tag: 'Nhắc Nhở Vận Hành', news3_date: 'Cần bổ sung', news3_title: 'Nếu có thay đổi, thông báo mới nhất tại đây và từ ban tổ chức sẽ được ưu tiên áp dụng', news3_desc: 'Những nội dung như điều chỉnh giờ thi, hạn nộp nhạc nền, quy trình hiện trường hay hạn bổ sung hồ sơ đều nên được thông báo tập trung tại đây để tránh phân tán.',
+    group_charm: 'Nhóm Ngôi Sao Quyến Rũ', group_vitality: 'Nhóm Ngôi Sao Năng Động', group_migrant: 'Nhóm Lao Động Di Trú',
+    reg_period_title: 'Thời Gian Đăng Ký',
+    reg_period_1: 'Từ nay đến <strong>ngày 25/7/2026 (Thứ Sáu), 18:00</strong>',
+    reg_period_2: 'Sau khi gửi đơn đăng ký, vui lòng xác nhận trong vòng 3 ngày làm việc (không tính thứ Bảy, Chủ Nhật và ngày lễ)',
+    vitality_age: 'Tuổi: 18–45', vitality_birth: 'Sinh năm 1981–2008',
+    charm_age: 'Tuổi: 46 trở lên', charm_birth: 'Sinh năm 1980 hoặc trước đó',
+    migrant_age: 'Tuổi: 18 trở lên', migrant_desc: 'Lao động nước ngoài làm việc hợp pháp tại Đài Loan',
+    elig_title: 'Điều Kiện Tham Gia',
+    elig_1: 'Từ 18 tuổi trở lên',
+    elig_2: 'Đăng ký hộ khẩu hoặc làm việc tại TP. Tân Bắc, hoặc lao động nước ngoài hợp pháp tại Đài Loan',
+    elig_3: 'Người từng đoạt giải Quán Quân các kỳ trước không được tham gia',
+    docs_title: 'Tài Liệu Cần Chuẩn Bị',
+    doc_1: 'Giấy đồng ý bảo hiểm lao động (hoặc bảng trạng thái BH 3 tháng gần nhất, biên lai đóng phí công đoàn)',
+    doc_2: 'Bản sao hai mặt CMND/CCCD hoặc giấy cư trú',
+    doc_3: 'Ngày thi cần mang theo giấy tờ gốc (CMND, bằng lái xe, hộ chiếu hoặc giấy cư trú)',
+    reg_methods_title: 'Phương Thức Đăng Ký',
+    step1_title: 'Đăng Ký Online', step1_desc: 'Điền vào biểu mẫu đăng ký trực tuyến trên website này (Google Form)',
+    step2_title: 'Đăng Ký Qua Bưu Điện', step2_desc: 'Tải mẫu đơn và gửi đến: 2F, 88 Wunhu St., Neihu, Taipei 114061 (Ghi "115 Labor Star Singing Contest")',
+    step3_title: 'Email / Fax / Line', step3_desc: 'Email: ntpcstar2026@gmail.com<br>Fax: (02)2700-3149<br>Line: @634edkrg',
+    th_round: 'Vòng Thi', th_group: 'Nhóm', th_date: 'Ngày', th_time: 'Giờ', th_venue: 'Địa Điểm',
+    prelim: 'Sơ Khảo', semi: 'Bán Kết', final: 'Chung Kết', all_groups: 'Ba Nhóm Cùng Thi',
+    date_pc: '8–9/8', date_pv: '15–16/8', date_pm: '30/8',
+    date_sc: '20/9', date_sv: '26/9', date_sm: '27/9', date_f: '25/10',
+    venue_1: 'Trung Tâm Hoạt Động Lao Động New Taipei (Q. Wugu)', venue_2: 'Hội Trường Lớn Tầng 6, UBND TP. Tân Bắc',
+    sched_note: '★ Sơ khảo: Nhóm QR và ND chọn 40 người; Nhóm Di Trú chọn 20 người. Bán kết: chọn top 10 mỗi nhóm vào chung kết.',
+    venue_card1_title: 'Địa Điểm Sơ Khảo / Bán Kết', venue_card1_body: 'Nhà hát Trung tâm Hoạt động Lao động New Taipei<br>Số 9, đường Wugong 6, quận Wugu, New Taipei',
+    venue_card2_title: 'Địa Điểm Chung Kết', venue_card2_body: 'Hội trường lớn tầng 6, Chính quyền TP. Tân Bắc<br>Số 161, đoạn 1, đường Zhongshan, quận Banqiao, tầng 6', view_map: 'Xem bản đồ',
+    rules_title: 'Nội Dung Cuộc Thi', rules_sub: 'Bổ sung các quy định chính thức còn thiếu từ website 2025 thành bản dễ đối chiếu, để sau này chỉ cần thay từng mục khi có cập nhật.',
+    rule_tab_prelim: 'Quy Định Sơ Khảo', rule_tab_semi: 'Quy Định Bán Kết', rule_tab_final: 'Quy Định Chung Kết', rule_tab_judge: 'Cách Chấm Điểm',
+    rule_prelim_title: 'Quy Định Sơ Khảo',
+    rule_prelim_1: 'Mỗi thí sinh chỉ được đăng ký một buổi sơ khảo; khi đăng ký có thể điền buổi ưu tiên, nếu vượt số lượng tối đa sẽ được điều chỉnh theo thứ tự đăng ký thực tế.',
+    rule_prelim_2: 'Thứ tự thi sơ khảo sẽ được công bố trên website trong vòng 1 tuần sau khi hết hạn đăng ký; sau khi danh sách công bố sẽ không được đổi buổi thi.',
+    rule_prelim_3: 'Ngày thi phải mang theo giấy tờ pháp lý bản gốc có ảnh; nếu kiểm tra thấy không đủ điều kiện sẽ bị hủy tư cách dự thi.',
+    rule_prelim_4: 'Vòng sơ khảo chỉ hát một đoạn trong 150 bài hát chỉ định, không chấp nhận nhạc đệm riêng; sau khi xếp hạng toàn bộ các buổi, nhóm Quyến Rũ và Năng Động lấy 40 người, nhóm Di Trú lấy 20 người vào bán kết.',
+    rule_semi_title: 'Quy Định Bán Kết',
+    rule_semi_1: 'Sau khi check-in tại bán kết, thí sinh bốc thăm thứ tự biểu diễn và vẫn phải mang giấy tờ pháp lý có ảnh để ban tổ chức kiểm tra.',
+    rule_semi_2: 'Mỗi thí sinh hát trọn vẹn một bài; căn cứ tổng điểm bán kết, mỗi nhóm lấy 10 người vào chung kết.',
+    rule_semi_3: 'Thí sinh xếp hạng 11 đến 20 của mỗi nhóm sẽ được trao giải tại địa điểm chung kết; sau bán kết sẽ đồng thời bốc thăm thứ tự hát ở chung kết, nếu vắng mặt sẽ do ban tổ chức bốc thay.',
+    rule_semi_4: 'Nếu thí sinh tự nguyện bỏ quyền vào vòng trong hoặc không đạt điều kiện sau khi rà soát, ban tổ chức sẽ gọi bổ sung theo thứ tự điểm và công bố trước ngày thi 1 tuần.',
+    rule_final_title: 'Quy Định Chung Kết',
+    rule_final_1: 'Thí sinh vào chung kết phải hát trọn vẹn một bài và khi check-in vẫn phải mang giấy tờ pháp lý bản gốc có ảnh.',
+    rule_final_2: 'Chung kết sẽ xếp hạng theo tổng điểm của giám khảo hoặc phương pháp xếp hạng thứ tự, đồng thời trao thêm các giải đặc biệt như Trang Phục Đẹp Nhất, Phong Thái Sân Khấu và Cổ Động Viên Xuất Sắc.',
+    rule_final_3: 'Kết quả đạt giải của từng nhóm sẽ công bố ngay tại hiện trường ngày chung kết; cúp và dải thưởng nhận trong ngày, tiền thưởng chuyển khoản.',
+    rule_final_4: 'Bài hát ở bán kết và chung kết không được trùng nhau; thí sinh dùng nhạc đệm riêng hoặc tự đàn tự hát phải nộp MP3 và thông tin liên quan trước ngày thi 1 tuần.',
+    rule_judge_title: 'Ban Giám Khảo Và Cách Chấm Điểm',
+    rule_judge_1: 'Khuyến nghị duy trì 3 đến 5 giám khảo chuyên nghiệp để chấm thi theo nguyên tắc khách quan, công bằng và công khai.',
+    rule_judge_2: 'Tiêu chí chấm điểm gồm: kỹ thuật cao độ 40%, âm sắc và cảm xúc 40%, phong thái sân khấu 10%, tạo hình 10%.',
+    rule_judge_3: 'Nếu sơ khảo hoặc bán kết bằng điểm, sẽ so theo thứ tự: kỹ thuật cao độ, âm sắc và cảm xúc, phong thái sân khấu, tạo hình; nếu vẫn bằng nhau thì giám khảo cùng quyết định.',
+    rule_judge_4: 'Chung kết có thể áp dụng phương pháp xếp hạng thứ tự; người có tổng thứ hạng thấp nhất là người thắng. Nếu vẫn bằng nhau, hội đồng giám khảo sẽ cùng thảo luận quyết định.',
+    scoring_title: 'Tiêu Chí Chấm Điểm',
+    score1_name: 'Kỹ Thuật Giọng', score2_name: 'Cảm Xúc Âm Thanh', score3_name: 'Phong Cách Sân Khấu', score4_name: 'Trang Phục',
+    prizes_sub: 'Mỗi nhóm có giải thưởng riêng biệt',
+    p1: 'Quán Quân', p2: 'Á Quân', p3: 'Hạng Ba', p4: 'Hạng Tư', p5: 'Hạng Năm', p6_10: 'Hạng 6–10', p11_20: 'Hạng 11–20',
+    trophy: 'Cúp', best_style: 'Giải Trang Phục Đẹp Nhất', best_stage: 'Giải Phong Cách Sân Khấu Xuất Sắc', best_cheer: 'Giải Cổ Động Viên Xuất Sắc',
+    prizes_note: '★ Tiền thưởng từ 20.000 NTD trở lên sẽ bị khấu trừ 10% thuế. Người nước ngoài ở Đài Loan dưới 183 ngày bị khấu trừ 20%.',
+    songs_sub: '150 bài hát: 50 Quan Thoại, 50 Đài Loan, 50 Ngoại ngữ',
+    song1_tab: 'Quan Thoại (50 bài)', song2_tab: 'Tiếng Đài Loan (50 bài)', song3_tab: 'Ngoại Ngữ (50 bài)',
+    th_no: 'STT', th_song: 'Tên Bài Hát', th_artist: 'Ca Sĩ', th_code: 'Mã Số',
+    song_search_placeholder: 'Tìm theo tên bài hát, ca sĩ hoặc mã số',
+    song_status_default: 'Đang hiển thị 150 bài hát chỉ định, có thể lọc theo tab và từ khóa.',
+    song_status_result: 'Tìm thấy {count} bài hát phù hợp với "{query}"',
+    song_data_missing: 'Dữ liệu bài hát chỉ định chưa được tải. Vui lòng kiểm tra songs-data.js.',
+    songs_note: '★ Tất cả các vòng thi sử dụng hệ thống karaoke tại chỗ, không chấp nhận nhạc riêng. Vòng bán kết có thể sử dụng MP3 tự chuẩn bị, cần nộp trước hạn chót.',
+    notices_title: 'Lưu Ý', notices_sub: 'Tổng hợp trước các lưu ý thường thấy trong điều lệ chính thức để dễ đối chiếu khi xác nhận thông tin sau này.',
+    notice1_title: 'Đăng ký và bổ sung hồ sơ', notice1_body: 'Người đăng ký tham gia được xem là đã hiểu và đồng ý tuân thủ quy định cuộc thi cùng các thông báo liên quan của ban tổ chức. Nếu hồ sơ thiếu hoặc nội dung không rõ, sau khi được thông báo vui lòng bổ sung trong 2 ngày; quá hạn xem như từ bỏ tư cách dự thi. Vui lòng tự lưu bản sao hồ sơ, ban tổ chức về nguyên tắc không hoàn trả.',
+    notice2_title: 'Check-in và kiểm tra giấy tờ', notice2_body: 'Ngày thi phải mang giấy tờ tùy thân bản gốc có ảnh như CCCD, bằng lái xe, hộ chiếu hoặc thẻ cư trú; các giấy tờ khác sẽ không được chấp nhận. Nếu kiểm tra thấy không đủ điều kiện, tư cách dự thi sẽ bị hủy.',
+    notice3_title: 'Đổi bài, thử âm và quy trình biểu diễn', notice3_body: 'Trong vòng 1 tuần trước sơ khảo, bán kết và chung kết không được đổi bài hát đột xuất; mỗi thí sinh về nguyên tắc chỉ được đổi một lần và phải hoàn tất trong thời hạn ban tổ chức quy định. Để giữ tiến độ, thời gian thử âm sẽ sắp xếp theo điều kiện địa điểm, không đảm bảo mọi thí sinh có cùng điều kiện thử âm; thời gian tổng duyệt chung kết theo kế hoạch của ban tổ chức.',
+    notice4_title: 'Nhạc đệm tự chuẩn bị và bản quyền', notice4_body: 'Người dùng nhạc đệm riêng hoặc tự đàn tự hát phải tự xin quyền bản quyền âm nhạc và tự chịu trách nhiệm nếu có vi phạm; file nhạc MP3 và thông tin bài hát phải nộp trước hạn, người tự đàn tự hát cũng cần phối hợp cung cấp dữ liệu cần thiết.',
+    notice5_title: 'Sức khỏe, thuế và quy định hiện trường', notice5_body: 'Thí sinh cần tự đánh giá tình trạng sức khỏe của mình có phù hợp để tham gia hay không; nếu che giấu tình trạng cơ thể dẫn đến tai nạn thì tự chịu trách nhiệm. Tiền thưởng từ 20.000 Đài tệ trở lên sẽ bị khấu trừ 10% thuế theo luật; người nước ngoài cư trú tại Đài Loan chưa đủ 183 ngày bị khấu trừ 20%. Một số khu vực hiện trường là khu kiểm soát như bàn giám khảo, bàn bấm giờ và khu xử lý kết quả, vui lòng không vào nếu chưa được nhân viên cho phép; đồng thời phối hợp phân loại rác và mang bình nước cá nhân.',
+    notice6_title: 'Thông báo và quyền điều chỉnh của ban tổ chức', notice6_body: 'Thông tin hoạt động mới nhất, hạn bổ sung hồ sơ, thay đổi quy trình và các vấn đề chưa được nêu sẽ căn cứ theo thông báo trên website và thông tin mới nhất từ ban tổ chức; ban tổ chức có quyền sửa đổi, bổ sung và thay đổi.',
+    reg_cta_title: 'Đăng Ký Ngay', reg_cta_sub: 'Hạn chót: 25/7/2026 (Thứ Sáu), 18:00',
+    register_vitality_title: 'Nhóm Ngôi Sao Năng Động', register_vitality_desc: 'Độ tuổi 18 đến 45. Về sau nên bổ sung liên kết Google Form riêng cho nhóm này để phân luồng đăng ký trực tiếp.', register_vitality_btn: 'Đăng ký nhóm Năng Động',
+    register_charm_title: 'Nhóm Ngôi Sao Quyến Rũ', register_charm_desc: 'Dành cho người từ 46 tuổi trở lên. Nên bố trí cổng đăng ký riêng như website chính thức để tránh chọn sai nhóm.', register_charm_btn: 'Đăng ký nhóm Quyến Rũ',
+    register_migrant_title: 'Nhóm Lao Động Di Trú', register_migrant_desc: 'Dành cho lao động nước ngoài từ 18 tuổi trở lên đang làm việc hợp pháp tại Đài Loan. Có thể bổ sung form đa ngôn ngữ hoặc mã QR để tăng tỷ lệ hoàn tất.', register_migrant_btn: 'Đăng ký nhóm Di Trú',
+    register_paper_title: 'Hồ sơ đăng ký bản giấy', register_paper_desc: 'Nên bổ sung file PDF đơn đăng ký và tài liệu hướng dẫn tải xuống, đồng thời ghi rõ địa chỉ gửi và thời hạn nhận hồ sơ.', register_paper_btn: 'Tải đơn đăng ký bản giấy',
+    register_note: 'Giờ phục vụ nên bổ sung là Thứ Hai đến Thứ Sáu, 10:00–18:00; không tiếp nhận vào cuối tuần và ngày lễ. Sau khi gửi hồ sơ, vui lòng chủ động xác nhận tình trạng nhận được trong vòng 3 ngày làm việc.',
+    register_vitality_alert: 'Liên kết đăng ký của nhóm Năng Động vẫn chưa được thiết lập', register_charm_alert: 'Liên kết đăng ký của nhóm Quyến Rũ vẫn chưa được thiết lập', register_migrant_alert: 'Liên kết đăng ký của nhóm Di Trú vẫn chưa được thiết lập', register_paper_alert: 'Tệp hồ sơ đăng ký bản giấy vẫn chưa được thiết lập', register_form_alert: 'Liên kết Google Form vẫn chưa được thiết lập', register_download_alert: 'Liên kết tải biểu mẫu vẫn chưa được thiết lập',
+    btn_register: 'Đăng Ký Online', btn_download: 'Tải Mẫu Đơn',
+    contact_title: 'Thông Tin Liên Hệ', lbl_phone: 'Điện Thoại', lbl_fax: 'Fax', lbl_email: 'Email', lbl_line: 'Tài Khoản LINE Chính Thức', lbl_addr: 'Địa Chỉ Đơn Vị Thực Hiện',
+    addr_val: '2F, 88 Wunhu St., Neihu Dist., Taipei 114061<br>Shangduo International Entertainment Co., Ltd.',
+    footer_title: 'Cuộc Thi Ngôi Sao Lao Động 2026｜20 Năm Hát Vang Tân Bắc',
+    footer_org: 'Ban Tổ Chức: Cục Lao Động Thành Phố Tân Bắc',
+    footer_exec: 'Đơn Vị Thực Hiện: Shangduo International Entertainment Co., Ltd.',
+    footer_copy: '© 2026 Cục Lao Động TP. Tân Bắc. Bảo lưu mọi quyền.'
+  },
+  th: {
+    page_title: 'การแข่งขันดาวแรงงาน 2026｜20 ปี เสียงเพลงแห่งนิวไทเป',
+    org_short: 'กรมแรงงาน นครนิวไทเป',
+    event_short: 'การแข่งขันดาวแรงงาน 2026',
+    loader_title: 'การแข่งขันดาวแรงงาน', loader_sub: 'เวทีกำลังเปิด', loader_loading: 'กำลังโหลด',
+    nav_info: 'ข้อมูลการสมัคร', nav_reg: 'สมัครเลย', nav_sched: 'ตารางแข่งขัน', nav_prize: 'รางวัล', nav_songs: 'เพลงที่กำหนด',
+    hero_org: 'สำนักงานแรงงาน เมืองนิวไทเป', hero_title1: '20 ปี เสียงเพลงแห่งนิวไทเป', hero_title2: 'การแข่งขันดาวแรงงาน 2026',
+    hero_btn_primary: 'สมัครตอนนี้', hero_btn_secondary: 'ดูรายชื่อเพลง',
+    cd_label: 'นับถอยหลังปิดรับสมัคร', cd_day: 'วัน', cd_hour: 'ชั่วโมง', cd_min: 'นาที', cd_sec: 'วินาที',
+    fact1_kicker: 'กลุ่มแข่งขัน', fact1_desc: '3 กลุ่มแยกแข่งขันตามคุณสมบัติผู้สมัคร',
+    fact2_kicker: 'เพลงที่กำหนด', fact2_desc: 'รวม 150 เพลง จีนกลาง ไต้หวัน และต่างประเทศ',
+    fact3_kicker: 'สิทธิ์เข้ารอบ', fact3_desc: 'รอบชิงคัด 10 คนต่อกลุ่ม และกลุ่มแรงงานต่างด้าวคัด 20 คนจากรอบแรก',
+    fact4_kicker: 'วันรอบชิง', fact4_desc: '25 ตุลาคม ที่หอประชุมใหญ่ ศาลากลางนิวไทเป',
+    highlight_title: 'จุดเด่นของงาน', highlight_sub: 'สรุปวิธีสมัคร รูปแบบการแข่งขัน และประสบการณ์บนเวทีแบบรวดเร็ว',
+    highlight1_eyebrow: 'Easy Entry',
+    highlight1_title: 'สมัครได้หลายช่องทาง',
+    highlight1_desc: 'ส่งใบสมัครได้ทั้งออนไลน์ ไปรษณีย์ อีเมล แฟกซ์ และ Line เหมาะกับเวลางานที่ยืดหยุ่นต่างกันของผู้สมัคร.',
+    highlight2_eyebrow: 'Fair Selection',
+    highlight2_title: 'แบ่งกลุ่มชัดเจน เกณฑ์ตัดสินโปร่งใส',
+    highlight2_desc: 'แบ่งกลุ่มตามอายุและสถานะผู้สมัคร พร้อมใช้เกณฑ์เดียวกันด้านเทคนิค อารมณ์ บุคลิก และการแต่งกาย.',
+    highlight3_eyebrow: 'Showtime',
+    highlight3_title: 'มีเวทีต่อเนื่องตั้งแต่รอบคัดเลือกถึงรอบชิง',
+    highlight3_desc: 'เริ่มรอบคัดเลือกในเดือนสิงหาคม ต่อด้วยรอบรองในกันยายน และปิดท้ายรอบชิงในตุลาคม.',
+    news_title: 'ประกาศ', news_sub: 'เตรียมโครงสร้างประกาศแบบเว็บไซต์ทางการไว้ก่อน เพื่อให้สามารถแทนที่ด้วยข่าวล่าสุดได้ทันทีในภายหลัง',
+    news1_tag: 'ข่าวล่าสุด', news1_date: 'ควรเติมข้อมูล', news1_title: 'วันปิดรับสมัคร รายชื่อรอบแข่งขัน และประกาศผู้ผ่านเข้ารอบ ควรรวมจัดการไว้ในส่วนนี้', news1_desc: 'ขณะนี้หน้ายังไม่มีโมดูลประกาศ เมื่อใช้งานจริงสามารถลงแจ้งเตือนวันปิดรับสมัคร ลำดับการขึ้นเวทีรอบคัดเลือก รายชื่อผู้ผ่านเข้ารอบรองและรอบชิง รวมถึงข้อควรทราบของแต่ละกลุ่มได้ที่นี่',
+    news2_tag: 'ประกาศการแข่งขัน', news2_date: 'ควรเติมข้อมูล', news2_title: 'ผลคะแนนแต่ละกลุ่มและข้อมูลรอบชิงสามารถอัปเดตรวมไว้ที่นี่', news2_desc: 'สามารถอ้างอิงรูปแบบเว็บไซต์ปี 2025 โดยแยกกลุ่มดาวเสน่ห์ ดาวพลัง และแรงงานต่างด้าว เพื่อประกาศคะแนนรอบรอง รายชื่อผู้ผ่านเข้ารอบชิง และข้อมูลการลงทะเบียนในวันแข่งขัน',
+    news3_tag: 'แจ้งเตือนการดำเนินงาน', news3_date: 'ควรเติมข้อมูล', news3_title: 'หากมีการเปลี่ยนแปลง ให้ยึดประกาศล่าสุดในส่วนนี้และการแจ้งจากผู้จัดเป็นหลัก', news3_desc: 'เรื่องอย่างการปรับเวลาแข่งขัน กำหนดส่งดนตรีประกอบ ขั้นตอนหน้างาน หรือกำหนดเส้นตายการส่งเอกสารเพิ่มเติม ควรประกาศรวมที่นี่เพื่อไม่ให้ข้อมูลกระจัดกระจาย',
+    group_charm: 'กลุ่มดาวเสน่ห์', group_vitality: 'กลุ่มดาวพลัง', group_migrant: 'กลุ่มแรงงานต่างด้าว',
+    reg_period_title: 'ระยะเวลาสมัคร',
+    reg_period_1: 'ตั้งแต่บัดนี้ถึง <strong>25 กรกฎาคม 2026 (วันศุกร์) เวลา 18:00 น.</strong>',
+    reg_period_2: 'หลังส่งใบสมัครแล้ว กรุณายืนยันภายใน 3 วันทำการ (ไม่รวมวันเสาร์ อาทิตย์ และวันหยุดราชการ)',
+    vitality_age: 'อายุ: 18–45 ปี', vitality_birth: 'เกิดปี พ.ศ. 2524–2551',
+    charm_age: 'อายุ: 46 ปีขึ้นไป', charm_birth: 'เกิดปี พ.ศ. 2523 หรือก่อนหน้า',
+    migrant_age: 'อายุ: 18 ปีขึ้นไป', migrant_desc: 'แรงงานต่างชาติที่ทำงานถูกกฎหมายในไต้หวัน',
+    elig_title: 'คุณสมบัติผู้สมัคร',
+    elig_1: 'อายุ 18 ปีขึ้นไป',
+    elig_2: 'มีทะเบียนบ้านหรือทำงานในเมืองนิวไทเป หรือเป็นแรงงานต่างชาติที่ทำงานถูกกฎหมายในไต้หวัน',
+    elig_3: 'ผู้ที่เคยได้รับรางวัลชนะเลิศในการแข่งขันครั้งก่อนไม่มีสิทธิ์เข้าร่วม',
+    docs_title: 'เอกสารที่ต้องเตรียม',
+    doc_1: 'ใบยินยอมประกันแรงงาน (หรือรายงานสถานะประกัน 3 เดือนล่าสุด, ใบเสร็จค่าสหภาพ)',
+    doc_2: 'สำเนาบัตรประชาชนทั้งสองด้าน หรือสำเนาใบอนุญาตพำนัก',
+    doc_3: 'วันแข่งต้องนำเอกสารต้นฉบับ (บัตรประชาชน, ใบขับขี่, หนังสือเดินทาง หรือใบอนุญาตพำนัก)',
+    reg_methods_title: 'วิธีการสมัคร',
+    step1_title: 'สมัครออนไลน์', step1_desc: 'กรอกแบบฟอร์มสมัครออนไลน์บนเว็บไซต์นี้ (Google Form)',
+    step2_title: 'สมัครทางไปรษณีย์', step2_desc: 'ดาวน์โหลดแบบฟอร์มและส่งไปที่: ชั้น 2, 88 ถนนเหวินหู, เขตเน่ยหู, ไทเป 114061 (ระบุ "115 Labor Star Singing Contest")',
+    step3_title: 'อีเมล / แฟกซ์ / ไลน์', step3_desc: 'อีเมล: ntpcstar2026@gmail.com<br>แฟกซ์: (02)2700-3149<br>ไลน์: @634edkrg',
+    th_round: 'รอบ', th_group: 'กลุ่ม', th_date: 'วันที่', th_time: 'เวลา', th_venue: 'สถานที่',
+    prelim: 'รอบคัดเลือก', semi: 'รอบรองชนะเลิศ', final: 'รอบชิงชนะเลิศ', all_groups: 'ทุกกลุ่มพร้อมกัน',
+    date_pc: '8–9 ส.ค.', date_pv: '15–16 ส.ค.', date_pm: '30 ส.ค.',
+    date_sc: '20 ก.ย.', date_sv: '26 ก.ย.', date_sm: '27 ก.ย.', date_f: '25 ต.ค.',
+    venue_1: 'ศูนย์กิจกรรมแรงงาน นิวไทเป (อำเภอหวู่กู่)', venue_2: 'หอประชุมใหญ่ ชั้น 6 ศาลากลาง นิวไทเป',
+    sched_note: '★ รอบคัดเลือก: กลุ่มดาวเสน่ห์และดาวพลัง คัดเลือก 40 คน; กลุ่มแรงงานต่างด้าว 20 คน รอบรองชนะเลิศคัดเลือก 10 คนต่อกลุ่ม',
+    venue_card1_title: 'สถานที่รอบคัดเลือก / รอบรอง', venue_card1_body: 'หอแสดงศิลป์ ศูนย์กิจกรรมแรงงานนิวไทเป<br>เลขที่ 9 ถนนอู่กง 6 เขตอู่กู่ นครนิวไทเป',
+    venue_card2_title: 'สถานที่รอบชิง', venue_card2_body: 'หอประชุมใหญ่ ชั้น 6 ศาลากลางนครนิวไทเป<br>เลขที่ 161 ถนนจงซาน ตอนที่ 1 เขตปั่นเฉียว ชั้น 6', view_map: 'ดูแผนที่',
+    rules_title: 'รายละเอียดการแข่งขัน', rules_sub: 'เติมกติกาทางการที่ขาดจากเว็บไซต์ปี 2025 ให้เป็นฉบับตรวจสอบได้ เพื่อให้ปีต่อไปเปลี่ยนเฉพาะรายละเอียดที่อัปเดตได้ง่าย',
+    rule_tab_prelim: 'กติการอบคัดเลือก', rule_tab_semi: 'กติการอบรอง', rule_tab_final: 'กติการอบชิง', rule_tab_judge: 'วิธีตัดสิน',
+    rule_prelim_title: 'กติการอบคัดเลือก',
+    rule_prelim_1: 'ผู้สมัครแต่ละคนสมัครรอบคัดเลือกได้เพียง 1 สนาม โดยสามารถระบุสนามที่ต้องการก่อน หากสนามเต็มจะจัดตามลำดับการสมัครจริง',
+    rule_prelim_2: 'ลำดับการแสดงในรอบคัดเลือกจะประกาศบนเว็บไซต์ภายใน 1 สัปดาห์หลังปิดรับสมัคร และเมื่อประกาศแล้วจะไม่สามารถเปลี่ยนสนามได้',
+    rule_prelim_3: 'ในวันแข่งขันต้องนำเอกสารราชการตัวจริงที่มีรูปถ่ายมาลงทะเบียน หากตรวจพบว่าไม่เข้าเกณฑ์จะถูกตัดสิทธิ์',
+    rule_prelim_4: 'รอบคัดเลือกให้ร้องเพียงช่วงหนึ่งของเพลงที่กำหนด 150 เพลง ไม่รับดนตรีประกอบส่วนตัว หลังรวมคะแนนทุกสนามแล้ว กลุ่มดาวเสน่ห์และดาวพลังคัด 40 คน ส่วนกลุ่มแรงงานต่างด้าวคัด 20 คนเข้าสู่รอบรอง',
+    rule_semi_title: 'กติการอบรอง',
+    rule_semi_1: 'หลังลงทะเบียนในวันรอบรอง ผู้เข้าแข่งขันจะจับสลากลำดับการร้อง และยังต้องนำเอกสารตัวจริงที่มีรูปถ่ายมาให้ผู้จัดตรวจสอบ',
+    rule_semi_2: 'ผู้เข้าแข่งขันแต่ละคนร้องเพลงเต็ม 1 เพลง และจัดอันดับตามคะแนนรวมรอบรอง โดยคัด 10 คนต่อกลุ่มเข้ารอบชิง',
+    rule_semi_3: 'ผู้เข้าแข่งขันอันดับ 11 ถึง 20 ของแต่ละกลุ่มจะรับรางวัลในสถานที่รอบชิง และหลังจบรอบรองจะจับลำดับการร้องรอบชิงพร้อมกัน หากไม่อยู่ในที่เกิดเหตุผู้จัดจะจับแทน',
+    rule_semi_4: 'หากสละสิทธิ์หรือภายหลังตรวจสอบแล้วไม่ผ่านคุณสมบัติ จะเรียกผู้ได้คะแนนถัดไปขึ้นแทนและประกาศก่อนการแข่งขัน 1 สัปดาห์',
+    rule_final_title: 'กติการอบชิง',
+    rule_final_1: 'ผู้ผ่านเข้ารอบชิงต้องร้องเพลงเต็ม 1 เพลง และเมื่อลงทะเบียนต้องนำเอกสารราชการตัวจริงที่มีรูปถ่ายมาด้วยเช่นกัน',
+    rule_final_2: 'รอบชิงจะตัดสินตามคะแนนรวมของกรรมการหรือระบบจัดลำดับ และยังมีรางวัลพิเศษ เช่น แต่งกายยอดเยี่ยม บุคลิกเวทียอดเยี่ยม และกองเชียร์ยอดเยี่ยม',
+    rule_final_3: 'ผลรางวัลของแต่ละกลุ่มจะประกาศในวันรอบชิง ณ สถานที่แข่งขัน ถ้วยรางวัลและสายสะพายรับภายในวันเดียวกัน ส่วนเงินรางวัลโอนเข้าบัญชี',
+    rule_final_4: 'เพลงในรอบรองและรอบชิงห้ามซ้ำกัน ผู้ที่ใช้ดนตรีประกอบส่วนตัวหรือเล่นดนตรีสดเอง ต้องส่งไฟล์ MP3 และข้อมูลที่เกี่ยวข้องก่อนวันแข่งขัน 1 สัปดาห์',
+    rule_judge_title: 'คณะกรรมการและวิธีให้คะแนน',
+    rule_judge_1: 'แนะนำให้มีกรรมการมืออาชีพ 3 ถึง 5 คน เพื่อให้การตัดสินเป็นไปอย่างเป็นกลาง ยุติธรรม และเปิดเผย',
+    rule_judge_2: 'เกณฑ์คะแนนประกอบด้วย เทคนิคเสียง 40% อารมณ์และน้ำเสียง 40% บุคลิกบนเวที 10% และการแต่งกาย 10%',
+    rule_judge_3: 'หากรอบคัดเลือกหรือรอบรองได้คะแนนเท่ากัน จะพิจารณาตามลำดับ เทคนิคเสียง น้ำเสียงและอารมณ์ บุคลิกบนเวที และการแต่งกาย หากยังเท่ากันให้กรรมการร่วมกันตัดสิน',
+    rule_judge_4: 'รอบชิงสามารถใช้วิธีจัดลำดับคะแนนรวม ผู้ที่มีผลรวมลำดับต่ำสุดเป็นผู้ชนะ หากลำดับเท่ากันให้คณะกรรมการหารือร่วมกันเพื่อชี้ขาด',
+    scoring_title: 'เกณฑ์การให้คะแนน',
+    score1_name: 'เทคนิคเสียง', score2_name: 'อารมณ์เพลง', score3_name: 'บุคลิกบนเวที', score4_name: 'การแต่งกาย',
+    prizes_sub: 'แต่ละกลุ่มมีรางวัลแยกกัน',
+    p1: 'ชนะเลิศ', p2: 'รองชนะเลิศ', p3: 'อันดับ 3', p4: 'อันดับ 4', p5: 'อันดับ 5', p6_10: 'อันดับ 6–10', p11_20: 'อันดับ 11–20',
+    trophy: 'ถ้วยรางวัล', best_style: 'รางวัลแต่งกายยอดเยี่ยม', best_stage: 'รางวัลบุคลิกดีที่สุด', best_cheer: 'รางวัลกองเชียร์ยอดเยี่ยม',
+    prizes_note: '★ รางวัลตั้งแต่ 20,000 NTD ขึ้นไป หักภาษี 10% ชาวต่างชาติที่อยู่ในไต้หวันไม่ถึง 183 วัน หักภาษี 20%',
+    songs_sub: 'รวม 150 เพลง: จีนกลาง 50, ไต้หวัน 50, ต่างประเทศ 50',
+    song1_tab: 'จีนกลาง (50 เพลง)', song2_tab: 'ไต้หวัน (50 เพลง)', song3_tab: 'ต่างประเทศ (50 เพลง)',
+    th_no: 'ลำดับ', th_song: 'ชื่อเพลง', th_artist: 'นักร้อง', th_code: 'รหัส',
+    song_search_placeholder: 'ค้นหาชื่อเพลง นักร้อง หรือรหัส',
+    song_status_default: 'กำลังแสดงเพลงที่กำหนด 150 เพลง สามารถกรองตามแท็บและคำค้นได้',
+    song_status_result: 'พบ {count} เพลงที่ตรงกับ "{query}"',
+    song_data_missing: 'ยังไม่ได้โหลดข้อมูลเพลงที่กำหนด กรุณาตรวจสอบ songs-data.js',
+    songs_note: '★ การแข่งขันทุกรอบใช้ระบบคาราโอเกะในสถานที่ ไม่รับดนตรีส่วนตัว รอบรองชนะเลิศสามารถใช้ MP3 ได้ โดยต้องส่งก่อนกำหนด',
+    notices_title: 'ข้อควรทราบ', notices_sub: 'รวบรวมข้อกำหนดที่มักมีในระเบียบการอย่างเป็นทางการไว้ก่อน เพื่อให้ง่ายต่อการตรวจสอบเมื่อยืนยันข้อมูลภายหลัง',
+    notice1_title: 'การสมัครและการส่งเอกสารเพิ่มเติม', notice1_body: 'ผู้ที่สมัครเข้าร่วมการแข่งขันนี้ถือว่าได้เข้าใจและยอมรับกติกาการแข่งขันและข้อกำหนดที่ผู้จัดประกาศแล้ว หากเอกสารไม่ครบหรือข้อมูลไม่ชัดเจน หลังได้รับแจ้งแล้วกรุณาแก้ไขภายใน 2 วัน หากพ้นกำหนดจะถือว่าสละสิทธิ์ กรุณาเก็บสำเนาเอกสารไว้ด้วยตนเอง โดยหลักแล้วผู้จัดจะไม่คืนเอกสาร',
+    notice2_title: 'การลงทะเบียนและการตรวจเอกสาร', notice2_body: 'ในวันแข่งขันต้องนำเอกสารยืนยันตัวตนตัวจริงที่มีรูปถ่าย เช่น บัตรประชาชน ใบขับขี่ หนังสือเดินทาง หรือใบอนุญาตพำนัก เอกสารอื่นจะไม่รับพิจารณา หากตรวจพบว่าไม่เข้าเกณฑ์จะถูกตัดสิทธิ์',
+    notice3_title: 'การเปลี่ยนเพลง การทดสอบเสียง และขั้นตอนการแสดง', notice3_body: 'ก่อนรอบคัดเลือก รอบรอง และรอบชิง 1 สัปดาห์ ห้ามเปลี่ยนเพลงกะทันหัน โดยผู้เข้าแข่งขันแต่ละคนสามารถเปลี่ยนได้โดยหลักเพียง 1 ครั้ง และต้องดำเนินการภายในเวลาที่ผู้จัดกำหนด เพื่อให้ตารางแข่งขันราบรื่น เวลาทดสอบเสียงจะจัดตามสภาพสถานที่ จึงไม่สามารถรับประกันเงื่อนไขที่เหมือนกันทุกคน ส่วนช่วงซ้อมรอบชิงจะเป็นไปตามแผนของผู้จัด',
+    notice4_title: 'ดนตรีประกอบส่วนตัวและความรับผิดชอบด้านลิขสิทธิ์', notice4_body: 'ผู้ที่ใช้เพลงประกอบส่วนตัวหรือเล่นดนตรีสดเอง ต้องจัดการสิทธิ์ลิขสิทธิ์เพลงด้วยตนเองและรับผิดชอบหากมีการละเมิด ไฟล์ MP3 และข้อมูลเพลงต้องส่งภายในกำหนด และผู้เล่นดนตรีเองต้องให้ข้อมูลที่ผู้จัดต้องการด้วย',
+    notice5_title: 'สุขภาพ ภาษี และกฎหน้างาน', notice5_body: 'ผู้เข้าแข่งขันควรประเมินสภาพสุขภาพของตนเองว่าเหมาะสมต่อการเข้าร่วมกิจกรรมหรือไม่ หากปกปิดอาการทางร่างกายจนเกิดอุบัติเหตุ ผู้เข้าแข่งขันต้องรับผิดชอบเอง เงินรางวัลตั้งแต่ 20,000 ดอลลาร์ไต้หวันขึ้นไปหักภาษี 10% ตามกฎหมาย ชาวต่างชาติที่พำนักในไต้หวันไม่ถึง 183 วันหักภาษี 20% พื้นที่บางส่วนในงาน เช่น โต๊ะกรรมการ โต๊ะจับเวลา และพื้นที่ประมวลผลคะแนน เป็นเขตควบคุม โปรดอย่าเข้าโดยไม่ได้รับอนุญาต และโปรดร่วมมือเรื่องการแยกขยะและการนำแก้วน้ำส่วนตัวมาใช้',
+    notice6_title: 'ประกาศและสิทธิ์ของผู้จัด', notice6_body: 'ข่าวสารล่าสุด กำหนดส่งเอกสารเพิ่มเติม การเปลี่ยนแปลงขั้นตอน และเรื่องที่ไม่ได้ระบุไว้ ให้ยึดประกาศบนเว็บไซต์และการแจ้งล่าสุดจากผู้จัดเป็นหลัก ผู้จัดขอสงวนสิทธิ์ในการแก้ไข เพิ่มเติม และเปลี่ยนแปลง',
+    reg_cta_title: 'สมัครเลย', reg_cta_sub: 'ปิดรับสมัคร: 25 กรกฎาคม 2026 (วันศุกร์) เวลา 18:00 น.',
+    register_vitality_title: 'กลุ่มดาวพลัง', register_vitality_desc: 'อายุ 18 ถึง 45 ปี ภายหลังควรเพิ่มลิงก์ Google Form เฉพาะกลุ่มนี้เพื่อให้ลงทะเบียนแยกได้โดยตรง', register_vitality_btn: 'สมัครกลุ่มดาวพลัง',
+    register_charm_title: 'กลุ่มดาวเสน่ห์', register_charm_desc: 'สำหรับผู้มีอายุ 46 ปีขึ้นไป แนะนำให้มีช่องทางสมัครแยกเหมือนเว็บไซต์ทางการเพื่อป้องกันการเลือกกลุ่มผิด', register_charm_btn: 'สมัครกลุ่มดาวเสน่ห์',
+    register_migrant_title: 'กลุ่มแรงงานต่างด้าว', register_migrant_desc: 'สำหรับแรงงานต่างชาติอายุ 18 ปีขึ้นไปที่ทำงานถูกกฎหมายในไต้หวัน สามารถเพิ่มแบบฟอร์มหลายภาษา หรือ QR code เพื่อช่วยให้กรอกเสร็จได้ง่ายขึ้น', register_migrant_btn: 'สมัครกลุ่มแรงงานต่างด้าว',
+    register_paper_title: 'เอกสารสมัครแบบกระดาษ', register_paper_desc: 'แนะนำให้เพิ่มไฟล์ PDF ใบสมัครและเอกสารคำอธิบายที่ดาวน์โหลดได้ พร้อมระบุที่อยู่จัดส่งและกำหนดเวลาปิดรับ', register_paper_btn: 'ดาวน์โหลดใบสมัครแบบกระดาษ',
+    register_note: 'เวลาทำการที่แนะนำคือ วันจันทร์ถึงวันศุกร์ 10:00–18:00 น. ไม่รับเรื่องในวันเสาร์ อาทิตย์ และวันหยุดราชการ หลังส่งเอกสารสมัครแล้ว กรุณาติดตามยืนยันการได้รับเอกสารภายใน 3 วันทำการ',
+    register_vitality_alert: 'ยังไม่ได้ตั้งค่าลิงก์สมัครกลุ่มดาวพลัง', register_charm_alert: 'ยังไม่ได้ตั้งค่าลิงก์สมัครกลุ่มดาวเสน่ห์', register_migrant_alert: 'ยังไม่ได้ตั้งค่าลิงก์สมัครกลุ่มแรงงานต่างด้าว', register_paper_alert: 'ยังไม่ได้ตั้งค่าไฟล์เอกสารสมัครแบบกระดาษ', register_form_alert: 'ยังไม่ได้ตั้งค่าลิงก์ Google Form', register_download_alert: 'ยังไม่ได้ตั้งค่าลิงก์ดาวน์โหลดใบสมัคร',
+    btn_register: 'สมัครออนไลน์', btn_download: 'ดาวน์โหลดใบสมัคร',
+    contact_title: 'ข้อมูลติดต่อ', lbl_phone: 'โทรศัพท์', lbl_fax: 'แฟกซ์', lbl_email: 'อีเมล', lbl_line: 'บัญชี LINE ทางการ', lbl_addr: 'ที่อยู่หน่วยงาน',
+    addr_val: 'ชั้น 2, 88 ถนนเหวินหู, เขตเน่ยหู, ไทเป 114061<br>Shangduo International Entertainment Co., Ltd.',
+    footer_title: 'การแข่งขันดาวแรงงาน 2026｜20 ปี เสียงเพลงแห่งนิวไทเป',
+    footer_org: 'ผู้จัด: สำนักงานแรงงาน เมืองนิวไทเป',
+    footer_exec: 'ผู้ดำเนินการ: Shangduo International Entertainment Co., Ltd.',
+    footer_copy: '© 2026 สำนักงานแรงงาน เมืองนิวไทเป สงวนสิทธิ์ทั้งหมด'
+  },
+  ph: {
+    page_title: '2026 Labor Star Singing Contest｜20 Taon ng Awit sa New Taipei',
+    org_short: 'Labor Bureau ng Lungsod ng New Taipei',
+    event_short: '2026 Labor Star Singing Contest',
+    loader_title: 'Labor Star Singing Contest', loader_sub: 'PAPARATING NA ANG ENTABLADO', loader_loading: 'NAGLO-LOAD',
+    nav_info: 'Impormasyon', nav_reg: 'Mag-register', nav_sched: 'Iskedyul', nav_prize: 'Mga Gantimpala', nav_songs: 'Mga Awit',
+    hero_org: 'Kawanihan ng Paggawa ng Lungsod ng New Taipei', hero_title1: '20 Taon ng Awit sa New Taipei', hero_title2: '2026 Labor Star Singing Contest',
+    hero_btn_primary: 'Magparehistro Ngayon', hero_btn_secondary: 'Tingnan ang Mga Awit',
+    cd_label: 'Countdown sa Deadline ng Pagpaparehistro', cd_day: 'Araw', cd_hour: 'Oras', cd_min: 'Minuto', cd_sec: 'Segundo',
+    fact1_kicker: 'Mga Grupo', fact1_desc: 'Tatlong hiwalay na kategorya para sa patas na kompetisyon',
+    fact2_kicker: 'Mga Itinalagang Awit', fact2_desc: '150 kanta sa Mandarin, Taiwanese at iba pang wika',
+    fact3_kicker: 'Mga Aakyat', fact3_desc: '10 kada grupo sa finals; top 20 mula sa migrant group sa prelims',
+    fact4_kicker: 'Araw ng Finals', fact4_desc: 'Oktubre 25 sa pangunahing bulwagan ng New Taipei City Hall',
+    highlight_title: 'Mga Tampok', highlight_sub: 'Mabilisang gabay sa pagsali, daloy ng paligsahan at karanasan sa entablado',
+    highlight1_eyebrow: 'Easy Entry',
+    highlight1_title: 'Maraming paraan ng pagpaparehistro',
+    highlight1_desc: 'Maaaring magsumite online, sa koreo, email, fax o Line para mas madaling makasabay sa iba-ibang iskedyul ng trabaho.',
+    highlight2_eyebrow: 'Fair Selection',
+    highlight2_title: 'Hiwalay na grupo, malinaw na batayan ng hurado',
+    highlight2_desc: 'May paghahati ayon sa edad at pagkakakilanlan ng kalahok, gamit ang iisang pamantayan sa boses, emosyon, stage presence at styling.',
+    highlight3_eyebrow: 'Showtime',
+    highlight3_title: 'Buong stage journey mula prelims hanggang finals',
+    highlight3_desc: 'Magsisimula ang prelims sa Agosto, semi-finals sa Setyembre, at finals sa Oktubre para sa mas kumpletong exposure sa entablado.',
+    news_title: 'Mga Anunsyo', news_sub: 'Inihanda muna ang karaniwang announcement structure ng opisyal na site para madaling mapalitan ng pinakabagong balita sa susunod.',
+    news1_tag: 'Bagong Balita', news1_date: 'Kailangang punan', news1_title: 'Mas mainam na dito pamahalaan ang deadline ng registration, mga listahan ng round at mga anunsyo ng qualifiers', news1_desc: 'Sa ngayon, wala pang announcement module ang page. Kapag opisyal nang ilulunsad, maaaring ilagay rito ang paalala sa deadline, order ng prelim performances, listahan ng qualifiers sa semi-finals at finals, at mga paalala para sa bawat grupo.',
+    news2_tag: 'Anunsyo ng Laban', news2_date: 'Kailangang punan', news2_title: 'Maaaring i-update rito nang sama-sama ang resulta ng bawat grupo at impormasyon sa finals', news2_desc: 'Maaaring sundan ang paraan ng 2025 official site at hatiin sa Charm Star, Vitality Star at Migrant Star para sa semi-final scores, finalists at check-in details sa araw ng finals.',
+    news3_tag: 'Operational Reminder', news3_date: 'Kailangang punan', news3_title: 'Kung may pagbabago, ang pinakabagong anunsyo rito at abiso ng organizer ang dapat sundin', news3_desc: 'Mga bagay gaya ng pagbabago sa oras ng paligsahan, deadline ng backing track, proseso sa venue, at huling araw ng pagsusumite ng kulang na requirements ay mas mabuting iisang lugar lang ipinapahayag.',
+    group_charm: 'Charm Star Group', group_vitality: 'Vitality Star Group', group_migrant: 'Migrant Star Group',
+    reg_period_title: 'Panahon ng Pagpaparehistro',
+    reg_period_1: 'Hanggang <strong>Hulyo 25, 2026 (Biyernes), 6:00 PM</strong>',
+    reg_period_2: 'Pagkatapos magsumite ng application, kumpirmahin sa loob ng 3 araw ng trabaho (hindi kasama ang Sabado, Linggo at pampublikong bakasyon)',
+    vitality_age: 'Edad: 18–45', vitality_birth: 'Ipinanganak 1981–2008',
+    charm_age: 'Edad: 46 pataas', charm_birth: 'Ipinanganak 1980 o mas maaga',
+    migrant_age: 'Edad: 18 pataas', migrant_desc: 'Mga dayuhang manggagawa na may legal na trabaho sa Taiwan',
+    elig_title: 'Mga Kinakailangan',
+    elig_1: '18 taong gulang pataas',
+    elig_2: 'Nakatala o nagtatrabaho sa New Taipei City, o legal na dayuhang manggagawa sa Taiwan',
+    elig_3: 'Ang mga nakaraang kampeon ng paligsahang ito ay hindi pinahihintulutan',
+    docs_title: 'Mga Kinakailangang Dokumento',
+    doc_1: 'Pahintulot sa seguro sa paggawa (o pahayag ng seguro sa nakalipas na 3 buwan, resibo ng unyon)',
+    doc_2: 'Kopya ng magkabilang panig ng ID o permit ng tirahan',
+    doc_3: 'Sa araw ng paligsahan, magdala ng orihinal na dokumento (ID, lisensya, pasaporte o permit)',
+    reg_methods_title: 'Paraan ng Pagpaparehistro',
+    step1_title: 'Online Registration', step1_desc: 'Punan ang online registration form sa website na ito (Google Form)',
+    step2_title: 'Pagpapadala sa Koreo', step2_desc: 'I-download ang form at ipadala sa: 2F, 88 Wunhu St., Neihu, Taipei 114061 (isulat "115 Labor Star Singing Contest")',
+    step3_title: 'Email / Fax / Line', step3_desc: 'Email: ntpcstar2026@gmail.com<br>Fax: (02)2700-3149<br>Line: @634edkrg',
+    th_round: 'Rounds', th_group: 'Grupo', th_date: 'Petsa', th_time: 'Oras', th_venue: 'Lugar',
+    prelim: 'Preliminary', semi: 'Semi-Final', final: 'Final', all_groups: 'Lahat ng Grupo',
+    date_pc: 'Aug 8–9', date_pv: 'Aug 15–16', date_pm: 'Aug 30',
+    date_sc: 'Sep 20', date_sv: 'Sep 26', date_sm: 'Sep 27', date_f: 'Oct 25',
+    venue_1: 'New Taipei Labor Activity Center (Wugu District)', venue_2: 'Grand Hall, 6F, New Taipei City Hall',
+    sched_note: '★ Preliminary qualifiers: Charm & Vitality Groups — top 40 each; Migrant Group — top 20. Semi-final: top 10 per group advance to finals.',
+    venue_card1_title: 'Lugar ng Preliminary / Semi-Final', venue_card1_body: 'Performing Hall, New Taipei Labor Activity Center<br>No. 9, Wugong 6th Rd., Wugu District, New Taipei',
+    venue_card2_title: 'Lugar ng Final', venue_card2_body: 'Grand Hall, 6th Floor, New Taipei City Government<br>No. 161, Sec. 1, Zhongshan Rd., Banqiao District, 6F', view_map: 'Tingnan ang mapa',
+    rules_title: 'Mga Patakaran sa Paligsahan', rules_sub: 'Idinagdag dito ang kulang na pormal na patakaran mula sa 2025 official site bilang bersyong madaling i-review, para mapalitan na lang ang bawat item kapag may bagong update.',
+    rule_tab_prelim: 'Patakaran sa Preliminary', rule_tab_semi: 'Patakaran sa Semi-Final', rule_tab_final: 'Patakaran sa Final', rule_tab_judge: 'Paraan ng Paghusga',
+    rule_prelim_title: 'Patakaran sa Preliminary',
+    rule_prelim_1: 'Bawat kalahok ay maaari lamang magparehistro sa isang preliminary session. Maaaring pumili ng prayoridad na schedule, ngunit kung lumampas sa limitasyon ng venue, aayusin ito ayon sa aktuwal na pagkakasunod ng registration.',
+    rule_prelim_2: 'Ang order ng pagtatanghal sa preliminary ay iaanunsyo sa website sa loob ng 1 linggo matapos ang deadline ng registration. Kapag nailabas na ang listahan, hindi na maaaring baguhin ang schedule.',
+    rule_prelim_3: 'Sa araw ng paligsahan, kailangang magdala ng orihinal na legal ID na may larawan para sa check-in. Kapag hindi pumasa sa beripikasyon, kakanselahin ang karapatang sumali.',
+    rule_prelim_4: 'Sa preliminary, isang bahagi lamang ng kanta mula sa 150 itinalagang awit ang kakantahin at hindi tinatanggap ang sariling backing track. Pagkatapos ng kabuuang ranking ng lahat ng session, pipiliin ang top 40 sa Charm at Vitality at top 20 sa Migrant Group para sa semi-finals.',
+    rule_semi_title: 'Patakaran sa Semi-Final',
+    rule_semi_1: 'Sa araw ng semi-final, pagkatapos ng check-in ay bubunot ng order ng pagkanta, at kailangan pa ring magdala ng orihinal na ID na may larawan para sa beripikasyon ng organizer.',
+    rule_semi_2: 'Bawat kalahok ay kakanta ng isang buong kanta. Ayon sa kabuuang marka ng semi-finals, top 10 ng bawat grupo ang papasok sa finals.',
+    rule_semi_3: 'Ang mga kalahok na nasa ika-11 hanggang ika-20 puwesto sa bawat grupo ay pararangalan sa final venue. Sa pagtatapos ng semi-finals ay bubunutin din ang order sa finals; kung wala ang kalahok, ang organizer ang bubunot para sa kanya.',
+    rule_semi_4: 'Kung ang isang kalahok ay kusang uurong o hindi papasa sa qualification review, tatawagin ang kapalit ayon sa ranggo ng marka at iaanunsyo ito 1 linggo bago ang paligsahan.',
+    rule_final_title: 'Patakaran sa Final',
+    rule_final_1: 'Ang mga finalist ay kailangang kumanta ng isang buong kanta at kailangan ding magdala ng orihinal na legal ID na may larawan sa oras ng check-in.',
+    rule_final_2: 'Sa finals, gagamit ng kabuuang marka ng judges o ranking method para sa final placement, at pipili rin ng mga espesyal na parangal gaya ng Best Styling, Best Stage Presence at Best Cheer Squad.',
+    rule_final_3: 'Ang resulta ng bawat grupo ay iaanunsyo sa mismong araw ng finals; ang tropeo at sash ay kukunin din sa araw na iyon, habang ang cash prize ay ibibigay sa pamamagitan ng bank transfer.',
+    rule_final_4: 'Hindi maaaring pareho ang kanta sa semi-finals at finals. Ang may sariling backing track o self-accompaniment ay kailangang magsumite ng MP3 at kaugnay na impormasyon isang linggo bago ang paligsahan.',
+    rule_judge_title: 'Mga Hurado at Paraan ng Pagmamarka',
+    rule_judge_1: 'Inirerekomendang panatilihin ang 3 hanggang 5 propesyonal na hurado upang matiyak na obhetibo, patas at bukas ang paghusga.',
+    rule_judge_2: 'Ang pamantayan sa pagmamarka ay: pitch at technique 40%, tono at emosyon 40%, stage presence 10%, at styling 10%.',
+    rule_judge_3: 'Kapag tabla sa preliminary o semi-final, pagbabatayan ang pagkakasunod: pitch at technique, tono at emosyon, stage presence, at styling. Kung tabla pa rin, magkakasamang magpapasya ang mga hurado.',
+    rule_judge_4: 'Sa finals, maaaring gamitin ang ranking method kung saan ang may pinakamababang total rank ang panalo. Kung magkapareho pa rin, magkakaroon ng kolektibong talakayan ang panel ng hurado para sa pinal na desisyon.',
+    scoring_title: 'Pamantayan sa Pagmamarka',
+    score1_name: 'Teknik ng Tinig', score2_name: 'Emosyon ng Tinig', score3_name: 'Stage Presence', score4_name: 'Kasuotan at Hitsura',
+    prizes_sub: 'Bawat grupo ay may sariling mga gantimpala',
+    p1: 'Kampeon', p2: 'Ika-2 Lugar', p3: 'Ika-3 Lugar', p4: 'Ika-4 Lugar', p5: 'Ika-5 Lugar', p6_10: 'Ika-6–10 Lugar', p11_20: 'Ika-11–20 Lugar',
+    trophy: 'Trophy', best_style: 'Pinakamahusay na Kasuotan', best_stage: 'Pinakamahusay na Stage Presence', best_cheer: 'Pinakamahusay na Cheer Squad',
+    prizes_note: '★ Ang premyo na 20,000 NTD pataas ay may 10% buwis. Mga dayuhang nanirahan sa Taiwan nang wala pang 183 araw — 20% buwis.',
+    songs_sub: '150 kanta: 50 Mandarin, 50 Taiwanese, 50 Ibang Wika',
+    song1_tab: 'Mandarin (50 kanta)', song2_tab: 'Taiwanese (50 kanta)', song3_tab: 'Ibang Wika (50 kanta)',
+    th_no: 'Blg.', th_song: 'Pamagat ng Awit', th_artist: 'Artista', th_code: 'Code',
+    song_search_placeholder: 'Maghanap ng kanta, artista, o code',
+    song_status_default: 'Ipinapakita ngayon ang 150 itinalagang awit; puwedeng mag-filter sa tab at keyword.',
+    song_status_result: 'May {count} awit na tumugma sa "{query}"',
+    song_data_missing: 'Hindi na-load ang data ng mga itinalagang awit. Pakisuri kung umiiral ang songs-data.js.',
+    songs_note: '★ Lahat ng round ay gumagamit ng onsite karaoke system. Hindi tinatanggap ang personal na musika. Sa semi-final, maaaring gumamit ng MP3 na dapat isumite bago ang deadline.',
+    notices_title: 'Mga Paalala', notices_sub: 'Pinagsama muna rito ang mga karaniwang paalala sa opisyal na handbook para may malinaw na checklist habang kinukumpirma pa ang detalye.',
+    notice1_title: 'Pagpaparehistro at pagsusumite ng kulang na dokumento', notice1_body: 'Ang sinumang sasali sa paligsahang ito ay ituturing na lubos nang nakaunawa at sumasang-ayon sa mga patakaran ng paligsahan at sa mga anunsyo ng organizer. Kung kulang o malabo ang isinumiteng dokumento, kailangang kumpletuhin ito sa loob ng 2 araw mula sa abiso; kung hindi, ituturing na boluntaryong pag-urong sa paligsahan. Mangyaring magtago ng sariling kopya ng lahat ng isinumite dahil sa pangkalahatan ay hindi ito ibinabalik ng organizer.',
+    notice2_title: 'Check-in at beripikasyon ng ID', notice2_body: 'Sa araw ng paligsahan, kailangang magdala ng orihinal na ID na may larawan gaya ng national ID, lisensya sa pagmamaneho, pasaporte, o residence permit. Ang ibang dokumento ay hindi tatanggapin. Kung mapatunayang hindi kwalipikado, kakanselahin ang karapatang sumali.',
+    notice3_title: 'Pagpalit ng kanta, sound check, at performance flow', notice3_body: 'Sa loob ng isang linggo bago ang preliminary, semi-final, at final, hindi pinapayagan ang biglaang pagpapalit ng kanta. Bawat kalahok ay sa prinsipyo isang beses lamang maaaring magpalit at kailangang matapos ito sa loob ng palugit na itinakda ng organizer. Upang manatiling maayos ang daloy ng paligsahan, ang sound check ay iaayon sa kondisyon ng venue at hindi matitiyak na pare-pareho para sa lahat; ang rehearsal ng finals ay isasagawa ayon sa plano ng organizer.',
+    notice4_title: 'Sariling backing track at pananagutan sa copyright', notice4_body: 'Ang gagamit ng sariling backing track o self-accompaniment ay kailangang kumuha mismo ng kinakailangang music copyright at sasagot sa anumang paglabag. Ang MP3 file at detalye ng kanta ay kailangang isumite bago ang takdang araw, at ang self-accompaniment performers ay dapat ding magbigay ng kinakailangang impormasyon sa organizer.',
+    notice5_title: 'Kalusugan, buwis, at mga patakaran sa venue', notice5_body: 'Responsibilidad ng kalahok na suriin kung ang kanyang kalagayan sa kalusugan ay angkop sa pagsali sa event. Kung magtago ng kondisyong pangkalusugan at magkaroon ng aksidente, sariling pananagutan ito. Ang premyong NTD 20,000 pataas ay may 10% tax withholding; ang mga dayuhan na wala pang 183 araw na naninirahan sa Taiwan ay may 20% withholding. Ang ilang bahagi ng venue gaya ng judges table, timer table, at score processing area ay restricted zones at hindi dapat pasukin nang walang pahintulot. Hinihikayat din ang segregation ng basura at paggamit ng sariling tumbler.',
+    notice6_title: 'Mga anunsyo at karapatan ng organizer', notice6_body: 'Ang pinakabagong balita, deadline ng pagsusumite ng kulang na requirements, pagbabago sa proseso, at iba pang hindi nakasaad ay ibabatay sa anunsyo sa website at sa pinakabagong abiso ng organizer. Nakalaan sa organizer ang karapatang mag-amyenda, magdagdag, at magbago ng nilalaman.',
+    reg_cta_title: 'Mag-register Ngayon', reg_cta_sub: 'Deadline: Hulyo 25, 2026 (Biyernes), 6:00 PM',
+    register_vitality_title: 'Vitality Star Group', register_vitality_desc: 'Edad 18 hanggang 45. Mainam na magdagdag sa susunod ng hiwalay na Google Form link para sa grupong ito upang mas madaling direktang ma-segment ang registration.', register_vitality_btn: 'Mag-register sa Vitality Group',
+    register_charm_title: 'Charm Star Group', register_charm_desc: 'Edad 46 pataas. Inirerekomendang magkaroon ng hiwalay na registration entry gaya ng official site upang maiwasan ang maling group selection.', register_charm_btn: 'Mag-register sa Charm Group',
+    register_migrant_title: 'Migrant Star Group', register_migrant_desc: 'Para sa mga dayuhang manggagawang 18 pataas na legal na nagtatrabaho sa Taiwan. Maaaring magdagdag ng multilingual form o QR code para tumaas ang completion rate.', register_migrant_btn: 'Mag-register sa Migrant Group',
+    register_paper_title: 'Paper Registration Files', register_paper_desc: 'Mainam na idagdag sa susunod ang PDF registration form at kaugnay na gabay sa pag-download, kasama ang mailing address at cut-off time.', register_paper_btn: 'I-download ang paper form',
+    register_note: 'Inirerekomendang idagdag ang service hours na Lunes hanggang Biyernes, 10:00–18:00. Walang pagtanggap tuwing weekend at pampublikong holiday. Pagkatapos maipadala ang requirements, mangyaring kumpirmahin ang pagtanggap sa loob ng 3 working days.',
+    register_vitality_alert: 'Hindi pa nakatakda ang registration link para sa Vitality Group', register_charm_alert: 'Hindi pa nakatakda ang registration link para sa Charm Group', register_migrant_alert: 'Hindi pa nakatakda ang registration link para sa Migrant Group', register_paper_alert: 'Hindi pa nakatakda ang paper registration file', register_form_alert: 'Hindi pa nakatakda ang Google Form link', register_download_alert: 'Hindi pa nakatakda ang download link ng form',
+    btn_register: 'Online Registration', btn_download: 'I-download ang Form',
+    contact_title: 'Impormasyon sa Pakikipag-ugnayan', lbl_phone: 'Telepono', lbl_fax: 'Fax', lbl_email: 'Email', lbl_line: 'Opisyal na LINE Account', lbl_addr: 'Address ng Executing Unit',
+    addr_val: '2F, 88 Wunhu St., Neihu District, Taipei 114061<br>Shangduo International Entertainment Co., Ltd.',
+    footer_title: '2026 Labor Star Singing Contest｜20 Taon ng Awit sa New Taipei',
+    footer_org: 'Organizer: Kawanihan ng Paggawa ng Lungsod ng New Taipei',
+    footer_exec: 'Executing Unit: Shangduo International Entertainment Co., Ltd.',
+    footer_copy: '© 2026 New Taipei City Government Labor Affairs Bureau. All Rights Reserved.'
+  },
+  id: {
+    page_title: 'Kontes Bintang Buruh 2026｜20 Tahun Bernyanyi di New Taipei',
+    org_short: 'Dinas Ketenagakerjaan Kota New Taipei',
+    event_short: 'Kontes Bintang Buruh 2026',
+    loader_title: 'Kontes Bintang Buruh', loader_sub: 'PANGGUNG SEGERA DIBUKA', loader_loading: 'MEMUAT',
+    nav_info: 'Informasi Pendaftaran', nav_reg: 'Daftar Sekarang', nav_sched: 'Jadwal Kompetisi', nav_prize: 'Hadiah', nav_songs: 'Daftar Lagu',
+    hero_org: 'Dinas Ketenagakerjaan Kota New Taipei', hero_title1: '20 Tahun Bernyanyi di New Taipei', hero_title2: 'Kontes Bintang Buruh 2026',
+    hero_btn_primary: 'Daftar Sekarang', hero_btn_secondary: 'Lihat Daftar Lagu',
+    cd_label: 'Hitung Mundur Penutupan Pendaftaran', cd_day: 'Hari', cd_hour: 'Jam', cd_min: 'Menit', cd_sec: 'Detik',
+    fact1_kicker: 'Kelompok Lomba', fact1_desc: '3 kelompok terpisah untuk kompetisi yang lebih adil',
+    fact2_kicker: 'Lagu Wajib', fact2_desc: '150 lagu Mandarin, Taiwan, dan bahasa asing',
+    fact3_kicker: 'Peserta Lolos', fact3_desc: '10 finalis per grup; grup migran mengambil 20 besar dari penyisihan',
+    fact4_kicker: 'Tanggal Final', fact4_desc: '25 Oktober di aula utama Balai Kota New Taipei',
+    highlight_title: 'Sorotan Acara', highlight_sub: 'Ringkasan cepat tentang cara ikut, alur lomba, dan pengalaman panggung',
+    highlight1_eyebrow: 'Easy Entry',
+    highlight1_title: 'Pendaftaran fleksibel lewat banyak kanal',
+    highlight1_desc: 'Formulir dapat dikirim secara online, pos, email, faks, atau Line agar lebih mudah menyesuaikan jadwal kerja peserta.',
+    highlight2_eyebrow: 'Fair Selection',
+    highlight2_title: 'Kompetisi per kelompok dengan penilaian transparan',
+    highlight2_desc: 'Peserta dibagi berdasarkan usia dan kategori identitas, lalu dinilai dengan standar yang sama untuk teknik, emosi, panggung, dan penampilan.',
+    highlight3_eyebrow: 'Showtime',
+    highlight3_title: 'Perjalanan panggung lengkap dari penyisihan sampai final',
+    highlight3_desc: 'Penyisihan dimulai pada Agustus, semi-final pada September, dan final pada Oktober untuk memberikan pengalaman tampil yang utuh.',
+    news_title: 'Pengumuman', news_sub: 'Struktur pengumuman khas situs resmi sudah disiapkan lebih dulu agar nanti mudah diganti dengan informasi terbaru.',
+    news1_tag: 'Berita Terbaru', news1_date: 'Perlu dilengkapi', news1_title: 'Batas pendaftaran, daftar jadwal, dan pengumuman peserta lolos sebaiknya dikelola terpusat di area ini', news1_desc: 'Saat ini halaman belum memiliki modul pengumuman. Saat situs resmi dipublikasikan, area ini dapat diisi pengingat batas pendaftaran, urutan tampil babak penyisihan, daftar lolos semi-final dan final, serta catatan penting tiap kelompok.',
+    news2_tag: 'Pengumuman Lomba', news2_date: 'Perlu dilengkapi', news2_title: 'Hasil tiap kelompok dan informasi final dapat diperbarui terpusat di sini', news2_desc: 'Bisa mengikuti pola situs resmi 2025 dengan memisahkan Grup Pesona, Vitalitas, dan Buruh Migran untuk mengumumkan nilai semi-final, daftar finalis, dan informasi check-in pada hari final.',
+    news3_tag: 'Pengingat Operasional', news3_date: 'Perlu dilengkapi', news3_title: 'Jika ada perubahan informasi, pengumuman terbaru di sini dan pemberitahuan panitia menjadi acuan utama', news3_desc: 'Hal-hal seperti penyesuaian waktu lomba, batas pengumpulan iringan, alur acara di lokasi, dan tenggat pelengkapan dokumen sebaiknya diumumkan terpusat di sini agar informasi tidak terpencar.',
+    group_charm: 'Grup Bintang Pesona', group_vitality: 'Grup Bintang Vitalitas', group_migrant: 'Grup Buruh Migran',
+    reg_period_title: 'Periode Pendaftaran',
+    reg_period_1: 'Hingga <strong>25 Juli 2026 (Jumat), pukul 18:00</strong>',
+    reg_period_2: 'Setelah mengirim formulir pendaftaran, konfirmasi dalam 3 hari kerja (tidak termasuk Sabtu, Minggu, dan hari libur nasional)',
+    vitality_age: 'Usia: 18–45 tahun', vitality_birth: 'Lahir tahun 1981–2008',
+    charm_age: 'Usia: 46 tahun ke atas', charm_birth: 'Lahir tahun 1980 atau sebelumnya',
+    migrant_age: 'Usia: 18 tahun ke atas', migrant_desc: 'Tenaga kerja asing yang bekerja secara legal di Taiwan',
+    elig_title: 'Persyaratan Peserta',
+    elig_1: 'Berusia 18 tahun ke atas',
+    elig_2: 'Terdaftar atau bekerja di Kota New Taipei, atau tenaga kerja asing yang bekerja secara legal di Taiwan',
+    elig_3: 'Pemenang juara pertama pada kompetisi sebelumnya tidak diizinkan mengikuti',
+    docs_title: 'Dokumen yang Diperlukan',
+    doc_1: 'Surat persetujuan asuransi tenaga kerja (atau laporan status asuransi 3 bulan terakhir, kwitansi serikat pekerja)',
+    doc_2: 'Fotokopi KTP/SIM kedua sisi atau izin tinggal',
+    doc_3: 'Pada hari kompetisi bawa dokumen asli (KTP, SIM, paspor atau izin tinggal)',
+    reg_methods_title: 'Cara Pendaftaran',
+    step1_title: 'Pendaftaran Online', step1_desc: 'Isi formulir pendaftaran online di website ini (Google Form)',
+    step2_title: 'Pendaftaran via Pos', step2_desc: 'Unduh formulir dan kirim ke: Lantai 2, 88 Wunhu St., Distrik Neihu, Taipei 114061 (tulis "115 Labor Star Singing Contest")',
+    step3_title: 'Email / Faks / Line', step3_desc: 'Email: ntpcstar2026@gmail.com<br>Faks: (02)2700-3149<br>Line: @634edkrg',
+    th_round: 'Babak', th_group: 'Kelompok', th_date: 'Tanggal', th_time: 'Waktu', th_venue: 'Lokasi',
+    prelim: 'Babak Penyisihan', semi: 'Semi-Final', final: 'Final', all_groups: 'Semua Grup',
+    date_pc: '8–9 Agustus', date_pv: '15–16 Agustus', date_pm: '30 Agustus',
+    date_sc: '20 September', date_sv: '26 September', date_sm: '27 September', date_f: '25 Oktober',
+    venue_1: 'Pusat Kegiatan Buruh New Taipei (Distrik Wugu)', venue_2: 'Aula Besar Lantai 6, Balai Kota New Taipei',
+    sched_note: '★ Babak penyisihan: Grup Pesona & Vitalitas pilih 40 besar; Grup Migran pilih 20 besar. Semi-final: 10 besar per grup maju ke final.',
+    venue_card1_title: 'Lokasi Penyisihan / Semi-Final', venue_card1_body: 'Aula Pertunjukan Pusat Kegiatan Buruh New Taipei<br>No. 9, Wugong 6th Rd., Distrik Wugu, New Taipei',
+    venue_card2_title: 'Lokasi Final', venue_card2_body: 'Aula Besar Lantai 6, Pemerintah Kota New Taipei<br>No. 161, Sec. 1, Zhongshan Rd., Distrik Banqiao, lantai 6', view_map: 'Lihat peta',
+    rules_title: 'Isi Kompetisi', rules_sub: 'Aturan resmi yang belum ada di situs 2025 ditambahkan di sini sebagai versi yang mudah dicek, sehingga nanti cukup mengganti poin per poin saat ada pembaruan tahunan.',
+    rule_tab_prelim: 'Aturan Penyisihan', rule_tab_semi: 'Aturan Semi-Final', rule_tab_final: 'Aturan Final', rule_tab_judge: 'Sistem Penjurian',
+    rule_prelim_title: 'Aturan Penyisihan',
+    rule_prelim_1: 'Setiap peserta hanya boleh mendaftar satu sesi penyisihan. Saat mendaftar, peserta dapat memilih sesi prioritas; jika sesi melebihi batas peserta, penyesuaian dilakukan berdasarkan urutan pendaftaran aktual.',
+    rule_prelim_2: 'Urutan tampil penyisihan diumumkan di situs acara dalam 1 minggu setelah penutupan pendaftaran. Setelah daftar diumumkan, sesi tidak dapat diubah lagi.',
+    rule_prelim_3: 'Pada hari lomba, peserta wajib membawa dokumen identitas resmi asli berfoto saat check-in. Jika setelah verifikasi dinyatakan tidak memenuhi syarat, hak mengikuti lomba akan dibatalkan.',
+    rule_prelim_4: 'Pada penyisihan, peserta hanya menyanyikan satu bagian lagu dari 150 lagu wajib dan tidak boleh membawa iringan sendiri. Setelah seluruh sesi dirangking, Grup Pesona dan Vitalitas masing-masing mengambil 40 besar, sedangkan Grup Migran mengambil 20 besar ke semi-final.',
+    rule_semi_title: 'Aturan Semi-Final',
+    rule_semi_1: 'Pada hari semi-final, setelah check-in peserta akan mengundi urutan tampil dan tetap harus membawa dokumen identitas resmi berfoto untuk diperiksa panitia.',
+    rule_semi_2: 'Setiap peserta menyanyikan satu lagu penuh. Berdasarkan total nilai semi-final, tiap kelompok mengambil 10 besar ke final.',
+    rule_semi_3: 'Peserta peringkat 11 sampai 20 dari tiap kelompok akan menerima penghargaan di lokasi final. Setelah semi-final selesai, urutan tampil final juga langsung diundi; bila peserta tidak hadir, panitia akan mengundi mewakili.',
+    rule_semi_4: 'Jika peserta mengundurkan diri atau setelah pemeriksaan ulang dinyatakan tidak memenuhi syarat, penggantian dilakukan menurut urutan nilai dan diumumkan 1 minggu sebelum lomba.',
+    rule_final_title: 'Aturan Final',
+    rule_final_1: 'Peserta yang masuk final harus menyanyikan satu lagu penuh dan saat check-in juga wajib membawa dokumen identitas resmi asli berfoto.',
+    rule_final_2: 'Final dinilai berdasarkan total skor juri atau metode peringkat, serta memilih penghargaan khusus seperti Kostum Terbaik, Penampilan Panggung Terbaik, dan Tim Suporter Terbaik.',
+    rule_final_3: 'Hasil pemenang tiap kelompok diumumkan langsung pada hari final di lokasi. Trofi dan selempang diambil pada hari yang sama, sedangkan hadiah uang dibayarkan melalui transfer bank.',
+    rule_final_4: 'Lagu semi-final dan final tidak boleh sama. Peserta yang menggunakan iringan sendiri atau mengiringi diri sendiri wajib menyerahkan file MP3 dan informasi terkait satu minggu sebelum lomba.',
+    rule_judge_title: 'Juri dan Sistem Penilaian',
+    rule_judge_1: 'Disarankan mempertahankan 3 sampai 5 juri profesional agar penilaian berlangsung objektif, adil, dan terbuka.',
+    rule_judge_2: 'Komponen penilaian adalah teknik nada 40%, warna suara dan emosi 40%, penampilan panggung 10%, dan tata gaya 10%.',
+    rule_judge_3: 'Jika terjadi nilai sama pada penyisihan atau semi-final, penentuan dilakukan berurutan berdasarkan teknik nada, warna suara dan emosi, penampilan panggung, lalu tata gaya. Jika tetap sama, keputusan diambil bersama oleh dewan juri.',
+    rule_judge_4: 'Final dapat menggunakan metode peringkat; peserta dengan total peringkat terendah menjadi pemenang. Jika masih seri, panel juri akan berdiskusi bersama untuk memutuskan.',
+    scoring_title: 'Kriteria Penilaian',
+    score1_name: 'Teknik Vokal', score2_name: 'Ekspresi & Emosi', score3_name: 'Penampilan Panggung', score4_name: 'Kostum & Penampilan',
+    prizes_sub: 'Setiap kelompok memiliki hadiah terpisah',
+    p1: 'Juara 1', p2: 'Juara 2', p3: 'Juara 3', p4: 'Peringkat 4', p5: 'Peringkat 5', p6_10: 'Peringkat 6–10', p11_20: 'Peringkat 11–20',
+    trophy: 'Trofi', best_style: 'Kostum Terbaik', best_stage: 'Penampilan Panggung Terbaik', best_cheer: 'Tim Suporter Terbaik',
+    prizes_note: '★ Hadiah senilai NTD 20.000 ke atas dipotong pajak 10%. Warga asing yang tinggal di Taiwan kurang dari 183 hari dipotong 20%.',
+    songs_sub: '150 lagu: 50 Mandarin, 50 Taiwan, 50 Bahasa Asing',
+    song1_tab: 'Mandarin (50 lagu)', song2_tab: 'Taiwan (50 lagu)', song3_tab: 'Bahasa Asing (50 lagu)',
+    th_no: 'No.', th_song: 'Judul Lagu', th_artist: 'Penyanyi', th_code: 'Kode',
+    song_search_placeholder: 'Cari judul lagu, penyanyi, atau kode',
+    song_status_default: 'Sedang menampilkan 150 lagu wajib; dapat difilter dengan tab dan kata kunci.',
+    song_status_result: 'Ditemukan {count} lagu yang cocok dengan "{query}"',
+    song_data_missing: 'Data lagu wajib belum dimuat. Silakan periksa songs-data.js.',
+    songs_note: '★ Semua babak menggunakan sistem karaoke di tempat, tidak menerima musik pribadi. Pada semi-final, boleh menggunakan MP3 yang harus dikumpulkan sebelum batas waktu.',
+    notices_title: 'Catatan Penting', notices_sub: 'Poin-poin yang lazim ada di panduan resmi dirangkum lebih dulu agar mudah dicek saat detail informasi masih dalam tahap konfirmasi.',
+    notice1_title: 'Pendaftaran dan pelengkapan dokumen', notice1_body: 'Setiap orang yang mendaftar dianggap telah memahami dan setuju mematuhi peraturan lomba serta ketentuan terkait yang diumumkan panitia. Jika data pendaftaran tidak lengkap atau tidak jelas, setelah diberi tahu panitia peserta harus melengkapinya dalam 2 hari; jika lewat batas waktu akan dianggap mengundurkan diri. Semua dokumen harap disimpan salinannya oleh peserta karena pada prinsipnya tidak dikembalikan oleh panitia.',
+    notice2_title: 'Check-in dan verifikasi dokumen', notice2_body: 'Pada hari lomba, peserta wajib membawa dokumen identitas asli berfoto seperti KTP, SIM, paspor, atau izin tinggal. Dokumen lain tidak diterima. Jika setelah verifikasi dinyatakan tidak memenuhi syarat, hak mengikuti lomba akan dibatalkan.',
+    notice3_title: 'Ganti lagu, sound check, dan alur tampil', notice3_body: 'Dalam 1 minggu sebelum penyisihan, semi-final, dan final, peserta tidak diperkenankan mengganti lagu secara mendadak. Setiap peserta pada prinsipnya hanya boleh mengganti satu kali dan harus menyelesaikannya dalam batas waktu yang ditetapkan panitia. Demi menjaga kelancaran jadwal, waktu sound check akan diatur sesuai kondisi tempat dan tidak dapat menjamin kondisi yang sama bagi semua peserta; jadwal gladi final mengikuti perencanaan panitia.',
+    notice4_title: 'Iringan sendiri dan tanggung jawab hak cipta', notice4_body: 'Peserta yang menggunakan backing track sendiri atau mengiringi diri sendiri wajib mengurus hak cipta musik secara mandiri dan menanggung sendiri bila terjadi pelanggaran. File MP3 dan informasi lagu harus diserahkan sebelum tenggat, dan peserta self-accompaniment juga harus memberikan data yang diperlukan panitia.',
+    notice5_title: 'Kesehatan, pajak, dan ketentuan lokasi', notice5_body: 'Peserta wajib menilai sendiri apakah kondisi kesehatannya sesuai untuk mengikuti kegiatan. Jika terjadi kecelakaan karena menyembunyikan kondisi kesehatan, tanggung jawab berada pada peserta. Hadiah di atas atau sama dengan NTD 20.000 dikenakan potongan pajak 10%; warga asing yang tinggal di Taiwan kurang dari 183 hari dikenakan potongan 20%. Beberapa area lokasi seperti meja juri, meja pencatat waktu, dan area pengolahan nilai adalah area terbatas dan tidak boleh dimasuki tanpa izin petugas. Mohon juga mengikuti pemilahan sampah dan membawa botol minum sendiri.',
+    notice6_title: 'Pengumuman dan hak panitia', notice6_body: 'Informasi kegiatan terbaru, batas pelengkapan dokumen, perubahan alur, dan hal-hal yang belum diatur semuanya mengacu pada pengumuman situs kegiatan dan pemberitahuan terbaru dari panitia. Panitia berhak melakukan revisi, penambahan, dan perubahan.',
+    reg_cta_title: 'Daftar Sekarang', reg_cta_sub: 'Batas waktu: 25 Juli 2026 (Jumat), pukul 18:00',
+    register_vitality_title: 'Grup Bintang Vitalitas', register_vitality_desc: 'Usia 18 sampai 45 tahun. Nantinya sebaiknya ditambahkan tautan Google Form khusus untuk grup ini agar alur pendaftaran bisa langsung dipisahkan.', register_vitality_btn: 'Daftar Grup Vitalitas',
+    register_charm_title: 'Grup Bintang Pesona', register_charm_desc: 'Usia 46 tahun ke atas. Disarankan menggunakan pintu pendaftaran terpisah seperti situs resmi agar peserta tidak salah memilih kelompok.', register_charm_btn: 'Daftar Grup Pesona',
+    register_migrant_title: 'Grup Buruh Migran', register_migrant_desc: 'Untuk pekerja migran berusia 18 tahun ke atas yang bekerja secara legal di Taiwan. Bisa ditambah formulir multibahasa atau QR code agar tingkat penyelesaian pendaftaran lebih tinggi.', register_migrant_btn: 'Daftar Grup Migran',
+    register_paper_title: 'Berkas pendaftaran cetak', register_paper_desc: 'Sebaiknya nanti ditambahkan formulir PDF dan file penjelasan terkait untuk diunduh, sekaligus alamat pengiriman serta batas waktu penerimaan.', register_paper_btn: 'Unduh formulir cetak',
+    register_note: 'Jam layanan yang disarankan adalah Senin sampai Jumat pukul 10:00–18:00. Sabtu, Minggu, dan hari libur nasional tidak melayani. Setelah dokumen dikirim, mohon konfirmasi penerimaan dalam 3 hari kerja.',
+    register_vitality_alert: 'Tautan pendaftaran Grup Vitalitas belum diatur', register_charm_alert: 'Tautan pendaftaran Grup Pesona belum diatur', register_migrant_alert: 'Tautan pendaftaran Grup Migran belum diatur', register_paper_alert: 'Berkas pendaftaran cetak belum diatur', register_form_alert: 'Tautan Google Form belum diatur', register_download_alert: 'Tautan unduh formulir belum diatur',
+    btn_register: 'Daftar Online', btn_download: 'Unduh Formulir',
+    contact_title: 'Informasi Kontak', lbl_phone: 'Telepon', lbl_fax: 'Faks', lbl_email: 'Email', lbl_line: 'Akun LINE Resmi', lbl_addr: 'Alamat Unit Pelaksana',
+    addr_val: 'Lantai 2, 88 Wunhu St., Distrik Neihu, Taipei 114061<br>Shangduo International Entertainment Co., Ltd.',
+    footer_title: 'Kontes Bintang Buruh 2026｜20 Tahun Bernyanyi di New Taipei',
+    footer_org: 'Penyelenggara: Dinas Ketenagakerjaan Kota New Taipei',
+    footer_exec: 'Unit Pelaksana: Shangduo International Entertainment Co., Ltd.',
+    footer_copy: '© 2026 Dinas Ketenagakerjaan Kota New Taipei. Hak Cipta Dilindungi.'
+  }
+};
+
+let currentLang = 'zh';
+let activeSongTab = 'mand';
+let introLoaderStarted = false;
+let introLoaderFinished = false;
+
+function setLang(lang) {
+  currentLang = lang;
+  const d = T[lang];
+  document.documentElement.lang = lang === 'zh' ? 'zh-TW' : lang;
+  document.body.setAttribute('data-lang', lang);
+  if (d.page_title) document.title = d.page_title;
+  // text nodes
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (d[key] !== undefined) el.textContent = d[key];
+  });
+  // html nodes
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const key = el.getAttribute('data-i18n-html');
+    if (d[key] !== undefined) el.innerHTML = d[key];
+  });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    if (d[key] !== undefined) el.setAttribute('placeholder', d[key]);
+  });
+  document.querySelectorAll('.lang-select').forEach(select => {
+    select.value = lang;
+  });
+  updateSongStatus();
+}
+
+function toggleNav() {
+  document.getElementById('mobile-nav').classList.toggle('open');
+}
+
+function switchRuleTab(tab) {
+  document.querySelectorAll('.rule-tab').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.ruleTab === tab);
+  });
+  document.querySelectorAll('.detail-card[data-rule-panel]').forEach(panel => {
+    panel.classList.toggle('active', panel.dataset.rulePanel === tab);
+  });
+}
+
+function hideLoader() {
+  const loader = document.getElementById('page-loader');
+  if (!loader || loader.classList.contains('hidden')) return;
+  introLoaderFinished = true;
+  loader.classList.add('hidden');
+  document.body.classList.remove('loading');
+}
+
+function runIntroLoader() {
+  if (introLoaderStarted || introLoaderFinished) return;
+  introLoaderStarted = true;
+  const loader = document.getElementById('page-loader');
+  const fill = document.getElementById('loader-progress-fill');
+  const num = document.getElementById('loader-progress-num');
+  if (!loader || !fill || !num) {
+    hideLoader();
+    return;
+  }
+
+  let progress = 0;
+
+  const beginProgress = () => {
+    loader.classList.add('show-progress');
+
+    const timer = setInterval(() => {
+      const step = progress < 35 ? 3 : progress < 72 ? 2 : 1;
+      progress = Math.min(100, progress + step);
+      fill.style.width = `${progress}%`;
+      num.textContent = `${progress}%`;
+      if (progress >= 100) {
+        clearInterval(timer);
+        setTimeout(hideLoader, 420);
+      }
+    }, 38);
+  };
+
+  requestAnimationFrame(() => {
+    loader.classList.add('opening');
+    setTimeout(beginProgress, 760);
+  });
+
+  setTimeout(() => {
+    fill.style.width = '100%';
+    num.textContent = '100%';
+    hideLoader();
+  }, 6200);
+}
+
+function showI18nAlert(key) {
+  const d = T[currentLang] || T.zh;
+  alert(d[key] || T.zh[key] || '');
+}
+
+function setupRevealAnimations() {
+  const revealEls = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) {
+    revealEls.forEach(el => el.classList.add('in-view'));
+    return;
+  }
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        io.unobserve(entry.target);
+      }
+    });
+  }, {threshold:.14, rootMargin:'0px 0px -8% 0px'});
+  revealEls.forEach(el => io.observe(el));
+}
+
+function updateScrollEffects() {
+  const doc = document.documentElement;
+  const maxScroll = doc.scrollHeight - window.innerHeight;
+  const scrollY = window.scrollY || 0;
+  const progress = maxScroll > 0 ? `${(scrollY / maxScroll) * 100}%` : '0%';
+  doc.style.setProperty('--scroll-progress', progress);
+  doc.style.setProperty('--hero-shift', `${Math.min(scrollY * .16, 42)}px`);
+}
+
+// Countdown
+function tick() {
+  const deadline = new Date('2026-07-25T18:00:00+08:00');
+  const diff = deadline - new Date();
+  if (diff <= 0) { ['cd-d','cd-h','cd-m','cd-s'].forEach(id => document.getElementById(id).textContent = '00'); return; }
+  document.getElementById('cd-d').textContent = String(Math.floor(diff/86400000)).padStart(2,'0');
+  document.getElementById('cd-h').textContent = String(Math.floor(diff%86400000/3600000)).padStart(2,'0');
+  document.getElementById('cd-m').textContent = String(Math.floor(diff%3600000/60000)).padStart(2,'0');
+  document.getElementById('cd-s').textContent = String(Math.floor(diff%60000/1000)).padStart(2,'0');
+}
+tick(); setInterval(tick, 1000);
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t) { e.preventDefault(); t.scrollIntoView({behavior:'smooth'}); }
+  });
+});
+
+document.querySelectorAll('.rule-tab').forEach(btn => {
+  btn.addEventListener('click', () => switchRuleTab(btn.dataset.ruleTab));
+});
+
+// Init
+setLang('zh');
+setupRevealAnimations();
+updateScrollEffects();
+window.addEventListener('scroll', updateScrollEffects, {passive:true});
+window.addEventListener('load', runIntroLoader, {once:true});
+setTimeout(runIntroLoader, 900);
+
+function renderSongs() {
+  if (!window.SONGS) {
+    const d = T[currentLang] || T.zh;
+    document.getElementById('song-status').textContent = d.song_data_missing || T.zh.song_data_missing;
+    return;
+  }
+  ['mand','tw','for'].forEach(key => {
+    const rows = window.SONGS[key].map(([no, title, artist, code]) =>
+      `<tr><td class="song-cell-no">${no}</td><td class="song-cell-title">${title}</td><td class="song-cell-artist">${artist}</td><td class="song-cell-code">${code}</td></tr>`
+    );
+    document.getElementById('tbody-' + key + '-1').innerHTML = rows.slice(0, 25).join('');
+    document.getElementById('tbody-' + key + '-2').innerHTML = rows.slice(25).join('');
+  });
+  updateSongStatus();
+}
+
+function switchSongTab(tab) {
+  activeSongTab = tab;
+  document.querySelectorAll('.stab').forEach(b => b.classList.remove('active'));
+  document.getElementById('stab-' + tab).classList.add('active');
+  document.querySelectorAll('.song-panel').forEach(p => p.classList.remove('active'));
+  document.getElementById('song-panel-' + tab).classList.add('active');
+  document.getElementById('song-search').value = '';
+  filterSongs();
+}
+
+function filterSongs() {
+  const q = document.getElementById('song-search').value.trim().toLowerCase();
+  let visibleCount = 0;
+  ['mand','tw','for'].forEach(key => {
+    const rows = document.querySelectorAll(`#tbody-${key}-1 tr, #tbody-${key}-2 tr`);
+    rows.forEach(row => {
+      const matched = !q || row.textContent.toLowerCase().includes(q);
+      row.style.display = matched ? '' : 'none';
+      if (key === activeSongTab && matched) visibleCount++;
+    });
+  });
+  updateSongStatus(visibleCount, q);
+}
+
+function updateSongStatus(count, query = '') {
+  const el = document.getElementById('song-status');
+  if (!el) return;
+  const d = T[currentLang];
+  if (!window.SONGS || !window.SONGS[activeSongTab]) return;
+  if (count === undefined) count = window.SONGS[activeSongTab].length;
+  if (!query) {
+    el.textContent = d.song_status_default;
+    return;
+  }
+  el.textContent = d.song_status_result.replace('{count}', count).replace('{query}', query);
+}
+
+renderSongs();
+</script>
+</body>
+</html>
